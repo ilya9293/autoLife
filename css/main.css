@@ -1,0 +1,133 @@
+:root {
+  --color-main-titles: #0f3c65;
+  --color-btn-hover: #e8a83c;
+  --color-darkbackground: #ffffff;
+  --color-menu-text: #262626;
+  --fonts-main: "Roboto", sans-serif;
+  --fonts-footer-menu: "Montserrat", sans-serif;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--color-text);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  padding: 0;
+  line-height: 0;
+  background-color: transparent;
+}
+
+.section {
+  padding: 32px 0;
+}
+@media screen and (min-width: 1649px) {
+  .section {
+    padding: 60px 0;
+  }
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 704px;
+  }
+}
+@media screen and (min-width: 1649px) {
+  .container {
+    max-width: 1619px;
+  }
+}
+
+.header {
+  padding: 32px 0;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo__container {
+  position: relative;
+}
+.logo__title {
+  font-family: var(--fonts-main);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: var(--color-btn-hover);
+}
+.logo__sub-title {
+  color: #515151;
+  font-family: var(--fonts-main);
+  font-size: 15px;
+}
+
+.burger-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 34px;
+  height: 24px;
+  border: none;
+}
+.burger-button__line {
+  height: 4px;
+  width: 100%;
+  background-color: var(--color-btn-hover);
+  border-radius: 5px;
+}
+@media screen and (min-width: 768px) {
+  .burger-button {
+    width: 50px;
+    height: 35px;
+  }
+}
+@media screen and (min-width: 1649px) {
+  .burger-button {
+    display: none;
+  }
+}
