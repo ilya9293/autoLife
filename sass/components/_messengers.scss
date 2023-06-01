@@ -1,0 +1,19 @@
+.messengers {
+  display: flex;
+  margin-bottom: 20px;
+
+  &__item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__link {
+  }
+
+  &__icon {
+  }
+
+  .desktop & {
+    margin-bottom: 0;
+    margin-right: 75px;
+  }
+}

@@ -13,14 +13,14 @@
     border-radius: 5px;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 360px) {
     & {
       width: 50px;
       height: 35px;
     }
   }
 
-  @media screen and (min-width: 1649px) {
+  @media screen and (min-width: 1200px) {
     & {
       display: none;
     }

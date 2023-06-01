@@ -3,12 +3,12 @@
   padding: 0 15px;
   margin: 0 auto;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 768px) {
     & {
       max-width: 704px;
     }
   }
-  @media screen and (min-width: 1649px) {
+  @media screen and (min-width: 769px) {
     & {
       max-width: 1619px;
     }

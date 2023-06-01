@@ -1,0 +1,81 @@
+.section.hero {
+  background-image: url("../../images/hero/background-squares-mobile_.png");
+  background-repeat: repeat;
+  background-position: 0 150px;
+  background-size: auto auto;
+}
+
+.title-flags-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 56px;
+
+  @media screen and (min-width: 360px) {
+    & {
+      margin-bottom: 46px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    & {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.title-hero {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 40px;
+  color: var(--color-main-titles);
+  margin-bottom: 10px;
+
+  @media screen and (min-width: 360px) {
+    & {
+      font-size: 52px;
+      line-height: 61px;
+      margin-bottom: 17px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    & {
+      font-size: 56px;
+      line-height: 66px;
+    }
+  }
+}
+.text-hero {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 23px;
+  color: var(--color-menu-text);
+  white-space: nowrap;
+  @media screen and (min-width: 360px) {
+    & {
+      font-size: 28px;
+      line-height: 33px;
+    }
+  }
+}
+.flags {
+  flex-shrink: 0;
+}
+
+.hero-img {
+  position: relative;
+
+  &__nature,
+  &__car {
+    position: absolute;
+    top: 0;
+    right: -15px;
+  }
+
+  &__car {
+  }
+}
+
+.price-hero {
+}

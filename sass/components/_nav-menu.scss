@@ -1,0 +1,36 @@
+.nav-menu {
+  margin-bottom: 20px;
+
+  &__item {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .desktop & {
+    display: flex;
+    margin-right: 75px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .desktop &__item {
+    margin-bottom: 0;
+    white-space: nowrap;
+  }
+
+  .desktop &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.authorization {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
