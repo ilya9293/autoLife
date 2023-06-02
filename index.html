@@ -68,7 +68,7 @@
             </ul>
           </nav>
 
-          <ul class="messengers">
+          <!-- <ul class="messengers">
             <li class="messengers__item">
               <a href="" class="messengers__link">
                 <svg
@@ -122,9 +122,9 @@
                 </svg>
               </a>
             </li>
-          </ul>
+          </ul> -->
 
-          <div class="languages">
+          <!-- <div class="languages">
             <button class="languages__btn">UA</button>
             <ul class="languages-list">
               <li class="languages-list__item">
@@ -138,7 +138,7 @@
 
           <nav>
             <a href="" class="authorization">Авторизація</a>
-          </nav>
+          </nav> -->
         </div>
 
         <!-- Mobile -->
@@ -274,73 +274,81 @@
 
     <main>
       <section class="section hero">
-        <div class="container">
-          <div class="title-flags-container">
+        <div class="hero__content">
+          <div class="container">
             <div class="title-container">
-              <h1 class="title-hero">Доставимо будь-що між</h1>
-              <span class="text-hero">Україною та Польшею</span>
+              <div class="wrapper-hero">
+                <div class="title-container__flags">
+                  <h1 class="title-hero">Доставимо будь-що між</h1>
+                  <span class="text-hero">Україною та Польшею</span>
+                </div>
+                <picture class="flags">
+                  <source
+                    srcset="./images/hero/flags-mobile.png"
+                    media="(max-width: 360px)"
+                  />
+                  <source
+                    srcset="./images/hero/flags-desktop.png"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="./images/hero/flags-tablet.png"
+                    media="(max-width: 767px)"
+                  />
+                  <img src="./images/hero/flags-mobile.png" alt="Флаги" />
+                </picture>
+              </div>
+              <a href="" class="btn-price">Розрахувати вартість</a>
             </div>
-            <picture class="flags">
-              <source
-                srcset="./images/hero/flags-mobile.png"
-                media="(max-width: 360px)"
-              />
-              <source
-                srcset="./images/hero/flags-desktop.png"
-                media="(min-width: 768px)"
-              />
-              <source
-                srcset="./images/hero/flags-tablet.png"
-                media="(max-width: 767px)"
-              />
-              <img src="./images/hero/flags-mobile.png" alt="Флаги" />
-            </picture>
           </div>
-
-          <div class="hero-img">
-            <picture>
-              <source
-                srcset="./images/hero/nature-backdrop-mobile.png"
-                media="(max-width: 360px)"
-              />
-              <source
-                srcset="./images/hero/nature-backdrop-desktop.png"
-                media="(min-width: 768px)"
-              />
-              <source
-                srcset="./images/hero/nature-backdrop-tablet.png"
-                media="(max-width: 767px)"
-              />
-              <img
-                class="hero-img__nature"
-                src="./images/hero/nature-backdrop-mobile.png"
-                alt="Природа"
-              />
-            </picture>
-            <picture>
-              <source
-                srcset="./images/hero/car-mobile.png"
-                media="(max-width: 360px)"
-              />
-              <source
-                srcset="./images/hero/car-desktop.png"
-                media="(min-width: 768px)"
-              />
-              <source
-                srcset="./images/hero/car-tablet.png"
-                media="(max-width: 767px)"
-              />
-              <img
-                class="hero-img__car"
-                src="./images/hero/car-mobile.png"
-                alt="Машина"
-              />
-            </picture>
-          </div>
-
-          <!-- <a href="" class="price-hero">Розрахувати вартість</a> -->
+        </div>
+        <div class="hero-img">
+          <picture>
+            <source
+              srcset="./images/hero/nature-backdrop-mobile.png"
+              media="(max-width: 360px)"
+            />
+            <source
+              srcset="./images/hero/nature-backdrop-desktop.png"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="./images/hero/nature-backdrop-tablet.png"
+              media="(max-width: 767px)"
+            />
+            <img
+              class="hero-img__nature"
+              src="./images/hero/nature-backdrop-mobile.png"
+              alt="Природа"
+            />
+          </picture>
+          <picture>
+            <source
+              srcset="./images/hero/car-mobile.png"
+              media="(max-width: 360px)"
+            />
+            <source
+              srcset="./images/hero/car-desktop.png"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="./images/hero/car-tablet.png"
+              media="(max-width: 767px)"
+            />
+            <img
+              class="hero-img__car"
+              src="./images/hero/car-mobile.png"
+              alt="Машина"
+            />
+          </picture>
         </div>
       </section>
+
+      <div class="wrap-btn-price">
+        <div class="container">
+          <a href="" class="btn-price">Розрахувати вартість</a>
+        </div>
+      </div>
     </main>
 
     <script src="./js/script.js"></script>
