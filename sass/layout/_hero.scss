@@ -1,40 +1,17 @@
 .section.hero {
-  //   background-image: url("../../images/hero/background-squares-mobile_.png");
-  //   background-repeat: repeat;
-  //   background-position: 0 150px;
-  //   background-size: auto auto;
-  //   background-image: url("../../images/hero/nature-backdrop-mobile.png");
-  //   background-repeat: no-repeat;
-  //   background-size: 96% auto;
-  //   background-position: right 190px;
+  background-image: url("../../images/hero/background-squares-mobile.png");
+  background-repeat: repeat;
+  background-position: 0 105px;
+  background-size: auto auto;
 
-  //   @media screen and (min-width: 360px) {
-  //     & {
-  //       background-image: url("../../images/hero/nature-backdrop-tablet.png");
-  //     }
-  //   }
-  //   @media screen and (max-width: 708px) {
-  //     & {
-  //       background-position: right 250px;
-  //     }
-  //   }
-  //   @media screen and (max-width: 424px) {
-  //     & {
-  //       background-position: right 300px;
-  //     }
-  //   }
-  //   @media screen and (max-width: 360px) {
-  //     & {
-  //       background-position: right 190px;
-  //    }
-  //   }
+  @media screen and (min-width: 360px) {
+    & {
+      background-image: url("../../images/hero/background-squares.png");
+      background-position: 100px 70px;
+      background-repeat: no-repeat;
+    }
+  }
 
-  //   @media screen and (min-width: 768px) {
-  //     & {
-  //       background-image: url("../../images/hero/nature-backdrop-desktop.png");
-  //       background-size: 50% auto;
-  //     }
-  //   }
   padding-bottom: 67px;
 
   & .container {
@@ -70,6 +47,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  flex-direction: column;
   padding: 0 70px 0 0;
 
   &__flags {
@@ -96,6 +74,22 @@
 
     &__flags {
       margin-right: 8px;
+    }
+  }
+}
+
+.boxes-wraper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+
+  &__img:first-child {
+    margin-right: 16px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    & {
+      display: none;
     }
   }
 }
@@ -193,5 +187,12 @@
     position: absolute;
     width: 100%;
     top: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    &__car {
+      width: 95%;
+      top: 15px;
+    }
   }
 }
