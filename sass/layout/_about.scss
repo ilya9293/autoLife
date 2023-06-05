@@ -1,0 +1,159 @@
+.section.about {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-image: url('../../images/about/background-mob.png');
+  background-position: -65px 0px;
+  background-repeat: no-repeat;
+
+  @media screen and (min-width: 360px) {
+   & {
+      background-image: url('../../images/about/background-tablet.png');
+   }
+  }
+  @media screen and (min-width: 768px) {
+   & {
+      background-image: url('../../images/about/background-desktop.png');
+      background-position: 25px -60px;
+
+   }
+  }
+}
+
+.about {
+  &__title {
+    font-style: italic;
+    font-size: 34px;
+    line-height: 40px;
+    text-align: center;
+    color: var(--color-main-titles);
+    margin-bottom: 32px;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 17px;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__wraper {
+    position: absolute;
+    bottom: 24px;
+    right: 0;
+    background: rgba(38, 38, 38, 0.85);
+    padding-bottom: 4px;
+  }
+
+  &__cars {
+    display: block;
+  }
+  &__cars:first-child {
+    margin-bottom: 13px;
+  }
+
+  &__big-img {
+  }
+
+  @media screen and (min-width: 360px) {
+
+    &__wraper {
+      padding-bottom: 8px;
+      bottom: 15px;
+    }
+
+    &__title {
+      font-size: 52px;
+      line-height: 61px;
+    }
+
+    &__description {
+      font-size: 20px;
+      line-height: 23px;
+      margin-bottom: 32px;
+    }
+
+    &__cars {
+      width: 310px;
+      height: auto;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &__title {
+      font-size: 56px;
+      line-height: 66px;
+      text-align: left;
+    }
+
+    &__wraper {
+      bottom: 40px;
+    }
+
+    &__cars {
+      width: 410px;
+    }
+  }
+
+  @media screen and (max-width: 1279px) {
+    &__content {
+      margin: 0 auto;
+    }
+
+    &__big-img {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    &__img {
+      display: none;
+    }
+
+    &__content {
+      flex: 0 0 100%;
+      display: flex;
+    }
+
+    &__title,
+    &__description {
+      width: 50%;
+    }
+
+    &__title {
+      margin-bottom: 60px;
+    }
+
+    &__description {
+      max-width: 798px;
+    }
+
+    &__content &__wraper {
+      display: none;
+    }
+
+    &__wraper-big-img {
+      position: relative;
+      flex: 0 0 50%;
+      transform: translate(-100%, 0px);
+      padding: 0 0 34.3% 0;
+    }
+
+    &__big-img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 85%;
+      height: 85%;
+      object-fit: cover;
+    }
+
+    &__wraper {
+      bottom: 12%;
+    }
+  }
+}

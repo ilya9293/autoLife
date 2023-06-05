@@ -1,8 +1,10 @@
 .services-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin-top: -16px;
   margin-right: -16px;
+  padding: 34px 0 9px;
 
   &__item {
     margin-top: 16px;
@@ -36,18 +38,21 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 23px;
+    margin-top: 10px;
   }
 
   &__text {
     font-size: 14px;
     line-height: 16px;
     color: var(--color-menu-text);
+    margin-top: 5px;
   }
 
-  @media screen and (min-width: 360px) {
+  @media screen and (min-width: 498px) {
     & {
       margin-top: -20px;
       margin-right: -20px;
+      padding: 33px 0;
     }
 
     &__item {
@@ -64,6 +69,16 @@
     &__text {
       font-size: 16px;
       line-height: 19px;
+    }
+  }
+
+  @media screen and (min-width: 1648px) {
+    & {
+      padding: 60px 0 38px;
+    }
+
+    &__item {
+      flex-basis: 253px;
     }
   }
 }

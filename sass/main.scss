@@ -1,5 +1,6 @@
 @import "./utils/variables";
 @import "./utils/visually-hidden";
+@import "./utils/mixins";
 @import "./base/reset";
 @import "./base/section";
 @import "./base/container";
@@ -15,3 +16,7 @@
 @import "./layout/hero";
 @import "./components/btn-price";
 @import "./components/services-list";
+@import "./components/ticker";
+@import "./layout/about";
+@import "./layout/cost";
+@import "./components/calc-form";

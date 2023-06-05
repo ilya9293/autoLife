@@ -1,0 +1,15 @@
+.ticker {
+  font-size: 28px;
+  line-height: 33px;
+  color: var(--color-darkbackground);
+  background-color: var(--color-main-titles);
+  white-space: nowrap;
+  overflow-x: hidden;
+  padding: 10px 0 11px;
+
+  &__auto {
+  }
+
+  &__company {
+  }
+}
