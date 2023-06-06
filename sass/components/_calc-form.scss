@@ -149,9 +149,9 @@
     }
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1400px) {
     & {
-      padding: 60px;
+      padding: 60px 133px;
       background-image: linear-gradient(
           rgba(38, 38, 38, 0.87),
           rgba(38, 38, 38, 0.87)
@@ -164,7 +164,9 @@
     }
 
     &__form {
-     
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
     }
 
     &__title,
@@ -172,8 +174,15 @@
       text-align: left;
     }
 
+    &__container-label {
+      flex-basis: 55%;
+    }
+
     &__label {
       max-width: 592px;
+    }
+    &__label:last-child {
+      margin-bottom: 0;
     }
 
     &__input {
@@ -181,6 +190,8 @@
     }
 
     &__btn {
+      max-width: 390px;
+      white-space: nowrap;
     }
   }
 }

@@ -1,0 +1,22 @@
+.section.feedback {
+  background-image: linear-gradient(
+      rgba(15, 60, 101, 0.77),
+      rgba(15, 60, 101, 0.77)
+    ),
+    url(../../images/feedback/background-mob.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.feedback {
+  &__title {
+    font-style: italic;
+    @include adaptiv-font(52, 34, 768);
+    line-height: calc(40 / 34);
+    text-align: center;
+    color: var(--color-darkbackground);
+    margin-bottom: 18px;
+  }
+
+  
+}

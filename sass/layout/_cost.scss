@@ -1,4 +1,15 @@
-.section {
+.section.cost {
+  background-image: url(../../images/cost/background-mob.png);
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+
+  @media screen and (min-width: 687px) {
+    background-image: url(../../images/cost/background-tablet.png);
+  }
+
+  @media screen and (min-width: 1400px) {
+    background-image: url(../../images/cost/background-desktop.png);
+  }
 }
 .cost {
   &__title {
@@ -50,7 +61,7 @@
     }
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1400px) {
     &__title {
       font-size: 56px;
       line-height: calc(66 / 56);

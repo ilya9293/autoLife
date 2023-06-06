@@ -1,0 +1,83 @@
+.form-feedback {
+  display: flex;
+  flex-direction: column;
+  max-width: 462px;
+  margin: 0 auto;
+
+  &__wraper,
+  &__select {
+    margin-bottom: 16px;
+  }
+
+  &__wraper_phone {
+    position: relative;
+  }
+
+  &__input,
+  &__select {
+    width: 100%;
+    border: 1.41463px solid #c4c4c4;
+    border-radius: 52.3415px;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    color: inherit;
+    padding: 13px 20px;
+  }
+
+  &__input::placeholder {
+    color: #8b8b8b;
+  }
+
+  &__select {
+  }
+
+  &__btn {
+    height: 47px;
+    background: var(--color-btn-hover);
+    border-radius: 26px;
+    border: none;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: calc(23 / 20);
+    color: var(--color-darkbackground);
+  }
+}
+
+.iti--allow-dropdown {
+  width: 100%;
+}
+
+.iti--separate-dial-code .iti__selected-flag {
+  background-color: transparent;
+}
+
+.iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
+   background-color: transparent;
+}
+
+.iti--allow-dropdown .iti__flag-container {
+  left: 9px;
+}
+
+.iti__selected-dial-code {
+  font-size: 14px;
+  line-height: calc(16 / 14);
+}
+
+.iti-mobile .iti--container {
+  position: absolute;
+  height: 200px;
+  top: 43px;
+  width: 100%;
+  left: 0;
+}
+
+.iti-mobile .iti__country-list {
+  border-radius: 15px;
+  overflow: -moz-scrollbars-none; 
+  -ms-overflow-style: none; 
+}
+
+.iti-mobile .iti__country-list::-webkit-scrollbar { 
+   width: 0 !important 
+}
