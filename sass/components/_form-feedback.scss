@@ -4,11 +4,6 @@
   max-width: 462px;
   margin: 0 auto;
 
-  &__wraper,
-  &__select {
-    margin-bottom: 16px;
-  }
-
   &__wraper_phone {
     position: relative;
   }
@@ -41,6 +36,49 @@
     line-height: calc(23 / 20);
     color: var(--color-darkbackground);
   }
+
+  @media screen and (min-width: 768px) {
+    &__input,
+    &__select {
+      font-size: 16px;
+      line-height: calc(19 / 16);
+      padding: 15px 20px;
+    }
+
+    &__btn {
+      font-size: 23px;
+      line-height: calc(27 / 23);
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+    &__wraper {
+      margin-bottom: 16px;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    & {
+      flex-direction: row;
+      max-width: 1619px;
+    }
+
+    &__wraper {
+      margin-right: 20px;
+    }
+
+    &__wraper_name {
+      flex-basis: 33.7%;
+    }
+
+    &__wraper_phone {
+      flex-basis: 16.2%;
+    }
+
+    &__btn {
+      flex-basis: 25%;
+    }
+  }
 }
 
 .iti--allow-dropdown {
@@ -52,7 +90,7 @@
 }
 
 .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
-   background-color: transparent;
+  background-color: transparent;
 }
 
 .iti--allow-dropdown .iti__flag-container {
@@ -62,22 +100,165 @@
 .iti__selected-dial-code {
   font-size: 14px;
   line-height: calc(16 / 14);
+  @media screen and (min-width: 768px) {
+    & {
+      font-size: 16px;
+      line-height: calc(19 / 16);
+    }
+  }
 }
 
 .iti-mobile .iti--container {
   position: absolute;
   height: 200px;
-  top: 43px;
+  top: 43px !important;
   width: 100%;
-  left: 0;
+  left: 0 !important;
+
+  @media screen and (min-width: 768px) {
+    & {
+      top: 51px !important;
+    }
+  }
 }
 
 .iti-mobile .iti__country-list {
   border-radius: 15px;
-  overflow: -moz-scrollbars-none; 
-  -ms-overflow-style: none; 
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+  overflow-x: hidden;
 }
 
-.iti-mobile .iti__country-list::-webkit-scrollbar { 
-   width: 0 !important 
+.iti-mobile .iti__country-list::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+.select {
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  padding: 12px 20px;
+  outline: none;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  outline: none !important;
+
+  @media screen and (min-width: 768px) {
+    & {
+      padding: 15px 20px;
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+    & {
+      margin-bottom: 16px;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    & {
+      margin-right: 20px;
+      flex-basis: 25%;
+    }
+  }
+}
+
+option {
+  outline: none !important;
+}
+
+.new-select {
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  font-size: 17px;
+}
+
+.new-select__list {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  cursor: pointer;
+  width: 100%;
+  z-index: 100;
+  background: #fff;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 20px;
+  border: none;
+  padding-left: 10px;
+
+  @media screen and (min-width: 768px) {
+    & {
+      top: 51px;
+    }
+  }
+}
+
+.new-select__list.on {
+  display: block;
+}
+
+.new-select__item span {
+  display: block;
+  padding: 10px 15px;
+}
+
+.new-select__item span:hover {
+  color: red;
+}
+
+.new-select:after {
+  content: "";
+  display: block;
+  width: 19px;
+  height: 19px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background: url("../../images/feedback/arrow.svg") no-repeat right
+    center/cover;
+  -webkit-transition: all 0.27s ease-in-out;
+  -o-transition: all 0.27s ease-in-out;
+  transition: all 0.27s ease-in-out;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.new-select.on:after {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }

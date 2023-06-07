@@ -1,12 +1,19 @@
 .messengers {
   display: flex;
-  margin-bottom: 20px;
+
+  &.mob-menu {
+    margin-bottom: 20px;
+  }
 
   &__item:not(:last-child) {
     margin-right: 20px;
   }
 
+  &__item,
   &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &__icon {
@@ -15,5 +22,20 @@
   .desktop & {
     margin-bottom: 0;
     margin-right: 75px;
+  }
+
+  .contacts-wraper & {
+    justify-content: center;
+
+    @media screen and (min-width: 1280px) {
+      & {
+         justify-content: flex-start;
+      }
+    }
+  }
+
+  .contacts-wraper &__icon {
+    width: 37px;
+    height: 37px;
   }
 }

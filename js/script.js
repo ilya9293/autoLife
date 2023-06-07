@@ -164,3 +164,68 @@ if (inputs && dropDownContainer) {
     });
   });
 }
+
+document.querySelectorAll(".select").forEach(select => {
+   const selectOption = select.querySelectorAll("option");
+   const selectOptionLength = selectOption.length;
+   const selectedOption = Array.from(selectOption).find(option => option.selected);
+   const duration = 450;
+ 
+   const wrapper = document.createElement("div");
+   wrapper.className = "select";
+   select.parentNode.insertBefore(wrapper, select);
+ 
+   select.style.display = "none";
+   wrapper.appendChild(select);
+ 
+   const newSelect = document.createElement("div");
+   newSelect.className = "new-select";
+   newSelect.textContent = select.querySelector("option:disabled").textContent;
+   wrapper.appendChild(newSelect);
+ 
+   const selectHead = newSelect;
+ 
+   const selectList = document.createElement("div");
+   selectList.className = "new-select__list";
+   wrapper.appendChild(selectList);
+ 
+   for (let i = 1; i < selectOptionLength; i++) {
+     const selectItem = document.createElement("div");
+     selectItem.className = "new-select__item";
+     const span = document.createElement("span");
+     span.textContent = selectOption[i].textContent;
+     selectItem.appendChild(span);
+     selectItem.dataset.value = selectOption[i].value;
+     selectList.appendChild(selectItem);
+   }
+ 
+   const selectItems = selectList.querySelectorAll(".new-select__item");
+   selectList.style.display = "none";
+   selectHead.addEventListener("click", () => {
+     if (!selectHead.classList.contains("on")) {
+       selectHead.classList.add("on");
+       selectList.style.display = "block";
+       selectItems.forEach(item => {
+         item.addEventListener("click", function () {
+           const chooseItem = this.dataset.value;
+           select.value = chooseItem;
+           selectedOption.removeAttribute("selected");
+           selectOption.forEach(option => {
+             if (option.value === chooseItem) {
+               option.setAttribute("selected", "selected");
+             }
+           });
+           selectHead.textContent = this.querySelector("span").textContent;
+           selectList.style.display = "none";
+           selectHead.classList.remove("on");
+         });
+       });
+     } else {
+       selectHead.classList.remove("on");
+       selectList.style.display = "none";
+     }
+   });
+ });
+ 
+ 
+ 
