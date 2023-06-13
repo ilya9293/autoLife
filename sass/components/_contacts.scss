@@ -60,6 +60,15 @@
       font-size: 16px;
       line-height: calc(19 / 16);
     }
+
+    &__link:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    &__item_wraper {
+      flex-direction: row;
+      gap: 16px;
+    }
   }
 
   @media screen and (min-width: 768px) {

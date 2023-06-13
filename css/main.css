@@ -1437,6 +1437,13 @@ option {
     font-size: 16px;
     line-height: 1.1875;
   }
+  .contacts__link:not(:last-child) {
+    margin-bottom: 0;
+  }
+  .contacts__item_wraper {
+    flex-direction: row;
+    gap: 16px;
+  }
 }
 @media screen and (min-width: 1280px) {
   .contacts {
@@ -1458,10 +1465,18 @@ option {
 .section.footer {
   background-color: var(--color-menu-text);
 }
+@media screen and (min-width: 1376px) {
+  .section.footer {
+    padding-bottom: 42px;
+  }
+}
 
+.footer__logo {
+  display: block;
+  margin-bottom: 32px;
+}
 .footer__img {
   margin: 0 auto;
-  margin-bottom: 32px;
 }
 .footer__wraper {
   display: flex;
@@ -1485,7 +1500,7 @@ option {
   color: var(--color-darkbackground);
   margin-bottom: 31px;
 }
-.footer__title_policy {
+.footer .footer__title_policy {
   margin-bottom: 10px;
 }
 .footer__title_contacts {
@@ -1502,12 +1517,63 @@ option {
   .footer .container {
     max-width: 492px;
   }
+  .footer__logo {
+    margin-bottom: 54px;
+  }
   .footer__title {
     font-size: 28px;
     line-height: 1.1785714286;
   }
+  .footer__wraper_contacts {
+    padding-top: 32px;
+  }
   .footer .contacts {
     padding-left: 50px;
+  }
+}
+@media screen and (min-width: 1376px) {
+  .footer .container {
+    max-width: 1376px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .footer__logo {
+    margin-bottom: 0;
+    margin-right: 157px;
+  }
+  .footer__wraper {
+    margin-right: 170px;
+    gap: 132px;
+  }
+  .footer__title {
+    margin-bottom: 44px;
+  }
+  .footer__wraper_contacts {
+    padding-top: 0;
+    padding-bottom: 26px;
+    width: 253px;
+    margin-bottom: 20px;
+  }
+  .footer__title_contacts {
+    text-align: left;
+    margin-bottom: 54px;
+  }
+  .footer .contacts {
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+  .footer .contacts__item_wraper {
+    flex-direction: column;
+    gap: 9px;
+  }
+  .footer .contacts__link_adress {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer .messengers {
+    margin-left: auto;
+    margin-right: 105px;
   }
 }
 
