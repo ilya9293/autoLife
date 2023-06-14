@@ -1,11 +1,50 @@
 .languages {
   margin-bottom: 20px;
+  position: relative;
 
   &__btn,
   .languages-list__link {
     font-weight: 500;
     font-size: 16px;
-    line-height: 19px;
+    line-height: calc(19 / 16);
+  }
+
+  &__btn {
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 250ms linear;
+    cursor: pointer;
+  }
+
+  &__btn::after {
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid var(--color-menu-text);
+    border-right: 2px solid var(--color-menu-text);
+    transform: rotate(135deg);
+    transition: transform 250ms linear, border 250ms linear;
+  }
+
+  &__btn:focus::after {
+    transform: rotate(-45deg);
+  }
+
+  &__btn:focus::after,
+  &__btn:hover::after {
+    border-color: var(--color-btn-hover);
+  }
+
+  &__btn:focus + .languages-list {
+    height: 78px;
+  }
+
+  &__btn:focus,
+  &__btn:hover {
+    color: var(--color-btn-hover);
   }
 
   .desktop & {
@@ -14,8 +53,15 @@
   }
 }
 .languages-list {
-  display: none;
+  position: absolute;
+  height: 0;
+  left: -5px;
+  overflow: hidden;
+  z-index: 2;
+  transition: height 250ms linear;
   &__item {
+    background-color: #f2f2f2;
+    padding: 10px 5px;
   }
 
   &__link {

@@ -90,15 +90,16 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      gap: 30px;
     }
 
     &__logo {
       margin-bottom: 0;
-      margin-right: 157px;
+      // margin-right: 157px;
     }
 
     &__wraper {
-      margin-right: 170px;
+      // margin-right: 170px;
       gap: 132px;
     }
 
@@ -136,6 +137,7 @@
     & .messengers {
       margin-left: auto;
       margin-right: 105px;
+      margin-top: -30px;
     }
   }
 }

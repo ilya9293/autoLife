@@ -7,9 +7,21 @@
   overflow-x: hidden;
   padding: 10px 0 11px;
 
-  &__auto {
+  & .marquee-container {
+    animation: marquee 5s infinite linear;
   }
 
-  &__company {
+  & span {
+    margin-right: 20px;
+  }
+
+  & span svg {
+    margin-left: 5px;
+  }
+}
+
+@keyframes marquee {
+  100% {
+   transform: translateX(-100vw);
   }
 }
