@@ -1,0 +1,14 @@
+.title {
+  font-style: italic;
+  font-weight: 700;
+  @include adaptiv-font(52, 34, 768);
+  line-height: calc(40 / 34);
+  color: var(--color-main-titles);
+
+  @media screen and (min-width: 768px) {
+    & {
+      @include adaptiv-font(56, 52, 1920, 768);
+      line-height: calc(61 / 52);
+    }
+  }
+}

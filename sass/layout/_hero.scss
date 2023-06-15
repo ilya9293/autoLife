@@ -18,22 +18,23 @@
     display: flex;
     align-items: center;
 
-    @media screen and (max-width: 1199px) {
+    @media screen and (max-width: 1280px) {
       & {
         justify-content: center;
       }
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 360px) {
+    & {
+      padding-bottom: 60px;
+    }
+  }
+  @media screen and (min-width: 1280px) {
     & {
       display: flex;
       padding-top: 0;
-    }
-  }
-  @media screen and (min-width: 360px) {
-    & {
-      padding-bottom: 76px;
+      padding-bottom: 0;
     }
   }
 }
@@ -54,22 +55,23 @@
     margin-right: 12px;
   }
 
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 1280px) {
     & {
       padding: 0 0 55px 0;
       justify-content: center;
     }
   }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 768px) and (max-width: 1280px) {
     &__flags {
       text-align: center;
       margin-right: 18px;
     }
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     & {
       width: 50%;
       position: relative;
+      top: -60px;
     }
 
     &__flags {
@@ -87,7 +89,7 @@
     margin-right: 16px;
   }
 
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 1280px) {
     & {
       display: none;
     }
@@ -99,26 +101,14 @@
 }
 
 .title-hero {
-  font-style: italic;
-  font-weight: 700;
-  @include adaptiv-font(52, 34, 768);
-  line-height: calc(40 / 34);
-  color: var(--color-main-titles);
   margin-bottom: 10px;
 
   @media screen and (min-width: 360px) {
     & {
-      // font-size: 52px;
-      // line-height: calc(61/52);
       margin-bottom: 17px;
     }
   }
-  @media screen and (min-width: 768px) {
-    & {
-      @include adaptiv-font(56, 52, 1920, 768);
-      line-height: calc(61 / 52);
-    }
-  }
+ 
 }
 .text-hero {
   font-style: normal;
@@ -141,13 +131,13 @@
 .hero-img {
   position: relative;
 
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 1280px) {
     &__nature {
       width: 97%;
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     & {
       flex: 0 0 50%;
       transform: translate(-100%, 0px);
@@ -189,7 +179,7 @@
     top: 0;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     &__car {
       width: 95%;
       top: 15px;

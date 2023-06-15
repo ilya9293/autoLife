@@ -1,27 +1,20 @@
-.ticker {
+.services .marquee {
   font-size: 28px;
   line-height: 33px;
   color: var(--color-darkbackground);
   background-color: var(--color-main-titles);
   white-space: nowrap;
   overflow-x: hidden;
+  position: relative;
+  height: 54px;
   padding: 10px 0 11px;
 
-  & .marquee-container {
-    animation: marquee 5s infinite linear;
-  }
-
   & span {
+   position: relative;
     margin-right: 20px;
   }
 
-  & span svg {
-    margin-left: 5px;
-  }
-}
-
-@keyframes marquee {
-  100% {
-   transform: translateX(-100vw);
+  & svg {
+    margin-left: 10px;
   }
 }

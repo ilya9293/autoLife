@@ -18,7 +18,7 @@
       line-height: calc(27/23);
     }
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     .wrap-btn-price & {
       display: none;
     }
@@ -29,7 +29,7 @@
     }
   }
 
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 1280px) {
     .hero & {
       display: none;
     }

@@ -226,52 +226,129 @@ document.querySelectorAll(".select").forEach((select) => {
   });
 });
 
-// Получение ссылок на контейнеры с помощью querySelectorAll
-const containers = document.querySelectorAll(".ticker");
+// // Получение ссылок на контейнеры с помощью querySelectorAll
+// const containers = document.querySelectorAll(".ticker");
 
-// Массив из двух слов
-const words = ["Компанія доставки", "Авто-лайф_PL"];
+// // Массив из двух слов
+// const words = ["Компанія доставки", "Авто-лайф_PL"];
 
-// Создание временного span для вычисления ширины
-const tempSpan = document.createElement("span");
-tempSpan.style.visibility = "hidden";
-tempSpan.style.whiteSpace = "nowrap";
+// // Создание временного span для вычисления ширины
+// const tempSpan = document.createElement("span");
+// tempSpan.style.visibility = "hidden";
+// tempSpan.style.whiteSpace = "nowrap";
 
-// Установка содержимого временного span
-const wordIndex = 0; // Берем первое слово из массива
-tempSpan.textContent = `${words[wordIndex]}`;
+// // Установка содержимого временного span
+// const wordIndex = 0; // Берем первое слово из массива
+// tempSpan.textContent = `${words[wordIndex]}`;
 
-// Вычисление ширины span с вложенным контентом
-document.body.appendChild(tempSpan); // Добавляем временный span в DOM
-const spanWidth = tempSpan.offsetWidth; // Получаем вычисленную ширину span
-document.body.removeChild(tempSpan); // Удаляем временный span из DOM
+// // Вычисление ширины span с вложенным контентом
+// document.body.appendChild(tempSpan); // Добавляем временный span в DOM
+// const spanWidth = tempSpan.offsetWidth; // Получаем вычисленную ширину span
+// document.body.removeChild(tempSpan); // Удаляем временный span из DOM
 
-// Определение максимальной ширины контейнеров
-let maxWidth = 0;
-containers.forEach((container) => {
-  maxWidth = Math.max(maxWidth, container.offsetWidth);
-});
+// // Определение максимальной ширины контейнеров
+// let maxWidth = 0;
+// containers.forEach((container) => {
+//   maxWidth = Math.max(maxWidth, container.offsetWidth);
+// });
 
-// Создание контейнера для бегущей строки
-const marqueeContainer = document.createElement("div");
-marqueeContainer.className = "marquee-container";
+// // Создание контейнера для бегущей строки
+// const marqueeContainer = document.createElement("div");
+// marqueeContainer.className = "marquee-container";
 
-// Вычисление необходимого количества span
-const totalSpanCount = Math.ceil(maxWidth / spanWidth);
+// // Вычисление необходимого количества span
+// const totalSpanCount = Math.ceil(maxWidth / spanWidth);
 
-// Создание спанов с вложенными элементами <svg>
-for (let i = 0; i < totalSpanCount; i++) {
-  const span = document.createElement("span");
-  const wordIndex = i % words.length;
-  span.innerHTML = `${words[wordIndex]} <svg width="18" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M12.7078 11.2809L17.6982 7.32406L11.383 6.50569L9.16122 0.538539L6.4296 6.29004L0.0864488 6.56786L4.69502 10.9352L2.98832 17.0694L8.5774 14.019L13.8834 17.5402L12.7078 11.2809Z" fill="#F2D53C"/>
-  </svg>`;
-  marqueeContainer.appendChild(span);
-}
+// // Создание спанов с вложенными элементами <svg>
+// for (let i = 0; i < totalSpanCount; i++) {
+//   const span = document.createElement("span");
+//   const wordIndex = i % words.length;
+//   span.innerHTML = `${words[wordIndex]} <svg width="18" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+//     <path d="M12.7078 11.2809L17.6982 7.32406L11.383 6.50569L9.16122 0.538539L6.4296 6.29004L0.0864488 6.56786L4.69502 10.9352L2.98832 17.0694L8.5774 14.019L13.8834 17.5402L12.7078 11.2809Z" fill="#F2D53C"/>
+//   </svg>`;
+//   marqueeContainer.appendChild(span);
+// }
 
-// Добавление бегущей строки в каждый контейнер
-containers.forEach((container) => {
-  container.appendChild(marqueeContainer.cloneNode(true));
-});
-
-
+// // Добавление бегущей строки в каждый контейнер
+// containers.forEach((container) => {
+//   container.appendChild(marqueeContainer.cloneNode(true));
+// });
+function start() {
+   var marqueeElements = document.getElementsByClassName('marquee');
+   for (var i = 0; i < marqueeElements.length; i++) {
+     var direction = i % 2 === 0 ? 'left' : 'right';
+     new mq(marqueeElements[i], direction);
+     mqRotate(mqr);
+   }
+ }
+ 
+ window.onload = start;
+ 
+ function objWidth(obj) {
+   if (obj.offsetWidth) return obj.offsetWidth;
+   if (obj.clip) return obj.clip.width;
+   return 0;
+ }
+ 
+ var mqr = [];
+ 
+ function mq(element, direction) {
+   this.mqo = element;
+   var spanElement = this.mqo.getElementsByTagName('span')[0];
+   var wid = objWidth(spanElement) + 5;
+   var fulwid = objWidth(this.mqo);
+   var txt = spanElement.innerHTML;
+   this.mqo.innerHTML = '';
+   var heit = this.mqo.style.height;
+   this.mqo.onmouseout = function () {
+     mqRotate(mqr);
+   };
+   this.mqo.onmouseover = function () {
+     clearTimeout(mqr[0].TO);
+   };
+   this.mqo.ary = [];
+   var maxw = Math.ceil(fulwid / wid) + 1;
+   var totalElements = direction === 'left' ? maxw * 2 : maxw;
+   for (var i = 0; i < totalElements; i++) {
+     var index = i % maxw;
+     this.mqo.ary[i] = document.createElement('div');
+     this.mqo.ary[i].innerHTML = txt;
+     this.mqo.ary[i].style.position = 'absolute';
+     this.mqo.ary[i].style.left = (wid * index) + 'px';
+     this.mqo.ary[i].style.width = wid + 'px';
+     this.mqo.ary[i].style.height = heit;
+     this.mqo.appendChild(this.mqo.ary[i]);
+   }
+   mqr.push(this.mqo);
+ 
+   // Устанавливаем направление анимации в зависимости от четности индекса
+   if (direction === 'left') {
+     this.mqo.direction = -1;
+   } else {
+     this.mqo.direction = 1;
+   }
+ }
+ 
+ function mqRotate(mqr) {
+   if (!mqr) return;
+   for (var j = mqr.length - 1; j > -1; j--) {
+     var maxa = mqr[j].ary.length;
+     for (var i = 0; i < maxa; i++) {
+       var x = mqr[j].ary[i].style;
+       x.left = parseInt(x.left, 10) + mqr[j].direction + 'px';
+     }
+     var firstElement = mqr[j].ary[0];
+     var lastElement = mqr[j].ary[maxa - 1];
+     if (mqr[j].direction === -1 && parseInt(firstElement.style.left, 10) + parseInt(firstElement.style.width, 10) < 0) {
+       var z = mqr[j].ary.shift();
+       z.style.left = (parseInt(lastElement.style.left) + parseInt(lastElement.style.width)) + 'px';
+       mqr[j].ary.push(z);
+     } else if (mqr[j].direction === 1 && parseInt(lastElement.style.left, 10) > parseInt(window.innerWidth)) {
+       var z = mqr[j].ary.pop();
+       z.style.left = (parseInt(firstElement.style.left) - parseInt(firstElement.style.width)) + 'px';
+       mqr[j].ary.unshift(z);
+     }
+   }
+   mqr[0].TO = setTimeout('mqRotate(mqr)', 45);
+ }
+ 
