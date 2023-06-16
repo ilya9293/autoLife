@@ -1,7 +1,7 @@
 .section.footer {
   background-color: var(--color-menu-text);
 
-  @media screen and (min-width: 1376px) {
+  @media screen and (min-width: 1280px) {
     & {
       padding-bottom: 42px;
     }
@@ -36,7 +36,7 @@
 
   &__title {
     font-weight: 500;
-    @include adaptiv-font(28, 20, 492);
+    @include adaptiv-font(28, 20, 768);
     line-height: calc(23 / 20);
     color: var(--color-darkbackground);
     margin-bottom: 31px;
@@ -70,11 +70,6 @@
       margin-bottom: 54px;
     }
 
-    &__title {
-      font-size: 28px;
-      line-height: calc(33 / 28);
-    }
-
     &__wraper_contacts {
       padding-top: 32px;
     }
@@ -84,7 +79,14 @@
     }
   }
 
-  @media screen and (min-width: 1376px) {
+  @media screen and (min-width: 768px) {
+    &__title {
+      font-size: 28px;
+      line-height: calc(33 / 28);
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
     & .container {
       max-width: 1376px;
       display: flex;
@@ -95,11 +97,9 @@
 
     &__logo {
       margin-bottom: 0;
-      // margin-right: 157px;
     }
 
     &__wraper {
-      // margin-right: 170px;
       gap: 132px;
     }
 
@@ -122,16 +122,6 @@
     & .contacts {
       padding-left: 0;
       margin-bottom: 0;
-    }
-
-    & .contacts__item_wraper {
-      flex-direction: column;
-      gap: 9px;
-    }
-
-    & .contacts__link_adress {
-      display: flex;
-      flex-direction: column;
     }
 
     & .messengers {

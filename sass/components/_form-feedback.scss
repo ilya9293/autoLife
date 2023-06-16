@@ -108,6 +108,21 @@
   }
 }
 
+// .iti__selected-flag .iti__arrow {
+//   width: 7px;
+//   height: 7px;
+//   border-top: 2px solid var(--color-menu-text);
+//   border-right: 2px solid var(--color-menu-text);
+//   border-left: none;
+//   transform: rotate(135deg);
+//   transition: transform 250ms linear, border 250ms linear;
+// }
+
+// .iti__selected-flag .iti__arrow.iti__arrow--up {
+//   border-bottom: none;
+//   transform: rotate(-45deg);
+// }
+
 .iti-mobile .iti--container {
   position: absolute;
   height: 200px;

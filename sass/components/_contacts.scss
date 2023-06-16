@@ -41,9 +41,14 @@
     flex-direction: column;
   }
 
+  &__item_phone::before {
+    margin-right: 10px;
+  }
+
   &__link {
     font-size: 14px;
     line-height: calc(16 / 14);
+    white-space: nowrap;
     color: var(--color-darkbackground);
   }
 
@@ -55,7 +60,7 @@
     text-decoration: underline;
   }
 
-  @media screen and (min-width: 462px) {
+  @media screen and (min-width: 498px) {
     &__link {
       font-size: 16px;
       line-height: calc(19 / 16);
@@ -90,6 +95,16 @@
     &__item:nth-child(3)::before {
       width: 26px;
       height: 29px;
+    }
+
+    &__item_wraper {
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    &__link_adress {
+      display: flex;
+      flex-direction: column;
     }
   }
 }

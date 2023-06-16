@@ -681,10 +681,16 @@ button {
   background-position: -65px 0px;
   background-repeat: no-repeat;
   padding-top: 0;
+  overflow: hidden;
 }
 @media screen and (min-width: 360px) {
   .section.about {
     background-image: url("../../images/about/background-tablet.png");
+  }
+}
+@media screen and (max-width: 768px) {
+  .section.about .container {
+    max-width: none;
   }
 }
 @media screen and (min-width: 768px) {
@@ -714,30 +720,69 @@ button {
 .about__img {
   width: 100%;
 }
+.about__content {
+  position: relative;
+}
 .about__wraper {
   position: absolute;
-  bottom: 24px;
+  bottom: -2%;
   right: 0;
+  z-index: 2;
+  width: 44%;
+  height: calc(
+    70px + 79 *
+      ((100vw - 360px) / 408)
+  );
+}
+.about__wraper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
   background: rgba(38, 38, 38, 0.85);
-  padding-bottom: 4px;
+  -webkit-clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 0% 100%);
+  background-image: url("../../images/about/road.svg");
+  background-position-y: 50%;
+  background-repeat: repeat-x;
+  background-size: 18vw 0.5vw;
+  animation: aboutRoad 10s linear infinite;
 }
-.about__cars {
-  display: block;
+.about__in-wraper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
-.about__cars:first-child {
-  margin-bottom: 13px;
+.about__in-wraper::before, .about__in-wraper::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-repeat: repeat-x;
+  background-size: 28% 38%;
+}
+.about__in-wraper::before {
+  content: "";
+  background-image: url("../../images/about/higher-car.svg");
+  background-position: 0 3%;
+  animation: aboutHigherCars 10s linear infinite;
+}
+.about__in-wraper::after {
+  content: "";
+  background-image: url("../../images/about/lower-car.svg");
+  background-position: 0 90%;
+  animation: aboutLowerCars 10s linear infinite;
 }
 @media screen and (min-width: 360px) {
-  .about__wraper {
-    padding-bottom: 8px;
-    bottom: 15px;
-  }
   .about__description {
     margin-bottom: 32px;
-  }
-  .about__cars {
-    width: 310px;
-    height: auto;
   }
 }
 @media screen and (min-width: 498px) {
@@ -746,12 +791,6 @@ button {
   }
 }
 @media screen and (min-width: 768px) {
-  .about__wraper {
-    bottom: 40px;
-  }
-  .about__cars {
-    width: 410px;
-  }
   .about__description {
     font-size: 20px;
     line-height: 1.15;
@@ -761,7 +800,7 @@ button {
   .about__content {
     margin: 0 auto;
   }
-  .about__big-img {
+  .about__wraper-big-img {
     display: none;
   }
 }
@@ -804,26 +843,50 @@ button {
        object-fit: cover;
   }
   .about__wraper {
-    bottom: 12%;
-    width: 522px;
-    height: 177px;
+    bottom: 15%;
+    width: 53%;
+    height: 29%;
     right: -8%;
     overflow: hidden;
   }
-  .about__wraper .marquee {
-    overflow-x: hidden;
-    position: relative;
-    height: 67px;
-  }
-  .about__wraper svg {
-    display: inline-block;
-    margin-right: 14px;
-  }
-  .about__road {
-    height: 5px;
+  .about__wraper::before {
+    background-size: 167px 5px;
+    animation: aboutRoad1280 10s linear infinite;
   }
 }
 
+@keyframes aboutRoad {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -18vw;
+  }
+}
+@keyframes aboutRoad1280 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -168px;
+  }
+}
+@keyframes aboutHigherCars {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -78%;
+  }
+}
+@keyframes aboutLowerCars {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 78%;
+  }
+}
 .section.cost {
   background-image: url(../../images/cost/background-mob.png);
   background-position: 0px 0px;
@@ -841,14 +904,7 @@ button {
 }
 
 .cost__title {
-  font-style: italic;
-  font-size: calc(
-    34px + 22 *
-      ((100vw - 360px) / 1560)
-  );
-  line-height: 1.18;
   text-align: center;
-  color: var(--color-main-titles);
   margin-bottom: 32px;
 }
 .cost__wraper {
@@ -858,11 +914,19 @@ button {
   margin-top: 16px;
 }
 .cost__icon {
+  width: auto;
+  height: calc(
+    26px + 27 *
+      ((100vw - 360px) / 408)
+  );
   margin-right: 7px;
 }
 .cost__price {
   font-weight: 700;
-  font-size: 21.4029px;
+  font-size: calc(
+    21px + 25 *
+      ((100vw - 360px) / 408)
+  );
   line-height: 1.17;
   letter-spacing: 0.229317px;
   color: var(--color-darkbackground);
@@ -871,23 +935,22 @@ button {
   color: #219653;
 }
 @media screen and (min-width: 687px) {
-  .cost__title {
-    font-size: 52px;
-    line-height: 1.17;
-  }
   .cost__icon {
-    width: 53px;
-    height: 53px;
     margin-right: 16px;
   }
+}
+@media screen and (min-width: 768px) {
   .cost__price {
-    font-size: 46.2766px;
+    font-size: 46px;
+    line-height: 1.1739130435;
+  }
+  .cost__icon {
+    height: 53px;
+    margin-right: 16px;
   }
 }
 @media screen and (min-width: 1400px) {
   .cost__title {
-    font-size: 56px;
-    line-height: 1.1785714286;
     margin-bottom: 60px;
     text-align: left;
   }
@@ -909,14 +972,20 @@ button {
 }
 .calc__title {
   font-style: italic;
-  font-size: 25px;
+  font-size: calc(
+    25px + 15 *
+      ((100vw - 360px) / 408)
+  );
   line-height: 1.16;
   color: var(--color-darkbackground);
   text-align: center;
   margin-bottom: 10px;
 }
 .calc__note {
-  font-size: 16px;
+  font-size: calc(
+    16px + 4 *
+      ((100vw - 360px) / 408)
+  );
   line-height: 1.19;
   text-align: center;
   color: #eb5757;
@@ -939,7 +1008,7 @@ button {
   font-weight: 500;
   font-size: calc(
     16px + 12 *
-      ((100vw - 360px) / 1560)
+      ((100vw - 360px) / 408)
   );
   line-height: 1.19;
   letter-spacing: 0.355835px;
@@ -962,7 +1031,10 @@ button {
   padding: 12px;
   border: none;
   font-weight: 500;
-  font-size: 20px;
+  font-size: calc(
+    20px + 8 *
+      ((100vw - 360px) / 408)
+  );
   line-height: 1.15;
   color: var(--color-darkbackground);
 }
@@ -971,14 +1043,7 @@ button {
     padding: 32px;
     background-image: linear-gradient(rgba(38, 38, 38, 0.87), rgba(38, 38, 38, 0.87)), url(../../images/cost/cost-tablet.jpg);
   }
-  .calc__title {
-    font-size: 40px;
-    line-height: 1.17;
-    letter-spacing: 0.251538px;
-  }
   .calc__note {
-    font-size: 20px;
-    line-height: 1.15;
     margin-bottom: 41px;
   }
   .calc__wraper-label {
@@ -1004,7 +1069,7 @@ button {
   }
   .calc__input {
     padding: 15px 20px;
-    max-width: 403px;
+    max-width: 63%;
   }
   .calc__btn {
     font-size: 28px;
@@ -1013,6 +1078,15 @@ button {
   }
 }
 @media screen and (min-width: 768px) {
+  .calc__title {
+    font-size: 40px;
+    line-height: 1.17;
+    letter-spacing: 0.251538px;
+  }
+  .calc__note {
+    font-size: 20px;
+    line-height: 1.15;
+  }
   .calc__name {
     font-size: 28px;
     line-height: 1.1785714286;
@@ -1054,15 +1128,19 @@ button {
 }
 
 .questions__title {
-  font-style: italic;
+  text-align: center;
+  margin-bottom: 32px;
+}
+.questions__inform {
+  font-weight: 500;
   font-size: calc(
-    34px + 22 *
+    20px + 8 *
       ((100vw - 360px) / 408)
   );
-  line-height: 1.1764705882;
-  text-align: center;
+  line-height: 1.15;
   color: var(--color-main-titles);
-  margin-bottom: 32px;
+  margin: 0 auto 16px;
+  max-width: 1346px;
 }
 .questions__btn {
   max-width: 1345px;
@@ -1082,13 +1160,14 @@ button {
   display: block;
 }
 @media screen and (min-width: 768px) {
-  .questions__title {
-    font-size: 56px;
-    line-height: 1.1785714286;
-  }
   .questions__btn {
     font-size: 28px;
     line-height: 1.1785714286;
+  }
+  .questions__inform {
+    font-size: 28px;
+    line-height: 1.1785714286;
+    margin-bottom: 20px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -1190,27 +1269,17 @@ button {
 }
 
 .feedback__title {
-  font-style: italic;
-  font-size: calc(
-    34px + 18 *
-      ((100vw - 360px) / 408)
-  );
-  line-height: 1.1764705882;
   text-align: center;
   color: var(--color-darkbackground);
   margin-bottom: 18px;
 }
 @media screen and (min-width: 768px) {
   .feedback__title {
-    font-size: 52px;
-    line-height: 1.1730769231;
     margin-bottom: 29px;
   }
 }
 @media screen and (min-width: 1280px) {
   .feedback__title {
-    font-size: 56px;
-    line-height: 1.1785714286;
     margin-bottom: 41px;
   }
 }
@@ -1455,7 +1524,7 @@ option {
 .connect .contacts {
   margin-bottom: 20px;
 }
-@media screen and (min-width: 462px) {
+@media screen and (min-width: 498px) {
   .connect .container {
     bottom: 32px;
   }
@@ -1499,7 +1568,7 @@ option {
 .contacts-wraper__title_messengers {
   margin-bottom: 16px;
 }
-@media screen and (min-width: 462px) {
+@media screen and (min-width: 498px) {
   .contacts-wraper {
     padding: 32px 61px;
   }
@@ -1553,9 +1622,13 @@ option {
   display: flex;
   flex-direction: column;
 }
+.contacts__item_phone::before {
+  margin-right: 10px;
+}
 .contacts__link {
   font-size: 14px;
   line-height: 1.1428571429;
+  white-space: nowrap;
   color: var(--color-darkbackground);
 }
 .contacts__link:not(:last-child) {
@@ -1564,7 +1637,7 @@ option {
 .contacts__link_email {
   text-decoration: underline;
 }
-@media screen and (min-width: 462px) {
+@media screen and (min-width: 498px) {
   .contacts__link {
     font-size: 16px;
     line-height: 1.1875;
@@ -1592,12 +1665,20 @@ option {
     width: 26px;
     height: 29px;
   }
+  .contacts__item_wraper {
+    flex-direction: column;
+    gap: 9px;
+  }
+  .contacts__link_adress {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .section.footer {
   background-color: var(--color-menu-text);
 }
-@media screen and (min-width: 1376px) {
+@media screen and (min-width: 1280px) {
   .section.footer {
     padding-bottom: 42px;
   }
@@ -1627,7 +1708,7 @@ option {
   font-weight: 500;
   font-size: calc(
     20px + 8 *
-      ((100vw - 360px) / 132)
+      ((100vw - 360px) / 408)
   );
   line-height: 1.15;
   color: var(--color-darkbackground);
@@ -1653,10 +1734,6 @@ option {
   .footer__logo {
     margin-bottom: 54px;
   }
-  .footer__title {
-    font-size: 28px;
-    line-height: 1.1785714286;
-  }
   .footer__wraper_contacts {
     padding-top: 32px;
   }
@@ -1664,7 +1741,13 @@ option {
     padding-left: 50px;
   }
 }
-@media screen and (min-width: 1376px) {
+@media screen and (min-width: 768px) {
+  .footer__title {
+    font-size: 28px;
+    line-height: 1.1785714286;
+  }
+}
+@media screen and (min-width: 1280px) {
   .footer .container {
     max-width: 1376px;
     display: flex;
@@ -1694,14 +1777,6 @@ option {
   .footer .contacts {
     padding-left: 0;
     margin-bottom: 0;
-  }
-  .footer .contacts__item_wraper {
-    flex-direction: column;
-    gap: 9px;
-  }
-  .footer .contacts__link_adress {
-    display: flex;
-    flex-direction: column;
   }
   .footer .messengers {
     margin-left: auto;
@@ -1754,4 +1829,58 @@ option {
     font-size: 16px;
     line-height: 1.1875;
   }
+}
+
+.steps .title {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.steps__container-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.steps__btn {
+  height: calc(
+    36px + 13 *
+      ((100vw - 360px) / 408)
+  );
+  padding: 0 38px;
+  border: none;
+  font-size: calc(
+    20px + 8 *
+      ((100vw - 360px) / 408)
+  );
+  font-weight: 500;
+  line-height: 1.15;
+  color: rgba(38, 38, 38, 0.5);
+  background-color: #ececec;
+  border-radius: 19px;
+  transition: background-color 250ms linear, color 250ms linear;
+}
+.steps__btn.active {
+  background-color: var(--color-btn-hover);
+  color: var(--color-darkbackground);
+}
+@media screen and (min-width: 768px) {
+  .steps__btn {
+    font-size: 28px;
+    height: 49px;
+    padding: 0 53px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .steps__btn {
+    padding: 0 70px;
+  }
+}
+
+.steps-list__item:nth-child(2) {
+  color: #219653;
+}
+.steps-list__icon {
+  display: inline-block;
+  font-size: 80px;
 }

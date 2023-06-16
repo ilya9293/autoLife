@@ -1,0 +1,26 @@
+.steps-list {
+
+   &__item {
+   }
+   &__item:nth-child(2) {
+      color: #219653;
+   }
+
+   &__wraper {
+   }
+   
+
+   &__icon {
+      display: inline-block;
+      font-size: 80px;
+   }
+
+   &__number {
+   }
+
+   &__title {
+   }
+
+   &__text {
+   }
+}

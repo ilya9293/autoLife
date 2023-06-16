@@ -1,0 +1,47 @@
+.section {
+}
+.steps {
+  & .title {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  &__container-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  &__btn {
+    @include adaptiv-height(49, 36, 768);
+    padding: 0 38px;
+    border: none;
+    @include adaptiv-font(28, 20, 768);
+    font-weight: 500;
+    line-height: calc(23 / 20);
+    color: rgba(38, 38, 38, 0.5);
+    background-color: #ececec;
+    border-radius: 19px;
+    transition: background-color 250ms linear, color 250ms linear;
+  }
+
+  &__btn.active {
+    background-color: var(--color-btn-hover);
+    color: var(--color-darkbackground);
+  }
+
+  @media screen and (min-width: 768px) {
+    &__btn {
+      font-size: 28px;
+      height: 49px;
+      padding: 0 53px;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    &__btn {
+      padding: 0 70px;
+    }
+  }
+}
