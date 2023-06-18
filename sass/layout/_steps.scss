@@ -1,9 +1,27 @@
-.section {
+.section.steps {
+  @media screen and (min-width: 600px) and (max-width: 1280px) {
+    & {
+      background-image: url("../../images/steps/box-left-top.png"),
+        url("../../images/steps/box-left-middle.png"),
+        url("../../images/steps/box-left-bottom.png"),
+        url("../../images/steps/box-right-top.png"),
+        url("../../images/steps/box-right-middle.png"),
+        url("../../images/steps/box-right-bottom.png");
+      background-repeat: no-repeat;
+      background-position: 0 26%, 0 59%, 0 100%, 100% 26%, 100% 62%, 100% 100%;
+    }
+  }
 }
 .steps {
   & .title {
     text-align: center;
     margin-bottom: 32px;
+  }
+
+  &__wraper {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
   }
 
   &__container-btn {
@@ -34,6 +52,12 @@
     color: var(--color-darkbackground);
   }
 
+  @media screen and (min-width: 480px) {
+    &__wraper {
+      max-width: 461px;
+    }
+  }
+
   @media screen and (min-width: 768px) {
     &__btn {
       font-size: 28px;
@@ -44,6 +68,15 @@
   @media screen and (min-width: 1280px) {
     &__btn {
       padding: 0 70px;
+    }
+
+    & .title {
+      text-align: left;
+      margin-bottom: 60px;
+    }
+
+    &__wraper {
+      padding: 0;
     }
   }
 }

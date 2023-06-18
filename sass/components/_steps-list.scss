@@ -22,7 +22,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    margin-bottom: 32px;
+    margin-bottom: 20px;
   }
 
   &__icon {
@@ -66,10 +66,18 @@
       flex-basis: calc((100% - 40px) / 2);
     }
   }
+
+  @media screen and (min-width: 768px) {
+    &__text {
+      font-size: 16px;
+      line-height: calc(19 / 16);
+    }
+  }
 }
 
 svg.steps-list__icon {
   padding: 0;
   margin-left: 12px;
   margin-top: 13px;
+  margin-bottom: 12px;
 }
