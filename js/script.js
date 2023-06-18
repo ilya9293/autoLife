@@ -366,12 +366,21 @@ function mqRotate(mqr) {
   mqr[0].TO = setTimeout("mqRotate(mqr)", 45);
 }
 
-const stepBtn = document.querySelectorAll("[data-step-switch]");
+const stepBtn = document.querySelectorAll("[data-switch]");
+const listParcel = document.querySelector(".steps-list.parcel");
+const listPassenger = document.querySelector(".steps-list.passenger");
 stepBtn.forEach((btn) => {
   const handleStepBtn = () => {
     stepBtn.forEach((btn) => btn.classList.remove("active"));
     btn.classList.add("active");
+    const valueDataSwitch = btn.dataset.switch;
+    if (valueDataSwitch === "parcel") {
+      listParcel.classList.remove("hide");
+      listPassenger.classList.add("hide");
+    } else if (valueDataSwitch === "passenger") {
+      listPassenger.classList.remove("hide");
+      listParcel.classList.add("hide");
+    }
   };
   btn.addEventListener("click", handleStepBtn);
 });
-

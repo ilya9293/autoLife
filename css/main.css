@@ -315,12 +315,6 @@ button {
   fill: var(--color-menu-text);
 }
 
-.is-open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: visible;
-}
-
 .desktop {
   display: flex;
   align-items: center;
@@ -1841,6 +1835,7 @@ option {
   justify-content: center;
   flex-wrap: wrap;
   gap: 16px;
+  margin-bottom: 44px;
 }
 .steps__btn {
   height: calc(
@@ -1858,6 +1853,7 @@ option {
   color: rgba(38, 38, 38, 0.5);
   background-color: #ececec;
   border-radius: 19px;
+  cursor: pointer;
   transition: background-color 250ms linear, color 250ms linear;
 }
 .steps__btn.active {
@@ -1877,10 +1873,96 @@ option {
   }
 }
 
+.steps-list__item:not(:last-child) {
+  margin-bottom: 29px;
+}
+.steps-list__item:nth-child(1) {
+  color: #3c81e8;
+}
 .steps-list__item:nth-child(2) {
   color: #219653;
+}
+.steps-list__item:nth-child(3) {
+  color: #e8653c;
+}
+.steps-list__item:nth-child(4) {
+  color: #2d9cdb;
+}
+.steps-list__item:nth-child(5) {
+  color: #eb5757;
+}
+.steps-list__wraper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 32px;
 }
 .steps-list__icon {
   display: inline-block;
   font-size: 80px;
+  padding: 13px 13px 12px 12px;
+}
+.steps-list__number {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 1.1730769231;
+}
+.steps-list__title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+.steps-list__text {
+  color: var(--color-menu-text);
+  font-size: 14px;
+  line-height: 1.1428571429;
+}
+@media screen and (min-width: 480px) {
+  .steps-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -20px;
+    margin-left: -20px;
+  }
+  .steps-list__item {
+    margin-top: 20px;
+    margin-left: 20px;
+    flex-basis: calc((100% - 40px) / 2);
+  }
+}
+
+svg.steps-list__icon {
+  padding: 0;
+  margin-left: 12px;
+  margin-top: 13px;
+}
+
+.parcel-direct__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.parcel-direct__item:not(:last-child) {
+  margin-bottom: 14px;
+}
+.parcel-direct__icon {
+  font-size: 19px;
+}
+.parcel-direct__text {
+  color: var(--color-menu-text);
+  font-size: 14px;
+  line-height: 1.1428571429;
+}
+
+.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: visible;
+}
+
+.hide {
+  display: none;
 }

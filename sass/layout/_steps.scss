@@ -12,6 +12,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 16px;
+    margin-bottom: 44px;
   }
 
   &__btn {
@@ -24,6 +25,7 @@
     color: rgba(38, 38, 38, 0.5);
     background-color: #ececec;
     border-radius: 19px;
+    cursor: pointer;
     transition: background-color 250ms linear, color 250ms linear;
   }
 
