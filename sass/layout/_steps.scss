@@ -11,6 +11,19 @@
       background-position: 0 26%, 0 59%, 0 100%, 100% 26%, 100% 62%, 100% 100%;
     }
   }
+
+  @media screen and (min-width: 1280px) {
+    & {
+      height: 950px;
+      background-repeat: no-repeat;
+      background-image: url("../../images/steps/desktop-left-top.png"),
+        url("../../images/steps/desktop-middle-top.png"),
+        url("../../images/steps/desktop-right-top.png"),
+        url("../../images/steps/desktop-left-bottom.png"),
+        url("../../images/steps/desktop-right-bottom.png");
+      background-position: 10% 24%, 50% 30%, 90% 35%, 25% 100%, 75% 100%;
+    }
+  }
 }
 .steps {
   & .title {
@@ -19,7 +32,7 @@
   }
 
   &__wraper {
-    width: 100%;
+    width: 100vw;
     padding: 0 15px;
     margin: 0 auto;
   }
@@ -65,7 +78,17 @@
       padding: 0 53px;
     }
   }
+  @media screen and (max-width: 1280px) {
+    &__curve, &__curve-solid {
+      display: none;
+    }
+  }
   @media screen and (min-width: 1280px) {
+    &__container-btn {
+      justify-content: flex-end;
+      margin-bottom: 105px;
+    }
+
     &__btn {
       padding: 0 70px;
     }
@@ -76,7 +99,24 @@
     }
 
     &__wraper {
+      position: relative;
       padding: 0;
+      max-width: none;
+    }
+
+    &__curve {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+
+    &__curve-solid {
+      position: absolute;
+      height: auto;
+      width: 28.5%;
+      top: 1.38%;
+      left: 0;
+      background-color: #ffffff;
     }
   }
 }

@@ -33,8 +33,8 @@
     transform: rotate(-45deg);
   }
 
-  &__btn:focus::after,
-  &__btn:hover::after {
+ .desktop &__btn:focus::after,
+ .desktop &__btn:hover::after {
     border-color: var(--color-btn-hover);
   }
 
@@ -42,8 +42,8 @@
     height: 78px;
   }
 
-  &__btn:focus,
-  &__btn:hover {
+  .desktop &__btn:focus,
+  .desktop &__btn:hover {
     color: var(--color-btn-hover);
   }
 
@@ -62,8 +62,5 @@
   &__item {
     background-color: #f2f2f2;
     padding: 10px 5px;
-  }
-
-  &__link {
   }
 }
