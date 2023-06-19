@@ -20,19 +20,19 @@
   &__item:nth-child(1)::before {
     width: 19px;
     height: 24px;
-    background: url("../../images/contacts/location.svg") no-repeat right
+    background: url("../images/contacts/location.svg") no-repeat right
       center/cover;
   }
   &__item:nth-child(2)::before {
     width: 25px;
     height: 24px;
-    background: url("../../images/contacts/phone.svg") no-repeat right
+    background: url("../images/contacts/phone.svg") no-repeat right
       center/cover;
   }
   &__item:nth-child(3)::before {
     width: 22px;
     height: 24px;
-    background: url("../../images/contacts/mail.svg") no-repeat right
+    background: url("../images/contacts/mail.svg") no-repeat right
       center/cover;
   }
 

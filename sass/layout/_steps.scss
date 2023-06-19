@@ -1,12 +1,13 @@
 .section.steps {
+  overflow: hidden;
   @media screen and (min-width: 600px) and (max-width: 1280px) {
     & {
-      background-image: url("../../images/steps/box-left-top.png"),
-        url("../../images/steps/box-left-middle.png"),
-        url("../../images/steps/box-left-bottom.png"),
-        url("../../images/steps/box-right-top.png"),
-        url("../../images/steps/box-right-middle.png"),
-        url("../../images/steps/box-right-bottom.png");
+      background-image: url("../images/steps/box-left-top.png"),
+        url("../images/steps/box-left-middle.png"),
+        url("../images/steps/box-left-bottom.png"),
+        url("../images/steps/box-right-top.png"),
+        url("../images/steps/box-right-middle.png"),
+        url("../images/steps/box-right-bottom.png");
       background-repeat: no-repeat;
       background-position: 0 26%, 0 59%, 0 100%, 100% 26%, 100% 62%, 100% 100%;
     }
@@ -16,11 +17,11 @@
     & {
       height: 950px;
       background-repeat: no-repeat;
-      background-image: url("../../images/steps/desktop-left-top.png"),
-        url("../../images/steps/desktop-middle-top.png"),
-        url("../../images/steps/desktop-right-top.png"),
-        url("../../images/steps/desktop-left-bottom.png"),
-        url("../../images/steps/desktop-right-bottom.png");
+      background-image: url("../images/steps/desktop-left-top.png"),
+        url("../images/steps/desktop-middle-top.png"),
+        url("../images/steps/desktop-right-top.png"),
+        url("../images/steps/desktop-left-bottom.png"),
+        url("../images/steps/desktop-right-bottom.png");
       background-position: 10% 24%, 50% 30%, 90% 35%, 25% 100%, 75% 100%;
     }
   }
@@ -79,7 +80,8 @@
     }
   }
   @media screen and (max-width: 1280px) {
-    &__curve, &__curve-solid {
+    &__curve,
+    &__curve-solid {
       display: none;
     }
   }

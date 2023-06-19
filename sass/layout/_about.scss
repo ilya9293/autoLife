@@ -3,7 +3,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  background-image: url("../../images/about/background-mob.png");
+  background-image: url("../images/about/background-mob.png");
   background-position: -65px 0px;
   background-repeat: no-repeat;
   padding-top: 0;
@@ -11,7 +11,7 @@
 
   @media screen and (min-width: 360px) {
     & {
-      background-image: url("../../images/about/background-tablet.png");
+      background-image: url("../images/about/background-tablet.png");
     }
   }
   @media screen and (max-width: 768px) {
@@ -21,7 +21,7 @@
   }
   @media screen and (min-width: 768px) {
     & {
-      background-image: url("../../images/about/background-desktop.png");
+      background-image: url("../images/about/background-desktop.png");
       background-position: 25px -60px;
     }
   }
@@ -71,7 +71,7 @@
     z-index: 1;
     background: rgba(38, 38, 38, 0.85);
     clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 0% 100%);
-    background-image: url("../../images/about/road.svg");
+    background-image: url("../images/about/road.svg");
     background-position-y: 50%;
     background-repeat: repeat-x;
     background-size: 18vw 0.5vw;
@@ -100,13 +100,13 @@
 
   &__in-wraper::before {
     content: "";
-    background-image: url("../../images/about/higher-car.svg");
+    background-image: url("../images/about/higher-car.svg");
     background-position: 0 3%;
     animation: aboutHigherCars 10s linear infinite;
   }
   &__in-wraper::after {
     content: "";
-    background-image: url("../../images/about/lower-car.svg");
+    background-image: url("../images/about/lower-car.svg");
     background-position: 0 90%;
     animation: aboutLowerCars 10s linear infinite;
   }

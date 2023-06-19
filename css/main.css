@@ -348,7 +348,7 @@ button {
 }
 
 .section.hero {
-  background-image: url("../../images/hero/background-squares-mobile.png");
+  background-image: url("../images/hero/background-squares-mobile.png");
   background-repeat: repeat;
   background-position: 0 105px;
   background-size: auto auto;
@@ -356,7 +356,7 @@ button {
 }
 @media screen and (min-width: 360px) {
   .section.hero {
-    background-image: url("../../images/hero/background-squares.png");
+    background-image: url("../images/hero/background-squares.png");
     background-position: 100px 70px;
     background-repeat: no-repeat;
   }
@@ -672,7 +672,7 @@ button {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  background-image: url("../../images/about/background-mob.png");
+  background-image: url("../images/about/background-mob.png");
   background-position: -65px 0px;
   background-repeat: no-repeat;
   padding-top: 0;
@@ -680,7 +680,7 @@ button {
 }
 @media screen and (min-width: 360px) {
   .section.about {
-    background-image: url("../../images/about/background-tablet.png");
+    background-image: url("../images/about/background-tablet.png");
   }
 }
 @media screen and (max-width: 768px) {
@@ -690,7 +690,7 @@ button {
 }
 @media screen and (min-width: 768px) {
   .section.about {
-    background-image: url("../../images/about/background-desktop.png");
+    background-image: url("../images/about/background-desktop.png");
     background-position: 25px -60px;
   }
 }
@@ -740,7 +740,7 @@ button {
   background: rgba(38, 38, 38, 0.85);
   -webkit-clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 0% 100%);
           clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 0% 100%);
-  background-image: url("../../images/about/road.svg");
+  background-image: url("../images/about/road.svg");
   background-position-y: 50%;
   background-repeat: repeat-x;
   background-size: 18vw 0.5vw;
@@ -765,13 +765,13 @@ button {
 }
 .about__in-wraper::before {
   content: "";
-  background-image: url("../../images/about/higher-car.svg");
+  background-image: url("../images/about/higher-car.svg");
   background-position: 0 3%;
   animation: aboutHigherCars 10s linear infinite;
 }
 .about__in-wraper::after {
   content: "";
-  background-image: url("../../images/about/lower-car.svg");
+  background-image: url("../images/about/lower-car.svg");
   background-position: 0 90%;
   animation: aboutLowerCars 10s linear infinite;
 }
@@ -883,18 +883,18 @@ button {
   }
 }
 .section.cost {
-  background-image: url(../../images/cost/background-mob.png);
+  background-image: url(../images/cost/background-mob.png);
   background-position: 0px 0px;
   background-repeat: no-repeat;
 }
 @media screen and (min-width: 687px) {
   .section.cost {
-    background-image: url(../../images/cost/background-tablet.png);
+    background-image: url(../images/cost/background-tablet.png);
   }
 }
 @media screen and (min-width: 1400px) {
   .section.cost {
-    background-image: url(../../images/cost/background-desktop.png);
+    background-image: url(../images/cost/background-desktop.png);
   }
 }
 
@@ -1245,20 +1245,20 @@ button {
 }
 
 .section.feedback {
-  background-image: linear-gradient(rgba(15, 60, 101, 0.77), rgba(15, 60, 101, 0.77)), url(../../images/feedback/background-mob.jpg);
+  background-image: linear-gradient(rgba(15, 60, 101, 0.77), rgba(15, 60, 101, 0.77)), url(../images/feedback/background-mob.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 @media screen and (min-width: 768px) {
   .section.feedback {
-    background-image: linear-gradient(rgba(15, 60, 101, 0.77), rgba(15, 60, 101, 0.77)), url(../../images/feedback/background-tablet.jpg);
+    background-image: linear-gradient(rgba(15, 60, 101, 0.77), rgba(15, 60, 101, 0.77)), url(../images/feedback/background-tablet.jpg);
     padding: 32px 0;
   }
 }
 @media screen and (min-width: 1280px) {
   .section.feedback {
-    background-image: linear-gradient(rgba(15, 60, 101, 0.77), rgba(15, 60, 101, 0.77)), url(../../images/feedback/background-desktop.jpg);
+    background-image: linear-gradient(rgba(15, 60, 101, 0.77), rgba(15, 60, 101, 0.77)), url(../images/feedback/background-desktop.jpg);
     padding: 60px 0;
   }
 }
@@ -1601,17 +1601,17 @@ option {
 .contacts__item:nth-child(1)::before {
   width: 19px;
   height: 24px;
-  background: url("../../images/contacts/location.svg") no-repeat right center/cover;
+  background: url("../images/contacts/location.svg") no-repeat right center/cover;
 }
 .contacts__item:nth-child(2)::before {
   width: 25px;
   height: 24px;
-  background: url("../../images/contacts/phone.svg") no-repeat right center/cover;
+  background: url("../images/contacts/phone.svg") no-repeat right center/cover;
 }
 .contacts__item:nth-child(3)::before {
   width: 22px;
   height: 24px;
-  background: url("../../images/contacts/mail.svg") no-repeat right center/cover;
+  background: url("../images/contacts/mail.svg") no-repeat right center/cover;
 }
 .contacts__item_wraper {
   display: flex;
@@ -1826,9 +1826,12 @@ option {
   }
 }
 
+.section.steps {
+  overflow: hidden;
+}
 @media screen and (min-width: 600px) and (max-width: 1280px) {
   .section.steps {
-    background-image: url("../../images/steps/box-left-top.png"), url("../../images/steps/box-left-middle.png"), url("../../images/steps/box-left-bottom.png"), url("../../images/steps/box-right-top.png"), url("../../images/steps/box-right-middle.png"), url("../../images/steps/box-right-bottom.png");
+    background-image: url("../images/steps/box-left-top.png"), url("../images/steps/box-left-middle.png"), url("../images/steps/box-left-bottom.png"), url("../images/steps/box-right-top.png"), url("../images/steps/box-right-middle.png"), url("../images/steps/box-right-bottom.png");
     background-repeat: no-repeat;
     background-position: 0 26%, 0 59%, 0 100%, 100% 26%, 100% 62%, 100% 100%;
   }
@@ -1837,7 +1840,7 @@ option {
   .section.steps {
     height: 950px;
     background-repeat: no-repeat;
-    background-image: url("../../images/steps/desktop-left-top.png"), url("../../images/steps/desktop-middle-top.png"), url("../../images/steps/desktop-right-top.png"), url("../../images/steps/desktop-left-bottom.png"), url("../../images/steps/desktop-right-bottom.png");
+    background-image: url("../images/steps/desktop-left-top.png"), url("../images/steps/desktop-middle-top.png"), url("../images/steps/desktop-right-top.png"), url("../images/steps/desktop-left-bottom.png"), url("../images/steps/desktop-right-bottom.png");
     background-position: 10% 24%, 50% 30%, 90% 35%, 25% 100%, 75% 100%;
   }
 }

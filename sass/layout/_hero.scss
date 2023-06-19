@@ -1,12 +1,12 @@
 .section.hero {
-  background-image: url("../../images/hero/background-squares-mobile.png");
+  background-image: url("../images/hero/background-squares-mobile.png");
   background-repeat: repeat;
   background-position: 0 105px;
   background-size: auto auto;
 
   @media screen and (min-width: 360px) {
     & {
-      background-image: url("../../images/hero/background-squares.png");
+      background-image: url("../images/hero/background-squares.png");
       background-position: 100px 70px;
       background-repeat: no-repeat;
     }
