@@ -952,7 +952,7 @@ button {
 }
 
 .calc {
-  background-image: linear-gradient(rgba(38, 38, 38, 0.87), rgba(38, 38, 38, 0.87)), url(../../images/cost/cost-mob.jpg);
+  background-image: linear-gradient(rgba(38, 38, 38, 0.87), rgba(38, 38, 38, 0.87)), url(../images/cost/cost-mob.jpg);
   background-color: #c4c4c4;
   min-height: 452px;
   max-width: 1341px;
@@ -1494,7 +1494,7 @@ option {
   position: absolute;
   right: 0px;
   top: 0px;
-  background: url("../../images/feedback/arrow.svg") no-repeat right center/cover;
+  background: url("../images/feedback/arrow.svg") no-repeat right center/cover;
   transition: all 0.27s ease-in-out;
   transform: rotate(0deg);
 }

@@ -154,7 +154,7 @@ const dropDownContainer = document.querySelectorAll(
 if (inputs && dropDownContainer) {
   iti = [...inputs].map((el, idx) => {
     return window.intlTelInput(el, {
-      utilsScript: "/js/utils.js",
+      utilsScript: "./js/utils.js",
       preferredCountries: ["ua", "us", "gb"],
       separateDialCode: true,
       dropdownContainer: dropDownContainer[idx],
