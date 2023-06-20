@@ -9,12 +9,13 @@
   height: 54px;
   padding: 10px 0 11px;
 
-  & span {
-   position: relative;
-    margin-right: 20px;
+  &__name {
+    position: relative;
+    margin-right: 10px;
+    margin-left: 20px;
   }
 
-  & svg {
-    margin-left: 10px;
-  }
+//   & div {
+//    width: auto !important;
+//   }
 }

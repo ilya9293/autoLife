@@ -384,3 +384,80 @@ stepBtn.forEach((btn) => {
   };
   btn.addEventListener("click", handleStepBtn);
 });
+
+const anchors = document.querySelectorAll(".anchor");
+anchors.forEach(function (anchor) {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute("href");
+
+    const targetElement = document.querySelector(targetId);
+    //  const scrollTime = parseInt(this.getAttribute("data-scroll-time")) || 1000;
+
+    const targetOffset = targetElement.offsetTop;
+    const startOffset = window.pageYOffset;
+    const distance = targetOffset - startOffset;
+
+    const startTime = performance.now();
+
+    function scrollAnimation(currentTime) {
+      const elapsedTime = currentTime - startTime;
+      const scrollProgress = Math.min(elapsedTime / 1000, 1);
+      const scrollPosition = startOffset + distance * scrollProgress;
+
+      window.scrollTo(0, scrollPosition);
+
+      if (scrollProgress < 1) {
+        requestAnimationFrame(scrollAnimation);
+      }
+    }
+
+    requestAnimationFrame(scrollAnimation);
+  });
+});
+
+i18next.init({
+  lng: "ua",
+  debug: true,
+  resources: {
+    ua: {
+      translation: uaTranslation,
+    },
+    en: {
+      translation: enTranslation,
+    },
+    pl: {
+      translation: plTranslation,
+    },
+  },
+});
+
+function updateTranslations() {
+  const elements = document.querySelectorAll("[data-i18n]");
+  elements.forEach((element) => {
+    const key = element.dataset.i18n;
+    element.textContent = i18next.t(key);
+    
+  });
+}
+
+function changeLanguage(lang) {
+  i18next.changeLanguage(lang, function (err, t) {
+    if (err) {
+      console.error("Ошибка при изменении языка:", err);
+      return;
+    }
+    updateTranslations();
+  });
+}
+
+const langSwitchers = document.querySelectorAll("[data-lang]");
+const btnLngs = document.querySelectorAll(".languages__btn");
+langSwitchers.forEach((switcher) => {
+  switcher.addEventListener("click", () => {
+    const valueLng = switcher.dataset.lang;
+    btnLngs.forEach((btn) => (btn.textContent = valueLng));
+    changeLanguage(valueLng);
+  });
+});

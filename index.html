@@ -19,7 +19,7 @@
     />
     <link rel="stylesheet" href="./css/accordion.min.css" />
     <link rel="stylesheet" href="./css/intlTelInput.min.css" />
-    <link rel="stylesheet" href="./css/iconfonts.css">
+    <link rel="stylesheet" href="./css/iconfonts.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <title>Авто-лайф</title>
   </head>
@@ -48,22 +48,49 @@
           <nav>
             <ul class="nav-menu">
               <li class="nav-menu__item">
-                <a href="" class="nav-menu__link">Головна</a>
+                <a href="#" class="nav-menu__link" data-i18n="header.main"
+                  >Головна</a
+                >
               </li>
               <li class="nav-menu__item">
-                <a href="" class="nav-menu__link">Про нас</a>
+                <a
+                  href="#about"
+                  class="nav-menu__link anchor"
+                  data-i18n="header.aboutUs"
+                  >Про нас</a
+                >
               </li>
               <li class="nav-menu__item">
-                <a href="" class="nav-menu__link">Оформлення замовлення</a>
+                <a
+                  href="#steps"
+                  class="nav-menu__link anchor"
+                  data-i18n="header.placingOrder"
+                  >Оформлення замовлення</a
+                >
               </li>
               <li class="nav-menu__item">
-                <a href="" class="nav-menu__link">Вартість посилки</a>
+                <a
+                  href="#cost"
+                  class="nav-menu__link anchor"
+                  data-i18n="header.costParcel"
+                  >Вартість посилки</a
+                >
               </li>
               <li class="nav-menu__item">
-                <a href="" class="nav-menu__link">Основні питання</a>
+                <a
+                  href="#questions"
+                  class="nav-menu__link anchor"
+                  data-i18n="header.basicQuestions"
+                  >Основні питання</a
+                >
               </li>
               <li class="nav-menu__item">
-                <a href="" class="nav-menu__link">Контакти</a>
+                <a
+                  href="#connect"
+                  class="nav-menu__link anchor"
+                  data-i18n="header.contacts"
+                  >Контакти</a
+                >
               </li>
             </ul>
           </nav>
@@ -127,17 +154,22 @@
           <div class="languages">
             <button class="languages__btn">UA</button>
             <ul class="languages-list">
-              <li class="languages-list__item">
-                <a href="" class="languages-list__link">UA</a>
+              <li class="languages-list__item" data-lang="ua">
+                <a href="#" class="languages-list__link">UA</a>
               </li>
-              <li class="languages-list__item">
-                <a href="" class="languages-list__link">EN</a>
+              <li class="languages-list__item" data-lang="en">
+                <a href="#" class="languages-list__link">EN</a>
+              </li>
+              <li class="languages-list__item" data-lang="pl">
+                <a href="#" class="languages-list__link">PL</a>
               </li>
             </ul>
           </div>
 
           <nav>
-            <a href="" class="authorization">Авторизація</a>
+            <a href="" class="authorization" data-i18n="header.authorization"
+              >Авторизація</a
+            >
           </nav>
         </div>
 
@@ -176,22 +208,49 @@
             <nav>
               <ul class="nav-menu">
                 <li class="nav-menu__item">
-                  <a href="" class="nav-menu__link">Головна</a>
+                  <a href="" class="nav-menu__link" data-i18n="header.main"
+                    >Головна</a
+                  >
                 </li>
                 <li class="nav-menu__item">
-                  <a href="" class="nav-menu__link">Про нас</a>
+                  <a
+                    href="#about"
+                    class="nav-menu__link anchor"
+                    data-i18n="header.aboutUs"
+                    >Про нас</a
+                  >
                 </li>
                 <li class="nav-menu__item">
-                  <a href="" class="nav-menu__link">Оформлення замовлення</a>
+                  <a
+                    href="#steps"
+                    class="nav-menu__link anchor"
+                    data-i18n="header.placingOrder"
+                    >Оформлення замовлення</a
+                  >
                 </li>
                 <li class="nav-menu__item">
-                  <a href="" class="nav-menu__link">Вартість посилки</a>
+                  <a
+                    href="#cost"
+                    class="nav-menu__link anchor"
+                    data-i18n="header.costParcel"
+                    >Вартість посилки</a
+                  >
                 </li>
                 <li class="nav-menu__item">
-                  <a href="" class="nav-menu__link">Основні питання</a>
+                  <a
+                    href="#questions"
+                    class="nav-menu__link anchor"
+                    data-i18n="header.basicQuestions"
+                    >Основні питання</a
+                  >
                 </li>
                 <li class="nav-menu__item">
-                  <a href="" class="nav-menu__link">Контакти</a>
+                  <a
+                    href="#connect"
+                    class="nav-menu__link anchor"
+                    data-i18n="header.contacts"
+                    >Контакти</a
+                  >
                 </li>
               </ul>
             </nav>
@@ -256,16 +315,21 @@
               <button class="languages__btn">UA</button>
               <ul class="languages-list">
                 <li class="languages-list__item">
-                  <a href="" class="languages-list__link">UA</a>
+                  <a href="#" class="languages-list__link" data-lang="ua">UA</a>
                 </li>
                 <li class="languages-list__item">
-                  <a href="" class="languages-list__link">RU</a>
+                  <a href="#" class="languages-list__link" data-lang="en">EN</a>
+                </li>
+                <li class="languages-list__item">
+                  <a href="#" class="languages-list__link" data-lang="pl">PL</a>
                 </li>
               </ul>
             </div>
 
             <nav>
-              <a href="" class="authorization">Авторизація</a>
+              <a href="" class="authorization" data-i18n="header.authorization"
+                >Авторизація</a
+              >
             </nav>
           </div>
         </div>
@@ -295,8 +359,12 @@
               </div>
               <div class="wrapper-hero">
                 <div class="title-container__flags">
-                  <h1 class="title-hero title">Доставимо будь-що між</h1>
-                  <span class="text-hero">Україною та Польшею</span>
+                  <h1 class="title-hero title" data-i18n="hero.delivery">
+                    Доставимо будь-що між
+                  </h1>
+                  <span class="text-hero" data-i18n="hero.countries"
+                    >Україною та Польшею</span
+                  >
                 </div>
                 <picture class="flags">
                   <source
@@ -314,7 +382,9 @@
                   <img src="./images/hero/flags-mobile.png" alt="Флаги" />
                 </picture>
               </div>
-              <a href="" class="btn-price">Розрахувати вартість</a>
+              <a href="" class="btn-price" data-i18n="hero.cost"
+                >Розрахувати вартість</a
+              >
             </div>
           </div>
         </div>
@@ -361,25 +431,51 @@
       </section>
       <div class="wrap-btn-price">
         <div class="container">
-          <a href="" class="btn-price">Розрахувати вартість</a>
+          <a href="" class="btn-price" data-i18n="hero.cost"
+            >Розрахувати вартість</a
+          >
         </div>
       </div>
 
       <section class="section services">
         <div class="marquee">
-         <span style="white-space:nowrap;">
-            <span>Авто-лайф_PL
-               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12.7078 11.2809L17.6982 7.32406L11.383 6.50569L9.16122 0.538539L6.4296 6.29004L0.0864488 6.56786L4.69502 10.9352L2.98832 17.0694L8.5774 14.019L13.8834 17.5402L12.7078 11.2809Z" fill="#F2D53C"/>
-               </svg>
+          <span style="white-space: nowrap">
+            <span
+              ><span class="marquee__name" data-i18n="services.avto"
+                >Авто-лайф_PL</span
+              >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.7078 11.2809L17.6982 7.32406L11.383 6.50569L9.16122 0.538539L6.4296 6.29004L0.0864488 6.56786L4.69502 10.9352L2.98832 17.0694L8.5774 14.019L13.8834 17.5402L12.7078 11.2809Z"
+                  fill="#F2D53C"
+                />
+              </svg>
             </span>
-            
-            <span>Компанія доставки
-               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12.7078 11.2809L17.6982 7.32406L11.383 6.50569L9.16122 0.538539L6.4296 6.29004L0.0864488 6.56786L4.69502 10.9352L2.98832 17.0694L8.5774 14.019L13.8834 17.5402L12.7078 11.2809Z" fill="#F2D53C"/>
-               </svg> 
-            </span>                      
-         </span>
+
+            <span
+              ><span class="marquee__name" data-i18n="services.company"
+                >Компанія доставки</span
+              >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.7078 11.2809L17.6982 7.32406L11.383 6.50569L9.16122 0.538539L6.4296 6.29004L0.0864488 6.56786L4.69502 10.9352L2.98832 17.0694L8.5774 14.019L13.8834 17.5402L12.7078 11.2809Z"
+                  fill="#F2D53C"
+                />
+              </svg>
+            </span>
+          </span>
         </div>
         <div class="container">
           <ul class="services-list">
@@ -399,9 +495,15 @@
                   fill="#E8653C"
                 />
               </svg>
-              <h3 class="services-list__title">Доставка посилок</h3>
-              <p class="services-list__text">
-               Доставка посилок з України до Польщі та Польщі до України відбувається в термін узгоджений з диспетчером
+              <h3
+                class="services-list__title"
+                data-i18n="services.delivery.title"
+              >
+                Доставка посилок
+              </h3>
+              <p class="services-list__text" data-i18n="services.delivery.text">
+                Доставка посилок з України до Польщі та Польщі до України
+                відбувається в термін узгоджений з диспетчером
               </p>
             </li>
             <li class="services-list__item">
@@ -442,9 +544,15 @@
                   fill="#219653"
                 />
               </svg>
-              <h3 class="services-list__title">Перевезення пасажирів</h3>
-              <p class="services-list__text">
-               Безпечне перевезення пасажирів здійснюється мікроавтобусами  до пункту призначення.
+              <h3
+                class="services-list__title"
+                data-i18n="services.shipping.title"
+              >
+                Перевезення пасажирів
+              </h3>
+              <p class="services-list__text" data-i18n="services.shipping.text">
+                Безпечне перевезення пасажирів здійснюється мікроавтобусами до
+                пункту призначення.
               </p>
             </li>
             <li class="services-list__item">
@@ -461,9 +569,13 @@
                   fill="#3C81E8"
                 />
               </svg>
-              <h3 class="services-list__title">Доставка документів</h3>
-              <p class="services-list__text">
-               Доставка документів в Польщі відбувається з рук в руки отримувачу, в Україні надсилаються Новою Поштою на вказану адресу
+              <h3 class="services-list__title" data-i18n="services.doc.title">
+                Доставка документів
+              </h3>
+              <p class="services-list__text" data-i18n="services.doc.text">
+                Доставка документів в Польщі відбувається з рук в руки
+                отримувачу, в Україні надсилаються Новою Поштою на вказану
+                адресу
               </p>
             </li>
             <li class="services-list__item">
@@ -492,9 +604,11 @@
                   fill="#FFA000"
                 />
               </svg>
-              <h3 class="services-list__title">Доставка ліків</h3>
-              <p class="services-list__text">
-               Можемо купити необхідні ліки та доставити Вам
+              <h3 class="services-list__title" data-i18n="services.med.title">
+                Доставка ліків
+              </h3>
+              <p class="services-list__text" data-i18n="services.med.text">
+                Можемо купити необхідні ліки та доставити Вам
               </p>
             </li>
             <li class="services-list__item">
@@ -511,8 +625,12 @@
                   fill="#4690D3"
                 />
               </svg>
-              <h3 class="services-list__title">Доставка для ЗСУ</h3>
-              <p class="services-list__text">Безкоштовна доставка для ЗСУ</p>
+              <h3 class="services-list__title" data-i18n="services.zsu.title">
+                Доставка для ЗСУ
+              </h3>
+              <p class="services-list__text" data-i18n="services.zsu.text">
+                Безкоштовна доставка для ЗСУ
+              </p>
             </li>
             <li class="services-list__item">
               <svg
@@ -528,41 +646,82 @@
                   fill="#4A78EF"
                 />
               </svg>
-              <h3 class="services-list__title">Доставка інтернет замовлень</h3>
-              <p class="services-list__text">
-               Доставка інтернет замовлень відбувається після оплати замовлення в інтернет-магазині
+              <h3 class="services-list__title" data-i18n="services.order.title">
+                Доставка інтернет замовлень
+              </h3>
+              <p class="services-list__text" data-i18n="services.order.text">
+                Доставка інтернет замовлень відбувається після оплати замовлення
+                в інтернет-магазині
               </p>
             </li>
           </ul>
         </div>
         <div class="marquee">
-         <span style="white-space:nowrap;">
-            <span>Авто-лайф_PL
-               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12.7078 11.2809L17.6982 7.32406L11.383 6.50569L9.16122 0.538539L6.4296 6.29004L0.0864488 6.56786L4.69502 10.9352L2.98832 17.0694L8.5774 14.019L13.8834 17.5402L12.7078 11.2809Z" fill="#F2D53C"/>
-               </svg>
+          <span style="white-space: nowrap">
+            <span
+              ><span class="marquee__name" data-i18n="services.avto"
+                >Авто-лайф_PL</span
+              >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.7078 11.2809L17.6982 7.32406L11.383 6.50569L9.16122 0.538539L6.4296 6.29004L0.0864488 6.56786L4.69502 10.9352L2.98832 17.0694L8.5774 14.019L13.8834 17.5402L12.7078 11.2809Z"
+                  fill="#F2D53C"
+                />
+              </svg>
             </span>
-            
-            <span>Компанія доставки
-               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12.7078 11.2809L17.6982 7.32406L11.383 6.50569L9.16122 0.538539L6.4296 6.29004L0.0864488 6.56786L4.69502 10.9352L2.98832 17.0694L8.5774 14.019L13.8834 17.5402L12.7078 11.2809Z" fill="#F2D53C"/>
-               </svg> 
+
+            <span
+              ><span class="marquee__name" data-i18n="services.company"
+                >Компанія доставки</span
+              >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.7078 11.2809L17.6982 7.32406L11.383 6.50569L9.16122 0.538539L6.4296 6.29004L0.0864488 6.56786L4.69502 10.9352L2.98832 17.0694L8.5774 14.019L13.8834 17.5402L12.7078 11.2809Z"
+                  fill="#F2D53C"
+                />
+              </svg>
             </span>
-                      
-         </span>
+          </span>
         </div>
       </section>
 
-      <section class="section about">
+      <section class="section about" id="about">
         <div class="about__content">
           <div class="container">
             <h2 class="about__title title">Чому обирають нас?</h2>
             <p class="about__description">
-               Компанія "Авто-Лайф_PL" надає послуги з перевезення вантажів та пасажирів з України до Польщі та навпаки. Наша компанія спеціалізується на перевезенні багажу, посилок, особистих речей, документів, замовлення з інтернет-магазинів. Є власні приміщення для збезкоштовного зберігання посилок як у Польщі так і в Україні. Доставка можлива за умови, що товари не заборонені митними правилами.
+              Компанія "Авто-Лайф_PL" надає послуги з перевезення вантажів та
+              пасажирів з України до Польщі та навпаки. Наша компанія
+              спеціалізується на перевезенні багажу, посилок, особистих речей,
+              документів, замовлення з інтернет-магазинів. Є власні приміщення
+              для збезкоштовного зберігання посилок як у Польщі так і в Україні.
+              Доставка можлива за умови, що товари не заборонені митними
+              правилами.
               <br /><br />
-              Доставка багажу дозволить Вам перевезти необхідні речі в назначенний час та максимально швидко. Наші водії заберуть вантаж у зручний час та у зручному для Вас місці. Кожен багаж має свій номер замовлення, та вноситься до системи маршрутів.
+              Доставка багажу дозволить Вам перевезти необхідні речі в
+              назначенний час та максимально швидко. Наші водії заберуть вантаж
+              у зручний час та у зручному для Вас місці. Кожен багаж має свій
+              номер замовлення, та вноситься до системи маршрутів.
               <br /><br />
-              Ціни на доставку розраховуються з таких показників: ширина, висота і довжина вантажу, що перевозиться. Посилка, не залежно від розмірів, доставляється за затвердженою диспетчером із замовником адресою і передається особисто в руки одержувачу, що гарантує безпеку доставку. Також надаємо можливість надіслати посилку кур'єрською службою в необхідне місто по Україні сервісом доставки Нова Пошта.
+              Ціни на доставку розраховуються з таких показників: ширина, висота
+              і довжина вантажу, що перевозиться. Посилка, не залежно від
+              розмірів, доставляється за затвердженою диспетчером із замовником
+              адресою і передається особисто в руки одержувачу, що гарантує
+              безпеку доставку. Також надаємо можливість надіслати посилку
+              кур'єрською службою в необхідне місто по Україні сервісом доставки
+              Нова Пошта.
             </p>
             <picture>
               <source
@@ -596,149 +755,246 @@
         </div>
       </section>
 
-      <section class="section steps">
-         <div class="container">
-            <h2 class="title">Кроки оформлення замовлення</h2>             
-               <div class="steps__container-btn">
-                  <button type="button" class="steps__btn active" data-switch="parcel">Посилка</button>
-                  <button type="button" class="steps__btn" data-switch="passenger">Пасажир</button>
-               </div>
-         </div>
-            <div class="steps__wraper">
-               <svg class="steps__curve" width="1920" height="372" viewBox="0 0 1920 372" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M-0.5 214.5C32 285.167 120.3 404.5 213.5 316.5C306.7 228.5 358.5 94.3864 444 33.5C510 -13.5 796.094 -44.6044 796.094 225C796.094 369.5 1049.59 335.5 1049.59 203.5C1049.59 -11.5 1542.5 80.0001 1551 290C1556.5 425.889 1846.5 389.5 1926 169" stroke="#0F3C65" stroke-width="3" stroke-dasharray="16 16"/>
-               </svg>
-               <ul class="steps-list parcel">
-                  <li class="steps-list__item">
-                     <div class="steps-list__wraper">
-                        <div class="steps-list__msg-wraper">
-                           <svg class="steps-list__icon" width="80" height="81" viewBox="0 0 80 81" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M29.9999 40.1679C29.9999 42.0147 28.5075 43.5117 26.6666 43.5117C24.8257 43.5117 23.3333 42.0147 23.3333 40.1679C23.3333 38.321 24.8257 36.824 26.6666 36.824C28.5075 36.824 29.9999 38.321 29.9999 40.1679ZM43.3333 40.1679C43.3333 42.0147 41.8409 43.5117 39.9999 43.5117C38.1589 43.5117 36.6666 42.0147 36.6666 40.1679C36.6666 38.321 38.1589 36.824 39.9999 36.824C41.8409 36.824 43.3333 38.321 43.3333 40.1679ZM56.6666 40.1679C56.6666 42.0147 55.1743 43.5117 53.3333 43.5117C51.4923 43.5117 49.9999 42.0147 49.9999 40.1679C49.9999 38.321 51.4923 36.824 53.3333 36.824C55.1743 36.824 56.6666 38.321 56.6666 40.1679Z" fill="#2F80ED"/>
-                              <path d="M10 40.1678C10 54.9421 23.4315 66.9189 40 66.9189C42.2913 66.9189 44.5227 66.6898 46.6667 66.2561L70 70.2627L64.3987 55.7366C67.9243 51.3511 70 45.9755 70 40.1678C70 25.3936 56.5687 13.4167 40 13.4167C23.4315 13.4167 10 25.3936 10 40.1678Z" stroke="#2F80ED" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                           </svg>
-                        </div>
-                        <div class="steps-list__number">1</div>
-                     </div>
-                     <h3 class="steps-list__title">Надіслати замовлення повідомленням у Viber, WhatsApp, Telegram</h3>
-                     <p class="steps-list__text">В повідомленні вказати польську адресу та польський номер телефону</p>
-                  </li>
-                  <li class="steps-list__item">
-                     <div class="steps-list__wraper">
-                        <i class="steps-list__icon icon-support"></i>
-                        <div class="steps-list__number">2</div>
-                     </div>
-                     <h3 class="steps-list__title">Диспетчер оброблює замовлення</h3>
-                     <p class="steps-list__text">Після обробки замовлення диспетчер надсилає повідомлення про стан замовлення</p>
-                  </li>
-                  <li class="steps-list__item">
-                     <div class="steps-list__wraper">
-                        <i class="steps-list__icon icon-box"></i>
-                        <div class="steps-list__number">3</div>
-                     </div>
-                     <h3 class="steps-list__title">На посилці вказати</h3>
-                     <ul class="parcel-direct">
-                        <li class="parcel-direct__item">
-                           <i class="parcel-direct__icon icon-phone"></i>
-                           <p class="parcel-direct__text">Номер телефону</p>
-                        </li>
-                        <li class="parcel-direct__item">
-                           <i class="parcel-direct__icon icon-location-pointer"></i>
-                           <p class="parcel-direct__text">Адреса (куди доставити посилку)</p>
-                        </li>
-                        <li class="parcel-direct__item">
-                           <i class="parcel-direct__icon icon-nova-post-small"></i>
-                           <p class="parcel-direct__text">Номер відділевння нової пошти</p>
-                        </li>
-                        <li class="parcel-direct__item">
-                           <i class="parcel-direct__icon icon-card-name"></i>
-                           <p class="parcel-direct__text">Ім’я отримувача</p>
-                        </li>
-                     </ul>
-                  </li>
-                  <li class="steps-list__item">
-                     <div class="steps-list__wraper">
-                        <i class="steps-list__icon icon-delivery-truck"></i>
-                        <div class="steps-list__number">4</div>
-                     </div>
-                     <h3 class="steps-list__title">Водій забирає посилку у замовника</h3>
-                     <p class="steps-list__text">Водій завчасно попереджає про свій приїзд, забирає посилку в Польщі та доставляє в Україну.</p>
-                  </li>
-                  <li class="steps-list__item">
-                     <div class="steps-list__wraper">
-                        <i class="steps-list__icon icon-nova_poshta"></i>
-                        <div class="steps-list__number">5</div>
-                     </div>
-                     <h3 class="steps-list__title">Отримувач забирає посилку з Нової Пошти</h3>
-                     <p class="steps-list__text">Посилки по Україні надсилаються Новою Поштою.</p>
-                  </li>
-               </ul>
-               <ul class="steps-list parcel passenger hide">
-                  <li class="steps-list__item">
-                     <div class="steps-list__wraper">
-                        <div class="steps-list__msg-wraper">
-                           <svg class="steps-list__icon" width="80" height="81" viewBox="0 0 80 81" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M29.9999 40.1679C29.9999 42.0147 28.5075 43.5117 26.6666 43.5117C24.8257 43.5117 23.3333 42.0147 23.3333 40.1679C23.3333 38.321 24.8257 36.824 26.6666 36.824C28.5075 36.824 29.9999 38.321 29.9999 40.1679ZM43.3333 40.1679C43.3333 42.0147 41.8409 43.5117 39.9999 43.5117C38.1589 43.5117 36.6666 42.0147 36.6666 40.1679C36.6666 38.321 38.1589 36.824 39.9999 36.824C41.8409 36.824 43.3333 38.321 43.3333 40.1679ZM56.6666 40.1679C56.6666 42.0147 55.1743 43.5117 53.3333 43.5117C51.4923 43.5117 49.9999 42.0147 49.9999 40.1679C49.9999 38.321 51.4923 36.824 53.3333 36.824C55.1743 36.824 56.6666 38.321 56.6666 40.1679Z" fill="#2F80ED"/>
-                              <path d="M10 40.1678C10 54.9421 23.4315 66.9189 40 66.9189C42.2913 66.9189 44.5227 66.6898 46.6667 66.2561L70 70.2627L64.3987 55.7366C67.9243 51.3511 70 45.9755 70 40.1678C70 25.3936 56.5687 13.4167 40 13.4167C23.4315 13.4167 10 25.3936 10 40.1678Z" stroke="#2F80ED" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                           </svg>
-                        </div>
-                        <div class="steps-list__number">1</div>
-                     </div>
-                     <h3 class="steps-list__title">Надіслати замовлення повідомленням у Viber, WhatsApp, Telegram</h3>
-                     <p class="steps-list__text">В повідомленні вказати польську адресу та польський номер телефону</p>
-                  </li>
-                  <li class="steps-list__item">
-                     <div class="steps-list__wraper">
-                        <i class="steps-list__icon icon-support"></i>
-                        <div class="steps-list__number">2</div>
-                     </div>
-                     <h3 class="steps-list__title">Диспетчер оброблює замовлення</h3>
-                     <p class="steps-list__text">Після обробки замовлення диспетчер надсилає повідомлення про стан замовлення</p>
-                  </li>
-                  <li class="steps-list__item">
-                     <div class="steps-list__wraper">
-                        <i class="steps-list__icon icon-backpacker"></i>
-                        <div class="steps-list__number">3</div>
-                     </div>
-                     <h3 class="steps-list__title">Координати пасажира</h3>
-                     <ul class="parcel-direct">
-                        <li class="parcel-direct__item">
-                           <i class="parcel-direct__icon icon-card-name"></i>
-                           <p class="parcel-direct__text">ПІБ</p>
-                        </li>
-                        <li class="parcel-direct__item">
-                           <i class="parcel-direct__icon icon-location-pointer"></i>
-                           <p class="parcel-direct__text">Звідки:</p>
-                        </li>
-                        <li class="parcel-direct__item">
-                           <i class="parcel-direct__icon icon-where"></i>
-                           <p class="parcel-direct__text">Куди:</p>
-                        </li>                    
-                     </ul>
-                  </li>
-                  <li class="steps-list__item">
-                     <div class="steps-list__wraper">
-                        <i class="steps-list__icon icon-transport"></i>
-                        <div class="steps-list__number">4</div>
-                     </div>
-                     <h3 class="steps-list__title">Водій забирає пасажира</h3>
-                     <p class="steps-list__text">В Польщі водій забирає пасажира за вказаною адресою, в Україні водій забирає пасажира або за адресою обо на вокзалі</p>
-                  </li>
-                  <li class="steps-list__item">
-                     <div class="steps-list__wraper">
-                        <i class="steps-list__icon icon-flag"></i>
-                        <div class="steps-list__number">5</div>
-                     </div>
-                     <h3 class="steps-list__title">Ви на місці!</h3>
-                     <p class="steps-list__text">Пасажир дістався місця призначення.</p>
-                  </li>
-               </ul>
-               <svg class="steps__curve-solid" width="548" height="345" viewBox="0 0 548 345" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M-0.5 209.5C32 280.167 120.3 399.5 213.5 311.5C306.7 223.5 358.5 89.3862 444 28.4998C463.656 14.5025 502.058 1.54224 547 1.5" stroke="#E8A83C" stroke-width="3"/>
-               </svg>
-            </div>         
+      <section class="section steps" id="steps">
+        <div class="container">
+          <h2 class="title">Кроки оформлення замовлення</h2>
+          <div class="steps__container-btn">
+            <button
+              type="button"
+              class="steps__btn active"
+              data-switch="parcel"
+            >
+              Посилка
+            </button>
+            <button type="button" class="steps__btn" data-switch="passenger">
+              Пасажир
+            </button>
+          </div>
+        </div>
+        <div class="steps__wraper">
+          <svg
+            class="steps__curve"
+            width="1920"
+            height="372"
+            viewBox="0 0 1920 372"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M-0.5 214.5C32 285.167 120.3 404.5 213.5 316.5C306.7 228.5 358.5 94.3864 444 33.5C510 -13.5 796.094 -44.6044 796.094 225C796.094 369.5 1049.59 335.5 1049.59 203.5C1049.59 -11.5 1542.5 80.0001 1551 290C1556.5 425.889 1846.5 389.5 1926 169"
+              stroke="#0F3C65"
+              stroke-width="3"
+              stroke-dasharray="16 16"
+            />
+          </svg>
+          <ul class="steps-list parcel">
+            <li class="steps-list__item">
+              <div class="steps-list__wraper">
+                <div class="steps-list__msg-wraper">
+                  <svg
+                    class="steps-list__icon"
+                    width="80"
+                    height="81"
+                    viewBox="0 0 80 81"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M29.9999 40.1679C29.9999 42.0147 28.5075 43.5117 26.6666 43.5117C24.8257 43.5117 23.3333 42.0147 23.3333 40.1679C23.3333 38.321 24.8257 36.824 26.6666 36.824C28.5075 36.824 29.9999 38.321 29.9999 40.1679ZM43.3333 40.1679C43.3333 42.0147 41.8409 43.5117 39.9999 43.5117C38.1589 43.5117 36.6666 42.0147 36.6666 40.1679C36.6666 38.321 38.1589 36.824 39.9999 36.824C41.8409 36.824 43.3333 38.321 43.3333 40.1679ZM56.6666 40.1679C56.6666 42.0147 55.1743 43.5117 53.3333 43.5117C51.4923 43.5117 49.9999 42.0147 49.9999 40.1679C49.9999 38.321 51.4923 36.824 53.3333 36.824C55.1743 36.824 56.6666 38.321 56.6666 40.1679Z"
+                      fill="#2F80ED"
+                    />
+                    <path
+                      d="M10 40.1678C10 54.9421 23.4315 66.9189 40 66.9189C42.2913 66.9189 44.5227 66.6898 46.6667 66.2561L70 70.2627L64.3987 55.7366C67.9243 51.3511 70 45.9755 70 40.1678C70 25.3936 56.5687 13.4167 40 13.4167C23.4315 13.4167 10 25.3936 10 40.1678Z"
+                      stroke="#2F80ED"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="steps-list__number">1</div>
+              </div>
+              <h3 class="steps-list__title">
+                Надіслати замовлення повідомленням у Viber, WhatsApp, Telegram
+              </h3>
+              <p class="steps-list__text">
+                В повідомленні вказати польську адресу та польський номер
+                телефону
+              </p>
+            </li>
+            <li class="steps-list__item">
+              <div class="steps-list__wraper">
+                <i class="steps-list__icon icon-support"></i>
+                <div class="steps-list__number">2</div>
+              </div>
+              <h3 class="steps-list__title">Диспетчер оброблює замовлення</h3>
+              <p class="steps-list__text">
+                Після обробки замовлення диспетчер надсилає повідомлення про
+                стан замовлення
+              </p>
+            </li>
+            <li class="steps-list__item">
+              <div class="steps-list__wraper">
+                <i class="steps-list__icon icon-box"></i>
+                <div class="steps-list__number">3</div>
+              </div>
+              <h3 class="steps-list__title">На посилці вказати</h3>
+              <ul class="parcel-direct">
+                <li class="parcel-direct__item">
+                  <i class="parcel-direct__icon icon-phone"></i>
+                  <p class="parcel-direct__text">Номер телефону</p>
+                </li>
+                <li class="parcel-direct__item">
+                  <i class="parcel-direct__icon icon-location-pointer"></i>
+                  <p class="parcel-direct__text">
+                    Адреса (куди доставити посилку)
+                  </p>
+                </li>
+                <li class="parcel-direct__item">
+                  <i class="parcel-direct__icon icon-nova-post-small"></i>
+                  <p class="parcel-direct__text">
+                    Номер відділевння нової пошти
+                  </p>
+                </li>
+                <li class="parcel-direct__item">
+                  <i class="parcel-direct__icon icon-card-name"></i>
+                  <p class="parcel-direct__text">Ім’я отримувача</p>
+                </li>
+              </ul>
+            </li>
+            <li class="steps-list__item">
+              <div class="steps-list__wraper">
+                <i class="steps-list__icon icon-delivery-truck"></i>
+                <div class="steps-list__number">4</div>
+              </div>
+              <h3 class="steps-list__title">
+                Водій забирає посилку у замовника
+              </h3>
+              <p class="steps-list__text">
+                Водій завчасно попереджає про свій приїзд, забирає посилку в
+                Польщі та доставляє в Україну.
+              </p>
+            </li>
+            <li class="steps-list__item">
+              <div class="steps-list__wraper">
+                <i class="steps-list__icon icon-nova_poshta"></i>
+                <div class="steps-list__number">5</div>
+              </div>
+              <h3 class="steps-list__title">
+                Отримувач забирає посилку з Нової Пошти
+              </h3>
+              <p class="steps-list__text">
+                Посилки по Україні надсилаються Новою Поштою.
+              </p>
+            </li>
+          </ul>
+          <ul class="steps-list parcel passenger hide">
+            <li class="steps-list__item">
+              <div class="steps-list__wraper">
+                <div class="steps-list__msg-wraper">
+                  <svg
+                    class="steps-list__icon"
+                    width="80"
+                    height="81"
+                    viewBox="0 0 80 81"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M29.9999 40.1679C29.9999 42.0147 28.5075 43.5117 26.6666 43.5117C24.8257 43.5117 23.3333 42.0147 23.3333 40.1679C23.3333 38.321 24.8257 36.824 26.6666 36.824C28.5075 36.824 29.9999 38.321 29.9999 40.1679ZM43.3333 40.1679C43.3333 42.0147 41.8409 43.5117 39.9999 43.5117C38.1589 43.5117 36.6666 42.0147 36.6666 40.1679C36.6666 38.321 38.1589 36.824 39.9999 36.824C41.8409 36.824 43.3333 38.321 43.3333 40.1679ZM56.6666 40.1679C56.6666 42.0147 55.1743 43.5117 53.3333 43.5117C51.4923 43.5117 49.9999 42.0147 49.9999 40.1679C49.9999 38.321 51.4923 36.824 53.3333 36.824C55.1743 36.824 56.6666 38.321 56.6666 40.1679Z"
+                      fill="#2F80ED"
+                    />
+                    <path
+                      d="M10 40.1678C10 54.9421 23.4315 66.9189 40 66.9189C42.2913 66.9189 44.5227 66.6898 46.6667 66.2561L70 70.2627L64.3987 55.7366C67.9243 51.3511 70 45.9755 70 40.1678C70 25.3936 56.5687 13.4167 40 13.4167C23.4315 13.4167 10 25.3936 10 40.1678Z"
+                      stroke="#2F80ED"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="steps-list__number">1</div>
+              </div>
+              <h3 class="steps-list__title">
+                Надіслати замовлення повідомленням у Viber, WhatsApp, Telegram
+              </h3>
+              <p class="steps-list__text">
+                В повідомленні вказати польську адресу та польський номер
+                телефону
+              </p>
+            </li>
+            <li class="steps-list__item">
+              <div class="steps-list__wraper">
+                <i class="steps-list__icon icon-support"></i>
+                <div class="steps-list__number">2</div>
+              </div>
+              <h3 class="steps-list__title">Диспетчер оброблює замовлення</h3>
+              <p class="steps-list__text">
+                Після обробки замовлення диспетчер надсилає повідомлення про
+                стан замовлення
+              </p>
+            </li>
+            <li class="steps-list__item">
+              <div class="steps-list__wraper">
+                <i class="steps-list__icon icon-backpacker"></i>
+                <div class="steps-list__number">3</div>
+              </div>
+              <h3 class="steps-list__title">Координати пасажира</h3>
+              <ul class="parcel-direct">
+                <li class="parcel-direct__item">
+                  <i class="parcel-direct__icon icon-card-name"></i>
+                  <p class="parcel-direct__text">ПІБ</p>
+                </li>
+                <li class="parcel-direct__item">
+                  <i class="parcel-direct__icon icon-location-pointer"></i>
+                  <p class="parcel-direct__text">Звідки:</p>
+                </li>
+                <li class="parcel-direct__item">
+                  <i class="parcel-direct__icon icon-where"></i>
+                  <p class="parcel-direct__text">Куди:</p>
+                </li>
+              </ul>
+            </li>
+            <li class="steps-list__item">
+              <div class="steps-list__wraper">
+                <i class="steps-list__icon icon-transport"></i>
+                <div class="steps-list__number">4</div>
+              </div>
+              <h3 class="steps-list__title">Водій забирає пасажира</h3>
+              <p class="steps-list__text">
+                В Польщі водій забирає пасажира за вказаною адресою, в Україні
+                водій забирає пасажира або за адресою обо на вокзалі
+              </p>
+            </li>
+            <li class="steps-list__item">
+              <div class="steps-list__wraper">
+                <i class="steps-list__icon icon-flag"></i>
+                <div class="steps-list__number">5</div>
+              </div>
+              <h3 class="steps-list__title">Ви на місці!</h3>
+              <p class="steps-list__text">
+                Пасажир дістався місця призначення.
+              </p>
+            </li>
+          </ul>
+          <svg
+            class="steps__curve-solid"
+            width="548"
+            height="345"
+            viewBox="0 0 548 345"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M-0.5 209.5C32 280.167 120.3 399.5 213.5 311.5C306.7 223.5 358.5 89.3862 444 28.4998C463.656 14.5025 502.058 1.54224 547 1.5"
+              stroke="#E8A83C"
+              stroke-width="3"
+            />
+          </svg>
+        </div>
       </section>
-      
-      <section class="section cost">
+
+      <section class="section cost" id="cost">
         <div class="container">
           <h2 class="cost__title title">Вартість посилки</h2>
           <div class="calc">
@@ -858,7 +1114,7 @@
                     />
                   </svg>
                   <p class="cost__price">
-                    Вартість: <span class="cost__number">81 zl</span>
+                    Вартість: <span class="cost__number">XX zl</span>
                   </p>
                 </div>
               </div>
@@ -867,10 +1123,14 @@
         </div>
       </section>
 
-      <section class="section questions">
+      <section class="section questions" id="questions">
         <div class="container">
           <h2 class="questions__title title">Основні питання</h2>
-          <p class="questions__inform">Всі посилки, які надходять нам в Україні для майбутнньої доставки в Польщу проходять обов'язкову перевірку на наявність заборонених речей</p>
+          <p class="questions__inform">
+            Всі посилки, які надходять нам в Україні для майбутнньої доставки в
+            Польщу проходять обов'язкову перевірку на наявність заборонених
+            речей
+          </p>
 
           <div class="accordion-container"></div>
           <button type="button" class="questions__btn">Більше запитань</button>
@@ -878,68 +1138,83 @@
       </section>
 
       <section class="section feedback">
-         <div class="container">
-            <h2 class="feedback__title title">Зв’яжіться з нами</h2>
-            <form action="#" class="form-feedback">
-               <label class="form-feedback__wraper form-feedback__wraper_name">
-                  <input name="name" type="text" placeholder="ПІБ" class="form-feedback__input">
-               </label>
-               <label class="form-feedback__wraper form-feedback__wraper_phone">
-                  <input name="phone" type="tel" placeholder="00 000 00 00" class="form-feedback__input">
-               </label>
-               <select name="service" class="form-feedback__select select">
-                  <option value="Оберіть послугу" disabled>Оберіть послугу</option>
-                  <option value="value1">Значение 1</option>
-                  <option value="value2">Значение 2</option>
-                  <option value="value3">Значение 3</option>
-               </select>
-               <button type="submit" class="form-feedback__btn">Зв’яжіться з нами</button>
-            </form>
-         </div>
+        <div class="container">
+          <h2 class="feedback__title title">Зв’яжіться з нами</h2>
+          <form action="#" class="form-feedback">
+            <label class="form-feedback__wraper form-feedback__wraper_name">
+              <input
+                name="name"
+                type="text"
+                placeholder="ПІБ"
+                class="form-feedback__input"
+              />
+            </label>
+            <label class="form-feedback__wraper form-feedback__wraper_phone">
+              <input
+                name="phone"
+                type="tel"
+                placeholder="00 000 00 00"
+                class="form-feedback__input"
+              />
+            </label>
+            <select name="service" class="form-feedback__select select">
+              <option value="Оберіть послугу" disabled>Оберіть послугу</option>
+              <option value="value1">Значение 1</option>
+              <option value="value2">Значение 2</option>
+              <option value="value3">Значение 3</option>
+            </select>
+            <button type="submit" class="form-feedback__btn">
+              Зв’яжіться з нами
+            </button>
+          </form>
+        </div>
       </section>
 
-      <section class="section connect">
-        <iframe
+      <section class="section connect" id="connect">
+        <!-- <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5279.159263413704!2d25.51505614264876!3d50.00318379981203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472fe61c00acdf07%3A0x37a2fa407f1c6993!2sVulytsya%20Sportyvna%2C%2041%2C%20Pochaiv%2C%20Ternopil&#39;s&#39;ka%20oblast%2C%2047026!5e0!3m2!1sen!2sua!4v1686126470134!5m2!1sen!2sua"
           style="border: 0"
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+        ></iframe> -->
+        <img src="./images/contacts/map.jpg" alt="карта" class="connect__map" />
         <div class="container">
           <div class="contacts-wraper">
             <h3 class="contacts-wraper__title">Наші контакти</h3>
             <ul class="contacts">
-               <li class="contacts__item contacts__item">
-                 <a
-                   class="contacts__link contacts__link_adress"
-                   href="https://goo.gl/maps/veHMKbEJ8AxTwqxg9"
-                   target="blank"
-                   rel="noopener noreferrer"
-                   ><span class="contacts__adress">М. Почаїв </span
-                   ><span class="contacts__adress">Вул. Спортивна, 41</span></a
-                 >
-               </li>
-               <li class="contacts__item contacts__item_phone">
-                 <div class="contacts__item_wraper">
-                   <a class="contacts__link" href="tel:+380 (96) 964 60 86"
-                     >+380 (96) 964 60 86</a
-                   >
-                   <a class="contacts__link" href="tel:+380 (68) 777 80 88"
-                     >+380 (68) 777 80 88</a
-                   >
-                 </div>
-               </li>
-               <li class="contacts__item">
-                 <a
-                   class="contacts__link contacts__link_email"
-                   href="mailto:avtolifepl@ukr.net"
-                   >avtolifepl@ukr.net</a
-                 >
-               </li>
-             </ul>
+              <li class="contacts__item contacts__item">
+                <a
+                  class="contacts__link contacts__link_adress"
+                  href="https://goo.gl/maps/veHMKbEJ8AxTwqxg9"
+                  target="blank"
+                  rel="noopener noreferrer"
+                  ><span class="contacts__adress">М. Почаїв </span
+                  ><span class="contacts__adress">Вул. Спортивна, 41</span></a
+                >
+              </li>
+              <li class="contacts__item contacts__item_phone">
+                <div class="contacts__item_wraper">
+                  <a class="contacts__link" href="tel:+380 (96) 964 60 86"
+                    >+380 (96) 964 60 86</a
+                  >
+                  <a class="contacts__link" href="tel:+380 (68) 777 80 88"
+                    >+380 (68) 777 80 88</a
+                  >
+                </div>
+              </li>
+              <li class="contacts__item">
+                <a
+                  class="contacts__link contacts__link_email"
+                  href="mailto:avtolifepl@ukr.net"
+                  >avtolifepl@ukr.net</a
+                >
+              </li>
+            </ul>
 
-            <h3 class="contacts-wraper__title contacts-wraper__title_messengers">
+            <h3
+              class="contacts-wraper__title contacts-wraper__title_messengers"
+            >
               Мессенджери
             </h3>
             <ul class="messengers">
@@ -1059,7 +1334,7 @@
               <li class="policy__item">
                 <a href="" class="policy__link">Документ 2</a>
               </li>
-              <li class="policy__item">
+              <!-- <li class="policy__item">
                 <a href="" class="policy__link">Документ 3</a>
               </li>
               <li class="policy__item">
@@ -1067,7 +1342,7 @@
               </li>
               <li class="policy__item">
                 <a href="" class="policy__link">Документ 5</a>
-              </li>
+              </li> -->
             </ul>
           </div>
         </div>
@@ -1166,7 +1441,7 @@
     <section class="section rights">
       <div class="container">
         <small class="rights__text">
-         &copy; 2023 | Усі права захищені | Розробка
+          &copy; 2023 | Усі права захищені | Розробка
           <a
             href="https://quazom.com/"
             class="rights__link"
@@ -1180,6 +1455,10 @@
 
     <script src="./js/accordion.min.js"></script>
     <script src="./js/intlTelInput.min.js"></script>
+    <script src="./js/i18next.min.js"></script>
+    <script src="./translations/ua.js"></script>
+    <script src="./translations/en.js"></script>
+    <script src="./translations/pl.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>

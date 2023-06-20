@@ -230,6 +230,7 @@ button {
   gap: 6px;
   transition: color 250ms linear;
   cursor: pointer;
+  text-transform: uppercase;
 }
 .languages__btn::after {
   content: "";
@@ -248,7 +249,7 @@ button {
   border-color: var(--color-btn-hover);
 }
 .languages__btn:focus + .languages-list {
-  height: 78px;
+  height: 117px;
 }
 .desktop .languages__btn:focus, .desktop .languages__btn:hover {
   color: var(--color-btn-hover);
@@ -659,12 +660,10 @@ button {
   height: 54px;
   padding: 10px 0 11px;
 }
-.services .marquee span {
+.services .marquee__name {
   position: relative;
-  margin-right: 20px;
-}
-.services .marquee svg {
-  margin-left: 10px;
+  margin-right: 10px;
+  margin-left: 20px;
 }
 
 .section.about {
@@ -1032,11 +1031,12 @@ button {
   );
   line-height: 1.15;
   color: var(--color-darkbackground);
+  cursor: pointer;
 }
 @media screen and (min-width: 687px) {
   .calc {
     padding: 32px;
-    background-image: linear-gradient(rgba(38, 38, 38, 0.87), rgba(38, 38, 38, 0.87)), url(../../images/cost/cost-tablet.jpg);
+    background-image: linear-gradient(rgba(38, 38, 38, 0.87), rgba(38, 38, 38, 0.87)), url(../images/cost/cost-tablet.jpg);
   }
   .calc__note {
     margin-bottom: 41px;
@@ -1091,7 +1091,7 @@ button {
 @media screen and (min-width: 1400px) {
   .calc {
     padding: 60px 133px;
-    background-image: linear-gradient(rgba(38, 38, 38, 0.87), rgba(38, 38, 38, 0.87)), url(../../images/cost/cost-desktop.jpg);
+    background-image: linear-gradient(rgba(38, 38, 38, 0.87), rgba(38, 38, 38, 0.87)), url(../images/cost/cost-desktop.jpg);
   }
   .calc__note {
     margin-bottom: 20px;
@@ -1153,6 +1153,7 @@ button {
   color: var(--color-darkbackground);
   margin: 0 auto;
   display: block;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .questions__btn {
@@ -1312,6 +1313,7 @@ button {
   font-size: 20px;
   line-height: 1.15;
   color: var(--color-darkbackground);
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .form-feedback__input, .form-feedback__select {
@@ -1506,6 +1508,23 @@ option {
 .section.connect {
   position: relative;
   padding: 0;
+  height: calc(
+    676px + -50 *
+      ((100vw - 360px) / 409)
+  );
+}
+@media screen and (min-width: 768px) {
+  .section.connect {
+    height: calc(
+    626px + -44 *
+      ((100vw - 768px) / 1152)
+  );
+  }
+}
+@media screen and (min-width: 1920px) {
+  .section.connect {
+    height: 582px;
+  }
 }
 
 .connect iframe {
@@ -1518,6 +1537,15 @@ option {
 }
 .connect .contacts {
   margin-bottom: 20px;
+}
+.connect__map {
+  margin: 0 auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 80%;
+     object-position: 50% 80%;
+  width: 100%;
+  height: 100%;
 }
 @media screen and (min-width: 498px) {
   .connect .container {
