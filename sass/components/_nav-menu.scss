@@ -4,7 +4,7 @@
   &__item {
     font-weight: 500;
     font-size: 16px;
-    line-height: 19px;
+    line-height: calc(19 / 16);
   }
 
   &__item:not(:last-child) {
@@ -35,16 +35,39 @@
   .desktop &__link:focus {
     color: var(--color-btn-hover);
   }
+
+  @media screen and (min-width: 1280px) {
+    &__item {
+      @include adaptiv-font(16, 12, 1920, 1280);
+    }
+  }
+  @media screen and (min-width: 1920px) {
+    &__item {
+      font-size: 16px;
+    }
+  }
 }
 
 .authorization {
+  display: block;
   font-weight: 500;
   font-size: 16px;
-  line-height: 19px;
+  line-height: calc(19 / 16);
   transition: color 250ms linear;
 
   &:hover,
   &:focus {
     color: var(--color-btn-hover);
+  }
+
+  @media screen and (min-width: 1280px) {
+    & {
+      @include adaptiv-font(16, 12, 1920, 1280);
+    }
+  }
+  @media screen and (min-width: 1920px) {
+    & {
+      font-size: 16px;
+    }
   }
 }

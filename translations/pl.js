@@ -7,6 +7,7 @@ const plTranslation = {
     basicQuestions: "Podstawowe pytania",
     contacts: "Łączność",
     authorization: "Upoważnienie",
+    avto: "Auto-life",
   },
   hero: {
     delivery: "Dostarczymy wszystko między",
@@ -43,7 +44,12 @@ const plTranslation = {
   },
   about: {
     why: "Dlaczego właśnie my?",
-    text: "Firma 'Auto-Life_PL' świadczy usługi przewozu towarów i pasażerów z Ukrainy do Polski iz powrotem. Nasza firma specjalizuje się w transporcie bagażu, paczek, rzeczy osobistych, dokumentów oraz zamówień ze sklepów internetowych. Posiadamy własne pomieszczenia do bezpłatnego przechowywania przesyłek zarówno w Polsce jak i na Ukrainie. Dostawa jest możliwa pod warunkiem, że towar nie jest zabroniony przez przepisy celne. Dostawa bagażu pozwoli Państwu przewieźć niezbędne rzeczy w wyznaczonym czasie i możliwie jak najszybciej. Nasi kierowcy odbiorą ładunek w dogodnym dla Państwa czasie i miejscu. Każda sztuka bagażu posiada swój numer porządkowy oraz jest wpisany do systemu tras. Ceny dostawy obliczane są na podstawie następujących wskaźników: szerokość, wysokość i długość przewożonego ładunku. Przesyłka niezależnie od gabarytów dostarczana jest pod adres uzgodniony przez dyspozytora z klientem i przekazywana osobiście odbiorcy, co gwarantuje bezpieczną dostawę. Zapewniamy również możliwość wysłania przesyłki kurierem do wybranego miasta na Ukrainie za pośrednictwem firmy kurierskiej Nowa Poczta.",
+    textFirst:
+      "Firma 'Auto-Life_PL' świadczy usługi przewozu towarów i pasażerów z Ukrainy do Polski iz powrotem. Nasza firma specjalizuje się w transporcie bagażu, paczek, rzeczy osobistych, dokumentów oraz zamówień ze sklepów internetowych. Posiadamy własne pomieszczenia do bezpłatnego przechowywania przesyłek zarówno w Polsce jak i na Ukrainie. Dostawa jest możliwa pod warunkiem, że towar nie jest zabroniony przez przepisy celne.",
+    textSecond:
+      "Dostawa bagażu pozwoli Państwu przewieźć niezbędne rzeczy w wyznaczonym czasie i możliwie jak najszybciej. Nasi kierowcy odbiorą ładunek w dogodnym dla Państwa czasie i miejscu. Każda sztuka bagażu posiada swój numer porządkowy oraz jest wpisany do systemu tras.",
+    textThird:
+      "Ceny dostawy obliczane są na podstawie następujących wskaźników: szerokość, wysokość i długość przewożonego ładunku. Przesyłka niezależnie od gabarytów dostarczana jest pod adres uzgodniony przez dyspozytora z klientem i przekazywana osobiście odbiorcy, co gwarantuje bezpieczną dostawę. Zapewniamy również możliwość wysłania przesyłki kurierem do wybranego miasta na Ukrainie za pośrednictwem firmy kurierskiej Nowa Poczta.",
   },
   steps: {
     order: "Etapy składania zamówienia",
@@ -54,8 +60,8 @@ const plTranslation = {
       text: "W wiadomości podaj polski adres i polski numer telefonu",
     },
     processing: {
-      title: "Диспетчер  оброблює замовлення",
-      text: "Після обробки замовлення диспетчер  надсилає повідомлення  про стан замовлення",
+      title: "Dyspozytor realizuje zamówienie",
+      text: "Po przetworzeniu zamówienia, dyspozytor wysyła wiadomość o statusie zamówienia",
     },
     direct: {
       title: "Wskaż na przesyłce:",
@@ -89,18 +95,107 @@ const plTranslation = {
   },
   cost: {
     calc: "Kalkulacja wartości przesyłki",
-    price: "Minimalna wartość paczki XX zł",
+    price: "Minimalna wartość paczki: XX zł",
     length: "Długość, patrz",
     width: "Szerokość, patrz",
     height: "Wysokość, patrz",
-    cost: "Cena: XX zł",
+    cost: "Cena: ",
+    figure: "XX zł",
   },
   feedback: {
     name: "Pełne imię i nazwisko",
-    shoosing: "Wybierz usługę",
+    choosing: "Wybierz usługę",
     connect: "Skontaktuj się z nami",
     contacts: "Nasze kontakty",
     messengers: "Posłańcy",
     policy: "Політика конфіденційності",
   },
+  questions: {
+    title:
+      "Wszystkie przesyłki, które trafiają do nas na Ukrainie w celu przyszłej dostawy do Polski, przechodzą obowiązkową kontrolę na obecność przedmiotów zabronionych",
+    two: {
+      title: "Jak mogę zamówić miejsce dla pasażera/przesiadki?",
+      answer:
+        "Aby zamówić miejsce wystarczy do nas zadzwonić lub napisać pod numer +380969646086 lub +380687778088 (Viber, WhatsApp, Telegram)",
+    },
+    three: {
+      title: "Jak długo trwa rezerwacja miejsca?",
+      answer:
+      "Na przewóz osób lepiej zarezerwować miejsce na kilka dni przed planowanym terminem wyjazdu, a na przesiadki - umówić się nie później niż w sobotę.",
+    },
+    four: {
+      title: "Ile sztuk bagażu jest wliczone w cenę biletu pasażera?",
+      answer:
+        "Do 5 sztuk bagażu gratis. Jeżeli bagaż jest większy niż 5 sztuk to nie problem, trzeba będzie dopłacić. Wysokość dopłaty zostanie oszacowana przez kierowcę po obniżonej cenie.",
+    },
+    five: {
+      title: "Z jakich miast Ukrainy wyjeżdżamy?",
+      answer:
+        "Wyjeżdżamy z: Równego, Łucka, Chmielnickiego, Tarnopola, Lwowa. Odbieramy również pasażerów w regionie, po uzgodnieniu.",
+    },
+    six: {
+      title: "W jakich miastach Polski pracujemy?",
+      answer:
+        "„Pracujemy bezpośrednio na terenie powiatu woj. śląskiego ze stolicą w Katowicach. Odbieramy pasażerów pod ich adresem w Polsce.",
+    },
+    seven: {
+      title: "Jak często mamy wyjścia?",
+      answer:
+      "Wyjazd z Ukrainy - wtorek i piątek. Wyjazd z Polski - środa i niedziela. Istnieją dodatkowe wyjazdy, zgodnie z ustaleniami z naszymi dyspozytorami. Zadzwoń +380969646086 lub +380687778088 (Viber, WhatsApp, Telegram)",
+    },
+    eight: {
+      title: "Jak mogę wysłać przelew z Ukrainy?",
+      answer:
+        "W tym celu należy wysłać przelew pocztą (Nova lub Ukrposhta, indeks 47025) według następujących współrzędnych: M. Poczajew Obwód tarnopolski Nowa Poczta 1 0969646086 Szyliński Nazar Ale zresetuj nam TTN",
+    },
+    nine: {
+      title: "Co jest zabronione do przenoszenia?",
+      answer:
+      "NIE MOGĘ!!! Nabiał, mięso, alkohol, papierosy i surowe ziemniaki. Wymieniona lista przedmiotów zabronionych dotyczy tylko transmisji z Ukrainy.",
+    },
+    ten: {
+      title: "Jak najlepiej spakować skrzynię biegów?",
+      answer:
+        "Preferujemy torby z zamkiem, ale z Polski możliwa jest również opcja z pudełkiem. Nie zabraniamy innych rodzajów opakowań, najważniejsza jest niezawodność.",
+    },
+    eleven: {
+      title: "Jak podpisać przelew?",
+      answer:
+      "Przelew z Ukrainy: wyślij nam numer TTN, miasto, ulicę, numer domu i numer telefonu odbiorcy w Polsce. transmisja z Polski: Sam podpisujesz przelew Miasto Numer oddziału Jeśli skrzynia biegów jest duża (powyżej 30 kg.), to wskazujemy przedział ładunkowy! Numer telefonu odbiorcy Imię i nazwisko",
+    },
+    twelve: {
+      title: "Skąd wiemy, że to twoja transmisja?",
+      answer:
+        "W tym celu nadawca musi przesłać nam numer faktury oraz adres wraz z numerem telefonu odbiorcy w Polsce na numer +380969646086 lub +380687778088 (Viber, WhatsApp, Telegram).",
+    },
+    threeteen: {
+      title: "Czy można wysłać paczkę na terenie całej Polski pocztą?",
+      answer:
+        "Tak, jest to możliwe, pocztą, jeśli nie jest to przesyłka masowa, jest wysyłana w obie strony.",
+    },
+    fourteen: {
+      title: "Jaki jest koszt transportu przekładni?",
+      answer:
+      "Cena według objętości. Od 30zł (zielona paczka Bedryonka) normalnie pakowana. Torba Bedryonka - 60 zł. Coś małego 20 zł (pudełko po butach). Koperta 20 zł, usługi pocztowe są płatne osobno.",
+    },
+    fifteen: {
+      title: "Czy mogę zamówić lekarstwa lub inne towary?",
+      answer:
+        "Tak, w tym celu wystarczy przesłać nam listę niezbędnych towarów pod numer +380969646086 lub +380687778088 (Viber, WhatsApp, Telegram).",
+    },
+    seexteen: {
+      title: "Jak szybko wysyłane są transmisje przez Ukrainę?",
+      answer:
+        "Wysyłki realizowane są od poniedziałku do środy w zależności od ilości przesyłek i nakładu pracy.",
+    },
+    seventeen: {
+      title: "Kiedy przelew jest odbierany w Polsce?",
+      answer:
+        "Wszystkie przelewy, które dotarły do ​​nas do czwartku, są dostarczane do adresata w Polsce w weekend.",
+    },
+  },
+  connect: {
+   city: "M. Poczajew",
+   street: "Вул. Спортивна, 41",
+  }
 };

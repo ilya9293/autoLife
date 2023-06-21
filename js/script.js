@@ -39,72 +39,68 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const paragraphsData = [
     {
-      title: "Як можна замовити місце для пасажира/передачі?",
-      text: "Для замовлення місця достатньо подзвонити або написати нам на номер +380969646086 або +380687778088 (Viber, WhatsApp, Telegram)",
+      titleKey: "questions.two.title",
+      textKey: "questions.two.answer",
     },
     {
-      title: "За скільки часу можна замовити місце?",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      titleKey: "questions.three.title",
+      textKey: "questions.three.answer",
     },
     {
-      title: "Скільки одиниць багажу входить у вартість проїзду пасажира?",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      titleKey: "questions.four.title",
+      textKey: "questions.four.answer",
     },
     {
-      title: "З яких міст України у нас виїзд?",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      titleKey: "questions.five.title",
+      textKey: "questions.five.answer",
     },
     {
-      title: "В яких містах Польщі ми працюємо?",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      titleKey: "questions.six.title",
+      textKey: "questions.six.answer",
     },
     {
-      title: "Як часто у нас виїзди?",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      titleKey: "questions.seven.title",
+      textKey: "questions.seven.answer",
     },
     {
-      title: "Як можна відправити передачу з України?",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      titleKey: "questions.eight.title",
+      textKey: "questions.eight.answer",
     },
     {
-      title: "Що заборонено передавати?",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      titleKey: "questions.nine.title",
+      textKey: "questions.nine.answer",
     },
     {
-      title: "У що краще пакувати передачу?",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      titleKey: "questions.ten.title",
+      textKey: "questions.ten.answer",
     },
     {
-      title: "Як підписувати передачу?",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      titleKey: "questions.eleven.title",
+      textKey: "questions.eleven.answer",
     },
     {
-      title: "Як ми дізнаємось, що це ваша передача?",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      titleKey: "questions.twelve.title",
+      textKey: "questions.twelve.answer",
     },
     {
-      title: "Чи можлива відправка посилки по Польші поштоматом?",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      titleKey: "questions.threeteen.title",
+      textKey: "questions.threeteen.answer",
     },
     {
-      title: "Яка вартість перевезення передачі?",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      titleKey: "questions.fourteen.title",
+      textKey: "questions.fourteen.answer",
     },
     {
-      title: "Чи можна замовити ліки або інші товари?",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      titleKey: "questions.fifteen.title",
+      textKey: "questions.fifteen.answer",
     },
     {
-      title: "Як швидко відбувається відправка передач по Україні?",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      titleKey: "questions.seexteen.title",
+      textKey: "questions.seexteen.answer",
     },
     {
-      title: "Коли передачу отримують у Польщі?",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-      title: "Як можна отримати номер накладної на посилку?",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      titleKey: "questions.seventeen.title",
+      textKey: "questions.seventeen.answer",
     },
   ];
   const visibleParagraphsCount = 6;
@@ -119,16 +115,18 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
     visibleParagraphs.forEach((paragraphData) => {
+      const title = i18next.t(paragraphData.titleKey);
+      const text = i18next.t(paragraphData.textKey);
       const markup = `<div class="ac">
                         <h2 class="ac-header">
                         <button type="button" class="ac-trigger">
-                           ${paragraphData.title}
+                           ${title}
                         </button>
                         </h2>
                         <div class="ac-panel">
-                        <p class="ac-text">
-                        ${paragraphData.text}
-                        </p>
+                           <p class="ac-text">
+                              ${text}
+                           </p>
                         </div>
                      </div>`;
 
@@ -414,50 +412,5 @@ anchors.forEach(function (anchor) {
     }
 
     requestAnimationFrame(scrollAnimation);
-  });
-});
-
-i18next.init({
-  lng: "ua",
-  debug: true,
-  resources: {
-    ua: {
-      translation: uaTranslation,
-    },
-    en: {
-      translation: enTranslation,
-    },
-    pl: {
-      translation: plTranslation,
-    },
-  },
-});
-
-function updateTranslations() {
-  const elements = document.querySelectorAll("[data-i18n]");
-  elements.forEach((element) => {
-    const key = element.dataset.i18n;
-    element.textContent = i18next.t(key);
-    
-  });
-}
-
-function changeLanguage(lang) {
-  i18next.changeLanguage(lang, function (err, t) {
-    if (err) {
-      console.error("Ошибка при изменении языка:", err);
-      return;
-    }
-    updateTranslations();
-  });
-}
-
-const langSwitchers = document.querySelectorAll("[data-lang]");
-const btnLngs = document.querySelectorAll(".languages__btn");
-langSwitchers.forEach((switcher) => {
-  switcher.addEventListener("click", () => {
-    const valueLng = switcher.dataset.lang;
-    btnLngs.forEach((btn) => (btn.textContent = valueLng));
-    changeLanguage(valueLng);
   });
 });
