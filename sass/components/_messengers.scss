@@ -29,10 +29,16 @@
 
     @media screen and (min-width: 1280px) {
       & {
-         justify-content: flex-start;
+        justify-content: flex-start;
       }
     }
   }
+
+  @media screen and (min-width: 1280px) and (max-width: 1680px) {
+   .desktop & {
+     margin-right: 50px;
+   }
+ }
 
   .contacts-wraper &__icon {
     width: 37px;

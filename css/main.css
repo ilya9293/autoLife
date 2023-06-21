@@ -70,14 +70,24 @@ button {
   padding: 0 15px;
   margin: 0 auto;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 1024px) {
   .container {
-    max-width: 734px;
+    max-width: 994px;
   }
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1280px) {
   .container {
-    max-width: 1649px;
+    max-width: 1250px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .container {
+    max-width: 1336px;
+  }
+}
+@media screen and (min-width: 1680px) {
+  .container {
+    max-width: 1650px;
   }
 }
 
@@ -179,6 +189,11 @@ button {
   );
   }
 }
+@media screen and (min-width: 1280px) and (max-width: 1680px) {
+  .desktop .nav-menu {
+    margin-right: 50px;
+  }
+}
 @media screen and (min-width: 1920px) {
   .nav-menu__item {
     font-size: 16px;
@@ -233,6 +248,11 @@ button {
 @media screen and (min-width: 1280px) {
   .contacts-wraper .messengers {
     justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 1280px) and (max-width: 1680px) {
+  .desktop .messengers {
+    margin-right: 50px;
   }
 }
 .contacts-wraper .messengers__icon {
@@ -689,7 +709,7 @@ button {
   color: var(--color-menu-text);
   margin-top: 5px;
 }
-@media screen and (min-width: 498px) {
+@media screen and (min-width: 480px) {
   .services-list {
     margin-top: -20px;
     margin-right: -20px;
@@ -711,7 +731,7 @@ button {
     line-height: 1.1875;
   }
 }
-@media screen and (min-width: 1648px) {
+@media screen and (min-width: 1680px) {
   .services-list {
     padding: 60px 0;
   }
@@ -861,7 +881,7 @@ button {
     line-height: 1.15;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1366px) {
   .about__content {
     margin: 0 auto;
   }
@@ -869,7 +889,7 @@ button {
     display: none;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1366px) {
   .about__img {
     display: none;
   }
