@@ -641,6 +641,7 @@ button {
 
 .section.services {
   overflow-x: hidden;
+  padding-bottom: 0;
 }
 @media screen and (min-width: 498px) {
   .section.services {
@@ -650,13 +651,11 @@ button {
 @media screen and (min-width: 768px) {
   .section.services {
     padding-top: 140px;
-    padding-bottom: 32px;
   }
 }
 @media screen and (min-width: 1280px) {
   .section.services {
     padding-top: 0;
-    padding-bottom: 0;
   }
 }
 
@@ -765,7 +764,7 @@ button {
   background-image: url("../images/about/background-mob.png");
   background-position: -65px 0px;
   background-repeat: no-repeat;
-  padding-top: 0;
+  padding-top: 32px;
   overflow: hidden;
 }
 @media screen and (min-width: 360px) {
@@ -773,20 +772,21 @@ button {
     background-image: url("../images/about/background-tablet.png");
   }
 }
-@media screen and (max-width: 768px) {
-  .section.about .container {
-    max-width: none;
-  }
-}
 @media screen and (min-width: 768px) {
   .section.about {
     background-image: url("../images/about/background-desktop.png");
     background-position: 25px -60px;
+    padding-top: 37px;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1366px) {
   .section.about {
     padding-top: 120px;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .section.about .container {
+    max-width: none;
   }
 }
 
@@ -907,6 +907,10 @@ button {
   .about__description {
     max-width: 798px;
     margin-bottom: 0;
+    font-size: calc(
+    16px + 4 *
+      ((100vw - 1366px) / 554)
+  );
   }
   .about__content .about__wraper {
     display: none;
@@ -937,6 +941,11 @@ button {
   .about__wraper::before {
     background-size: 167px 5px;
     animation: aboutRoad1280 10s linear infinite;
+  }
+}
+@media screen and (min-width: 1366px) and (max-width: 1680px) {
+  .about__title {
+    margin-bottom: 30px;
   }
 }
 
@@ -1160,7 +1169,7 @@ button {
   .calc__btn {
     font-size: 28px;
     line-height: 1.18;
-    padding: 7px;
+    padding: 7px 20px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1179,7 +1188,7 @@ button {
     letter-spacing: 0.36px;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1280px) {
   .calc {
     padding: 60px 133px;
     background-image: linear-gradient(rgba(38, 38, 38, 0.87), rgba(38, 38, 38, 0.87)), url(../images/cost/cost-desktop.jpg);
@@ -1191,6 +1200,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 30px;
   }
   .calc__title, .calc__note {
     text-align: left;
@@ -1207,9 +1217,19 @@ button {
   .calc__input {
     max-width: 349px;
   }
+  .calc__container-btn-price {
+    max-width: 440px;
+  }
   .calc__btn {
     max-width: 390px;
     white-space: nowrap;
+    display: block;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 1280px) and (max-width: 1680px) {
+  .calc {
+    padding: 60px 70px;
   }
 }
 
@@ -1961,6 +1981,11 @@ option {
     background-repeat: no-repeat;
     background-image: url("../images/steps/desktop-left-top.png"), url("../images/steps/desktop-middle-top.png"), url("../images/steps/desktop-right-top.png"), url("../images/steps/desktop-left-bottom.png"), url("../images/steps/desktop-right-bottom.png");
     background-position: 10% 24%, 50% 30%, 90% 35%, 25% 100%, 75% 100%;
+  }
+}
+@media screen and (min-width: 2200px) {
+  .section.steps {
+    height: 1000px;
   }
 }
 

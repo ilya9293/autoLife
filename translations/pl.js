@@ -100,7 +100,7 @@ const plTranslation = {
     width: "Szerokość, patrz",
     height: "Wysokość, patrz",
     cost: "Cena: ",
-    figure: "XX zł",
+    figure: "zł",
   },
   feedback: {
     name: "Pełne imię i nazwisko",

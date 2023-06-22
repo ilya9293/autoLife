@@ -25,6 +25,12 @@
       background-position: 10% 24%, 50% 30%, 90% 35%, 25% 100%, 75% 100%;
     }
   }
+
+  @media screen and (min-width: 2200px) {
+    & {
+      height: 1000px;
+    }
+  }
 }
 .steps {
   & .title {

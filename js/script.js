@@ -12,26 +12,6 @@ mobBtnClose.addEventListener("click", toggleModal);
 // new Accordion(".accordion-container");
 
 document.addEventListener("DOMContentLoaded", function () {
-  //   const questionsBtn = document.querySelector(".questions__btn");
-  //   const acContainers = document.querySelectorAll(".ac");
-
-  //   const hiddenAc = [...acContainers].slice(3);
-  //   const visiblePcontainersCount = 3;
-
-  //   hiddenAc.forEach((container) => (container.style.display = "none"));
-
-  //   questionsBtn.addEventListener("click", () => {
-  //     for (var i = 0; i < visiblePcontainersCount; i++) {
-  //       if (hiddenAc.length > 0) {
-  //         hiddenAc.shift().style.display = "block";
-  //       }
-  //     }
-
-  //     if (hiddenAc.length === 0) {
-  //       questionsBtn.style.display = "none";
-  //     }
-  //   });
-
   const container = document.querySelector(".accordion-container");
   const button = document.querySelector(".questions__btn");
 
@@ -106,42 +86,48 @@ document.addEventListener("DOMContentLoaded", function () {
   const visibleParagraphsCount = 6;
   let hiddenParagraphs = [...paragraphsData];
 
-  const showNextParagraphs = () => {
-    new Accordion(".accordion-container");
+  const makeMarkup = (data) => {
+    const title = i18next.t(data.titleKey);
+    const text = i18next.t(data.textKey);
+    const markup = `<div class="ac">
+                     <h2 class="ac-header">
+                     <button type="button" class="ac-trigger">
+                        ${title}
+                     </button>
+                     </h2>
+                     <div class="ac-panel">
+                        <p class="ac-text">
+                           ${text}
+                        </p>
+                     </div>
+                  </div>`;
 
+    container.insertAdjacentHTML("beforeend", markup);
+  };
+
+  const showFirstParagraphs = () => {
     const visibleParagraphs = hiddenParagraphs.splice(
       0,
       visibleParagraphsCount
     );
-
+    new Accordion(".accordion-container");
     visibleParagraphs.forEach((paragraphData) => {
-      const title = i18next.t(paragraphData.titleKey);
-      const text = i18next.t(paragraphData.textKey);
-      const markup = `<div class="ac">
-                        <h2 class="ac-header">
-                        <button type="button" class="ac-trigger">
-                           ${title}
-                        </button>
-                        </h2>
-                        <div class="ac-panel">
-                           <p class="ac-text">
-                              ${text}
-                           </p>
-                        </div>
-                     </div>`;
-
-      container.insertAdjacentHTML("beforeend", markup);
+      makeMarkup(paragraphData);
     });
     new Accordion(".accordion-container");
-
-    if (hiddenParagraphs.length === 0) {
-      button.style.display = "none";
-    }
   };
 
-  button.addEventListener("click", showNextParagraphs);
+  const handleShowMore = () => {
+    for (let i = 0; i < hiddenParagraphs.length; i++) {
+      new Accordion(".accordion-container");
+      makeMarkup(hiddenParagraphs[i]);
+      new Accordion(".accordion-container");
+    }
+    button.style.display = "none";
+  };
 
-  showNextParagraphs();
+  button.addEventListener("click", handleShowMore);
+  showFirstParagraphs();
 });
 
 const inputs = document.querySelectorAll(".form-feedback__input[type=tel]");
@@ -414,3 +400,18 @@ anchors.forEach(function (anchor) {
     requestAnimationFrame(scrollAnimation);
   });
 });
+
+// Calc Form
+
+const calcForm = document.querySelector(".calc__form");
+const costValue = document.querySelector("#cost-value");
+
+const handleCost = (e) => {
+  e.preventDefault();
+  const { width, length, height } = e.currentTarget;
+  const result =
+    Number(width.value) + Number(length.value) + Number(height.value);
+  costValue.textContent = Math.round(result);
+};
+
+calcForm.addEventListener("submit", handleCost);

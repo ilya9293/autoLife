@@ -100,7 +100,7 @@ const uaTranslation = {
     width: "Ширина, см",
     height: "Висота, см",
     cost: "Вартість: ",
-    figure: "ХХ zl",
+    figure: "zl",
   },
   feedback: {
     name: "ПІБ",

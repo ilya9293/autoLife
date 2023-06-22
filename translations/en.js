@@ -100,7 +100,7 @@ const enTranslation = {
     width: "Width, see",
     height: "Height, see",
     cost: "Price: ",
-    figure: "XX zl",
+    figure: "zl",
   },
   feedback: {
     name: "Full name",

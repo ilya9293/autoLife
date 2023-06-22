@@ -6,7 +6,7 @@
   background-image: url("../images/about/background-mob.png");
   background-position: -65px 0px;
   background-repeat: no-repeat;
-  padding-top: 0;
+  padding-top: 32px;
   overflow: hidden;
 
   @media screen and (min-width: 360px) {
@@ -14,20 +14,23 @@
       background-image: url("../images/about/background-tablet.png");
     }
   }
-  @media screen and (max-width: 768px) {
-    & .container {
-      max-width: none;
-    }
-  }
+
   @media screen and (min-width: 768px) {
     & {
       background-image: url("../images/about/background-desktop.png");
       background-position: 25px -60px;
+      padding-top: 37px;
     }
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1366px) {
     & {
       padding-top: 120px;
+    }
+  }
+
+  @media screen and (max-width: 1366px) {
+    & .container {
+      max-width: none;
     }
   }
 }
@@ -163,6 +166,7 @@
     &__description {
       max-width: 798px;
       margin-bottom: 0;
+      @include adaptiv-font(20, 16, 1920, 1366);
     }
 
     &__content &__wraper {
@@ -197,6 +201,12 @@
     &__wraper::before {
       background-size: 167px 5px;
       animation: aboutRoad1280 10s linear infinite;
+    }
+  }
+
+  @media screen and (min-width: 1366px) and (max-width: 1680px) {
+    &__title {
+      margin-bottom: 30px;
     }
   }
 }
