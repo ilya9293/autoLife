@@ -109,10 +109,13 @@ const plTranslation = {
     contacts: "Nasze kontakty",
     messengers: "Posłańcy",
     policy: "Політика конфіденційності",
+    transportPass: "Przewóz pasażerów",
+    transportParcel: "Transport paczek",
   },
   questions: {
     title:
       "Wszystkie przesyłki, które trafiają do nas na Ukrainie w celu przyszłej dostawy do Polski, przechodzą obowiązkową kontrolę na obecność przedmiotów zabronionych",
+    more: "Więcej pytań",
     two: {
       title: "Jak mogę zamówić miejsce dla pasażera/przesiadki?",
       answer:
@@ -121,7 +124,7 @@ const plTranslation = {
     three: {
       title: "Jak długo trwa rezerwacja miejsca?",
       answer:
-      "Na przewóz osób lepiej zarezerwować miejsce na kilka dni przed planowanym terminem wyjazdu, a na przesiadki - umówić się nie później niż w sobotę.",
+        "Na przewóz osób lepiej zarezerwować miejsce na kilka dni przed planowanym terminem wyjazdu, a na przesiadki - umówić się nie później niż w sobotę.",
     },
     four: {
       title: "Ile sztuk bagażu jest wliczone w cenę biletu pasażera?",
@@ -141,7 +144,7 @@ const plTranslation = {
     seven: {
       title: "Jak często mamy wyjścia?",
       answer:
-      "Wyjazd z Ukrainy - wtorek i piątek. Wyjazd z Polski - środa i niedziela. Istnieją dodatkowe wyjazdy, zgodnie z ustaleniami z naszymi dyspozytorami. Zadzwoń +380969646086 lub +380687778088 (Viber, WhatsApp, Telegram)",
+        "Wyjazd z Ukrainy - wtorek i piątek. Wyjazd z Polski - środa i niedziela. Istnieją dodatkowe wyjazdy, zgodnie z ustaleniami z naszymi dyspozytorami. Zadzwoń +380969646086 lub +380687778088 (Viber, WhatsApp, Telegram)",
     },
     eight: {
       title: "Jak mogę wysłać przelew z Ukrainy?",
@@ -151,7 +154,7 @@ const plTranslation = {
     nine: {
       title: "Co jest zabronione do przenoszenia?",
       answer:
-      "NIE MOGĘ!!! Nabiał, mięso, alkohol, papierosy i surowe ziemniaki. Wymieniona lista przedmiotów zabronionych dotyczy tylko transmisji z Ukrainy.",
+        "NIE MOGĘ!!! Nabiał, mięso, alkohol, papierosy i surowe ziemniaki. Wymieniona lista przedmiotów zabronionych dotyczy tylko transmisji z Ukrainy.",
     },
     ten: {
       title: "Jak najlepiej spakować skrzynię biegów?",
@@ -161,7 +164,7 @@ const plTranslation = {
     eleven: {
       title: "Jak podpisać przelew?",
       answer:
-      "Przelew z Ukrainy: wyślij nam numer TTN, miasto, ulicę, numer domu i numer telefonu odbiorcy w Polsce. transmisja z Polski: Sam podpisujesz przelew Miasto Numer oddziału Jeśli skrzynia biegów jest duża (powyżej 30 kg.), to wskazujemy przedział ładunkowy! Numer telefonu odbiorcy Imię i nazwisko",
+        "Przelew z Ukrainy: wyślij nam numer TTN, miasto, ulicę, numer domu i numer telefonu odbiorcy w Polsce. transmisja z Polski: Sam podpisujesz przelew Miasto Numer oddziału Jeśli skrzynia biegów jest duża (powyżej 30 kg.), to wskazujemy przedział ładunkowy! Numer telefonu odbiorcy Imię i nazwisko",
     },
     twelve: {
       title: "Skąd wiemy, że to twoja transmisja?",
@@ -176,7 +179,7 @@ const plTranslation = {
     fourteen: {
       title: "Jaki jest koszt transportu przekładni?",
       answer:
-      "Cena według objętości. Od 30zł (zielona paczka Bedryonka) normalnie pakowana. Torba Bedryonka - 60 zł. Coś małego 20 zł (pudełko po butach). Koperta 20 zł, usługi pocztowe są płatne osobno.",
+        "Cena według objętości. Od 30zł (zielona paczka Bedryonka) normalnie pakowana. Torba Bedryonka - 60 zł. Coś małego 20 zł (pudełko po butach). Koperta 20 zł, usługi pocztowe są płatne osobno.",
     },
     fifteen: {
       title: "Czy mogę zamówić lekarstwa lub inne towary?",
@@ -195,7 +198,11 @@ const plTranslation = {
     },
   },
   connect: {
-   city: "M. Poczajew",
-   street: "Вул. Спортивна, 41",
-  }
+    city: "M. Poczajew",
+    street: "Św. Sportiwna, 41",
+  },
+  footer: {
+    document: "Dokument",
+    rights: "Wszelkie prawa zastrzeżone | Opracowany przez",
+  },
 };

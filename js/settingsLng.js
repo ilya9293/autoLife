@@ -1,9 +1,9 @@
-const cuurentLng = localStorage.getItem("currentLang");
-const isCuurentLng = cuurentLng ? cuurentLng : "ua";
+const curentLng = localStorage.getItem("currentLang");
+const isCurentLng = curentLng ? curentLng : "ua";
 
 i18next.init({
-  lng: isCuurentLng,
-  debug: true,
+  lng: isCurentLng,
+  debug: false,
   resources: {
     ua: {
       translation: uaTranslation,
@@ -17,14 +17,19 @@ i18next.init({
   },
 });
 
-
 function updateTranslations() {
   const elements = document.querySelectorAll("[data-i18n]");
+  const inputs = document.querySelectorAll("[data-i18nph]");
   elements.forEach((element) => {
     const key = element.dataset.i18n;
     element.textContent = i18next.t(key);
   });
-  btnLngs.forEach((btn) => (btn.textContent = isCuurentLng));
+  inputs.forEach((input) => {
+    const key = input.dataset.i18nph;
+    const translatedValue = i18next.t(key);
+    input.setAttribute("placeholder", translatedValue);
+  });
+  btnLngs.forEach((btn) => (btn.textContent = isCurentLng));
 }
 
 function changeLanguage(lang) {

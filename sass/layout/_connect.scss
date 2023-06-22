@@ -38,6 +38,14 @@
     height: 100%;
   }
 
+  & .messengers__link {
+    font-size: 37px;
+  }
+
+  & .messengers__icon {
+    color: var(--color-darkbackground);
+  }
+
   @media screen and (min-width: 498px) {
     & .container {
       bottom: 32px;

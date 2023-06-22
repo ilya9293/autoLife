@@ -410,8 +410,40 @@ const handleCost = (e) => {
   e.preventDefault();
   const { width, length, height } = e.currentTarget;
   const result =
-    Number(width.value) + Number(length.value) + Number(height.value);
+    (Number(width.value) * Number(length.value) * Number(height.value) * 60) /
+    (50 * 40 * 25);
   costValue.textContent = Math.round(result);
 };
 
 calcForm.addEventListener("submit", handleCost);
+
+const calcInputs = document.querySelectorAll(".calc__input");
+const setWidthInput = () => {
+  calcInputs.forEach((input) => {
+    if (curentLng === "pl" && window.innerWidth > 687) {
+      input.style.maxWidth = "54%";
+    } else {
+      input.style.maxWidth = "";
+    }
+  });
+};
+
+window.addEventListener("resize", setWidthInput);
+setWidthInput();
+
+// Политика конфединциальности
+const policyLink = document.querySelector(".policy__link");
+
+switch (curentLng) {
+  case "ua":
+    policyLink.setAttribute("href", "1");
+    break;
+  case "pl":
+    policyLink.setAttribute("href", "2");
+    break;
+  case "en":
+    policyLink.setAttribute("href", "3");
+    break;
+  default:
+    break;
+}

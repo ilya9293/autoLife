@@ -109,10 +109,13 @@ const enTranslation = {
     contacts: "Our contacts",
     messengers: "Messengers",
     policy: "Privacy Policy",
+    transportPass: "Transportation of passengers",
+    transportParcel: "Transportation of parcels",
   },
   questions: {
     title:
       "All parcels that come to us in Ukraine for future delivery to Poland undergo a mandatory check for the presence of prohibited items",
+    more: "More questions",
     two: {
       title: "How can I order a seat for a passenger/transfer?",
       answer:
@@ -175,7 +178,8 @@ const enTranslation = {
     },
     fourteen: {
       title: "What is the cost of transporting the transmission?",
-      answer: "Price by volume. From 30zl (green package Bedryonka) normally packed. Bedryonka bag - 60 zl. Something small 20 zl (shoe box). Envelope 20zl, postal services are paid separately.",
+      answer:
+        "Price by volume. From 30zl (green package Bedryonka) normally packed. Bedryonka bag - 60 zl. Something small 20 zl (shoe box). Envelope 20zl, postal services are paid separately.",
     },
     fifteen: {
       title: "Can I order medicine or other goods?",
@@ -195,6 +199,10 @@ const enTranslation = {
   },
   connect: {
     city: "M. Pochaev",
-    street: "Вул. Спортивна, 41",
+    street: "St. Sportivna, 41",
+  },
+  footer: {
+    document: "Document",
+    rights: "All rights reserved | Developed by",
   },
 };

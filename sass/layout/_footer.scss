@@ -54,9 +54,8 @@
     justify-content: center;
   }
 
-  & .messengers__icon {
-    width: 37px;
-    height: 37px;
+  & .messengers__link {
+    font-size: 37px;
   }
 
   @media screen and (max-width: 492px) {
@@ -127,7 +126,7 @@
     & .messengers {
       margin-left: auto;
       margin-right: 105px;
-      margin-top: -30px;
+      margin-top: -83px;
     }
   }
 }
