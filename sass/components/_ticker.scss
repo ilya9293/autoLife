@@ -15,7 +15,12 @@
     margin-left: 20px;
   }
 
-//   & div {
-//    width: auto !important;
-//   }
+  &__icon {
+    font-size: 18px;
+    color: #F2D53C;
+  }
+
+  &__icon::before {
+    display: inline-block;
+  }
 }

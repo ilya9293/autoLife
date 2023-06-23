@@ -25,8 +25,7 @@
   }
 
   &__icon {
-    width: auto;
-    @include adaptiv-height(53, 26, 768);
+    @include adaptiv-font(53, 24, 768);
     margin-right: 7px;
   }
 
@@ -54,7 +53,7 @@
     }
 
     &__icon {
-      height: 53px;
+      font-size: 53px;
       margin-right: 16px;
     }
   }

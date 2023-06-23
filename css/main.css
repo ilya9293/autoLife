@@ -419,6 +419,8 @@ button {
 }
 .close-btn svg {
   fill: var(--color-menu-text);
+  width: 100%;
+  height: 100%;
 }
 
 .desktop {
@@ -703,6 +705,12 @@ button {
 .services-list__item:nth-child(6) {
   color: #4a78ef;
 }
+.services-list__icon {
+  font-size: 77px;
+}
+.services-list .icon-arms {
+  color: #4690d3;
+}
 .services-list__title {
   font-weight: 500;
   font-size: calc(
@@ -767,6 +775,13 @@ button {
   position: relative;
   margin-right: 10px;
   margin-left: 20px;
+}
+.services .marquee__icon {
+  font-size: 18px;
+  color: #F2D53C;
+}
+.services .marquee__icon::before {
+  display: inline-block;
 }
 
 .section.about {
@@ -1021,9 +1036,8 @@ button {
   margin-top: 16px;
 }
 .cost__icon {
-  width: auto;
-  height: calc(
-    26px + 27 *
+  font-size: calc(
+    24px + 29 *
       ((100vw - 360px) / 408)
   );
   margin-right: 7px;
@@ -1052,7 +1066,7 @@ button {
     line-height: 1.1739130435;
   }
   .cost__icon {
-    height: 53px;
+    font-size: 53px;
     margin-right: 16px;
   }
 }
@@ -1109,6 +1123,10 @@ button {
   margin-bottom: 10px;
 }
 .calc__icon {
+  font-size: calc(
+    19px + 14 *
+      ((100vw - 360px) / 408)
+  );
   margin-right: 13px;
 }
 .calc__name {
@@ -1168,8 +1186,6 @@ button {
     margin-bottom: 65px;
   }
   .calc__icon {
-    width: 33px;
-    height: 33px;
     margin-right: 11px;
   }
   .calc__name {
@@ -1199,6 +1215,9 @@ button {
     font-size: 28px;
     line-height: 1.1785714286;
     letter-spacing: 0.36px;
+  }
+  .calc__icon {
+    font-size: 33px;
   }
 }
 @media screen and (min-width: 1280px) {

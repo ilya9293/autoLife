@@ -2,12 +2,19 @@ const mobBackDrop = document.querySelector("[data-modal]");
 const mobBtn = document.querySelector("[data-modal-open]");
 const mobBtnClose = document.querySelector("[data-modal-close]");
 
-const toggleModal = () => {
+const toggleModal = (e) => {
   mobBackDrop.classList.toggle("is-open");
+};
+
+const closeModal = (e) => {
+  if (e.currentTarget === e.target) {
+    mobBackDrop.classList.remove("is-open");
+  }
 };
 
 mobBtn.addEventListener("click", toggleModal);
 mobBtnClose.addEventListener("click", toggleModal);
+mobBackDrop.addEventListener("click", closeModal);
 
 // new Accordion(".accordion-container");
 
@@ -146,6 +153,7 @@ if (inputs && dropDownContainer) {
   });
 }
 
+// select
 document.querySelectorAll(".select").forEach((select) => {
   const selectOption = select.querySelectorAll("option");
   const selectOptionLength = selectOption.length;
@@ -210,53 +218,6 @@ document.querySelectorAll(".select").forEach((select) => {
   });
 });
 
-// // Получение ссылок на контейнеры с помощью querySelectorAll
-// const containers = document.querySelectorAll(".ticker");
-
-// // Массив из двух слов
-// const words = ["Компанія доставки", "Авто-лайф_PL"];
-
-// // Создание временного span для вычисления ширины
-// const tempSpan = document.createElement("span");
-// tempSpan.style.visibility = "hidden";
-// tempSpan.style.whiteSpace = "nowrap";
-
-// // Установка содержимого временного span
-// const wordIndex = 0; // Берем первое слово из массива
-// tempSpan.textContent = `${words[wordIndex]}`;
-
-// // Вычисление ширины span с вложенным контентом
-// document.body.appendChild(tempSpan); // Добавляем временный span в DOM
-// const spanWidth = tempSpan.offsetWidth; // Получаем вычисленную ширину span
-// document.body.removeChild(tempSpan); // Удаляем временный span из DOM
-
-// // Определение максимальной ширины контейнеров
-// let maxWidth = 0;
-// containers.forEach((container) => {
-//   maxWidth = Math.max(maxWidth, container.offsetWidth);
-// });
-
-// // Создание контейнера для бегущей строки
-// const marqueeContainer = document.createElement("div");
-// marqueeContainer.className = "marquee-container";
-
-// // Вычисление необходимого количества span
-// const totalSpanCount = Math.ceil(maxWidth / spanWidth);
-
-// // Создание спанов с вложенными элементами <svg>
-// for (let i = 0; i < totalSpanCount; i++) {
-//   const span = document.createElement("span");
-//   const wordIndex = i % words.length;
-//   span.innerHTML = `${words[wordIndex]} <svg width="18" height="17" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-//     <path d="M12.7078 11.2809L17.6982 7.32406L11.383 6.50569L9.16122 0.538539L6.4296 6.29004L0.0864488 6.56786L4.69502 10.9352L2.98832 17.0694L8.5774 14.019L13.8834 17.5402L12.7078 11.2809Z" fill="#F2D53C"/>
-//   </svg>`;
-//   marqueeContainer.appendChild(span);
-// }
-
-// // Добавление бегущей строки в каждый контейнер
-// containers.forEach((container) => {
-//   container.appendChild(marqueeContainer.cloneNode(true));
-// });
 function start() {
   var marqueeElements = document.getElementsByClassName("marquee");
   for (var i = 0; i < marqueeElements.length; i++) {

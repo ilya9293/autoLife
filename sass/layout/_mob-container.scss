@@ -42,5 +42,7 @@
   border: none;
   & svg {
     fill: var(--color-menu-text);
+    width: 100%;
+    height: 100%;
   }
 }
