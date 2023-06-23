@@ -192,7 +192,7 @@ document.querySelectorAll(".select").forEach((select) => {
 
   const selectItems = selectList.querySelectorAll(".new-select__item");
   selectList.style.display = "none";
-  selectHead.addEventListener("click", () => {
+  selectHead.addEventListener("click", (e) => {
     if (!selectHead.classList.contains("on")) {
       selectHead.classList.add("on");
       selectList.style.display = "block";
@@ -216,7 +216,19 @@ document.querySelectorAll(".select").forEach((select) => {
       selectList.style.display = "none";
     }
   });
-});
+//   const newSelects = document.querySelectorAll('.new-select');
+//     document.addEventListener("click", (event) => {
+//       const targetElement = event.target;
+//       const isSelect = targetElement.classList.contains("new-select");
+//       if (!isSelect) {
+//          newSelects.forEach((newSelect) => {
+//            newSelect.classList.remove("on");
+//          });
+//          selectList.style.display = "none";
+//        }
+//     });
+  });
+
 
 function start() {
   var marqueeElements = document.getElementsByClassName("marquee");
