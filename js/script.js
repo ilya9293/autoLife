@@ -1,3 +1,10 @@
+// document.addEventListener('DOMContentLoaded', () => {
+//    const preloader = document.querySelector('.preloader');
+//    preloader.style.display = 'none';
+//  });
+ 
+
+
 const mobBackDrop = document.querySelector("[data-modal]");
 const mobBtn = document.querySelector("[data-modal-open]");
 const mobBtnClose = document.querySelector("[data-modal-close]");
@@ -16,126 +23,129 @@ mobBtn.addEventListener("click", toggleModal);
 mobBtnClose.addEventListener("click", toggleModal);
 mobBackDrop.addEventListener("click", closeModal);
 
-// new Accordion(".accordion-container");
 
-document.addEventListener("DOMContentLoaded", function () {
-  const container = document.querySelector(".accordion-container");
-  const button = document.querySelector(".questions__btn");
+document.addEventListener("DOMContentLoaded", async function () {
+   await changeLanguage(isCurentLng);
+ 
+   const container = document.querySelector(".accordion-container");
+   const button = document.querySelector(".questions__btn");
+ 
+   if (!button) return;
+ 
+   const paragraphsData = [
+     {
+       titleKey: "questions.two.title",
+       textKey: "questions.two.answer",
+     },
+     {
+       titleKey: "questions.three.title",
+       textKey: "questions.three.answer",
+     },
+     {
+       titleKey: "questions.four.title",
+       textKey: "questions.four.answer",
+     },
+     {
+       titleKey: "questions.five.title",
+       textKey: "questions.five.answer",
+     },
+     {
+       titleKey: "questions.six.title",
+       textKey: "questions.six.answer",
+     },
+     {
+       titleKey: "questions.seven.title",
+       textKey: "questions.seven.answer",
+     },
+     {
+       titleKey: "questions.eight.title",
+       textKey: "questions.eight.answer",
+     },
+     {
+       titleKey: "questions.nine.title",
+       textKey: "questions.nine.answer",
+     },
+     {
+       titleKey: "questions.ten.title",
+       textKey: "questions.ten.answer",
+     },
+     {
+       titleKey: "questions.eleven.title",
+       textKey: "questions.eleven.answer",
+     },
+     {
+       titleKey: "questions.twelve.title",
+       textKey: "questions.twelve.answer",
+     },
+     {
+       titleKey: "questions.threeteen.title",
+       textKey: "questions.threeteen.answer",
+     },
+     {
+       titleKey: "questions.fourteen.title",
+       textKey: "questions.fourteen.answer",
+     },
+     {
+       titleKey: "questions.fifteen.title",
+       textKey: "questions.fifteen.answer",
+     },
+     {
+       titleKey: "questions.seexteen.title",
+       textKey: "questions.seexteen.answer",
+     },
+     {
+       titleKey: "questions.seventeen.title",
+       textKey: "questions.seventeen.answer",
+     },
+   ];
+   const visibleParagraphsCount = 6;
+   let hiddenParagraphs = [...paragraphsData];
+ 
+   const makeMarkup = (data) => {
+     const title = i18next.t(data.titleKey);
+     const text = i18next.t(data.textKey);
+     const markup = `<div class="ac">
+                      <h2 class="ac-header">
+                      <button type="button" class="ac-trigger">
+                         ${title}
+                      </button>
+                      </h2>
+                      <div class="ac-panel">
+                         <p class="ac-text">
+                            ${text}
+                         </p>
+                      </div>
+                   </div>`;
+ 
+     container.insertAdjacentHTML("beforeend", markup);
+   };
+ 
+   const showFirstParagraphs = () => {
+     const visibleParagraphs = hiddenParagraphs.splice(
+       0,
+       visibleParagraphsCount
+     );
+     visibleParagraphs.forEach((paragraphData) => {
+       makeMarkup(paragraphData);
+     });
+     new Accordion(".accordion-container");
+   };
+ 
+   const handleShowMore = () => {
+     new Accordion(".accordion-container");
+     for (let i = 0; i < hiddenParagraphs.length; i++) {
+       makeMarkup(hiddenParagraphs[i]);
+     }
+     new Accordion(".accordion-container");
+     button.style.display = "none";
+   };
+ 
+   button.addEventListener("click", handleShowMore);
+   showFirstParagraphs();
+   start();
+ });
 
-  if (!button) return;
 
-  const paragraphsData = [
-    {
-      titleKey: "questions.two.title",
-      textKey: "questions.two.answer",
-    },
-    {
-      titleKey: "questions.three.title",
-      textKey: "questions.three.answer",
-    },
-    {
-      titleKey: "questions.four.title",
-      textKey: "questions.four.answer",
-    },
-    {
-      titleKey: "questions.five.title",
-      textKey: "questions.five.answer",
-    },
-    {
-      titleKey: "questions.six.title",
-      textKey: "questions.six.answer",
-    },
-    {
-      titleKey: "questions.seven.title",
-      textKey: "questions.seven.answer",
-    },
-    {
-      titleKey: "questions.eight.title",
-      textKey: "questions.eight.answer",
-    },
-    {
-      titleKey: "questions.nine.title",
-      textKey: "questions.nine.answer",
-    },
-    {
-      titleKey: "questions.ten.title",
-      textKey: "questions.ten.answer",
-    },
-    {
-      titleKey: "questions.eleven.title",
-      textKey: "questions.eleven.answer",
-    },
-    {
-      titleKey: "questions.twelve.title",
-      textKey: "questions.twelve.answer",
-    },
-    {
-      titleKey: "questions.threeteen.title",
-      textKey: "questions.threeteen.answer",
-    },
-    {
-      titleKey: "questions.fourteen.title",
-      textKey: "questions.fourteen.answer",
-    },
-    {
-      titleKey: "questions.fifteen.title",
-      textKey: "questions.fifteen.answer",
-    },
-    {
-      titleKey: "questions.seexteen.title",
-      textKey: "questions.seexteen.answer",
-    },
-    {
-      titleKey: "questions.seventeen.title",
-      textKey: "questions.seventeen.answer",
-    },
-  ];
-  const visibleParagraphsCount = 6;
-  let hiddenParagraphs = [...paragraphsData];
-
-  const makeMarkup = (data) => {
-    const title = i18next.t(data.titleKey);
-    const text = i18next.t(data.textKey);
-    const markup = `<div class="ac">
-                     <h2 class="ac-header">
-                     <button type="button" class="ac-trigger">
-                        ${title}
-                     </button>
-                     </h2>
-                     <div class="ac-panel">
-                        <p class="ac-text">
-                           ${text}
-                        </p>
-                     </div>
-                  </div>`;
-
-    container.insertAdjacentHTML("beforeend", markup);
-  };
-
-  const showFirstParagraphs = () => {
-    const visibleParagraphs = hiddenParagraphs.splice(
-      0,
-      visibleParagraphsCount
-    );
-    new Accordion(".accordion-container");
-    visibleParagraphs.forEach((paragraphData) => {
-      makeMarkup(paragraphData);
-    });
-    new Accordion(".accordion-container");
-  };
-
-  const handleShowMore = () => {
-    for (let i = 0; i < hiddenParagraphs.length; i++) {
-      new Accordion(".accordion-container");
-      makeMarkup(hiddenParagraphs[i]);
-      new Accordion(".accordion-container");
-    }
-    button.style.display = "none";
-  };
-
-  button.addEventListener("click", handleShowMore);
-  showFirstParagraphs();
-});
 
 const inputs = document.querySelectorAll(".form-feedback__input[type=tel]");
 const dropDownContainer = document.querySelectorAll(
@@ -239,7 +249,7 @@ function start() {
   }
 }
 
-window.onload = start;
+// window.onload = start;
 
 function objWidth(obj) {
   if (obj.offsetWidth) return obj.offsetWidth;

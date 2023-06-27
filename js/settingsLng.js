@@ -1,23 +1,35 @@
 const curentLng = localStorage.getItem("currentLang");
 const isCurentLng = curentLng ? curentLng : "ua";
 
-i18next.init({
-  lng: isCurentLng,
-  debug: false,
-  resources: {
-    ua: {
-      translation: uaTranslation,
-    },
-    en: {
-      translation: enTranslation,
-    },
-    pl: {
-      translation: plTranslation,
-    },
-  },
-});
+async function loadTranslation(lang) {
+  const response = await fetch(`translations/${lang}.json`);
+  if (!response.ok) {
+    throw new Error(`Failed to load translation for ${lang}`);
+  }
+  return await response.json();
+}
 
-function updateTranslations() {
+async function initI18next(lang) {
+  const translation = await loadTranslation(lang);
+
+  i18next.init(
+    {
+      lng: lang,
+      debug: true,
+      resources: {
+        [lang]: {
+          translation: translation,
+        },
+      },
+    },
+    () => {
+      const preloader = document.querySelector(".preloader");
+      preloader.style.display = "none";
+    }
+  );
+}
+
+async function updateTranslations() {
   const elements = document.querySelectorAll("[data-i18n]");
   const inputs = document.querySelectorAll("[data-i18nph]");
   elements.forEach((element) => {
@@ -32,14 +44,13 @@ function updateTranslations() {
   btnLngs.forEach((btn) => (btn.textContent = isCurentLng));
 }
 
-function changeLanguage(lang) {
-  i18next.changeLanguage(lang, function (err, t) {
-    if (err) {
-      console.error("Ошибка при изменении языка:", err);
-      return;
-    }
+async function changeLanguage(lang) {
+  try {
+    await initI18next(lang);
     updateTranslations();
-  });
+  } catch (err) {
+    console.error("Ошибка при изменении языка:", err);
+  }
 }
 
 const langSwitchers = document.querySelectorAll("[data-lang]");
@@ -50,5 +61,3 @@ langSwitchers.forEach((switcher) => {
     localStorage.setItem("currentLang", valueLng);
   });
 });
-
-changeLanguage();
