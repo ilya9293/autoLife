@@ -4,29 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
-      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./css/modern-normalize.min.css" />
+    <link rel="stylesheet" href="./css/iconfonts.css" />
     <link rel="stylesheet" href="./css/accordion.min.css" />
     <link rel="stylesheet" href="./css/intlTelInput.min.css" />
-    <link rel="stylesheet" href="./css/iconfonts.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <title>Авто-лайф</title>
   </head>
-  <body>
-   <div class="preloader">
+  <body class="fixed">
+    <div class="preloader">
       <div class="preloader__spinner"></div>
-   </div>
+    </div>
 
     <header class="header">
       <div class="container">
@@ -101,19 +95,25 @@
 
           <ul class="messengers">
             <li class="messengers__item">
-              <a href="tg://resolve?domain=+380688088484" class="messengers__link">
+              <a
+                href="tg://resolve?domain=+380688088484"
+                class="messengers__link"
+              >
                 <i class="messengers__icon icon-telegram"></i>
               </a>
             </li>
             <li class="messengers__item">
-              <a href="viber://add?number=+380688088484" class="messengers__link">
+              <a
+                href="viber://add?number=+380688088484"
+                class="messengers__link"
+              >
                 <i class="messengers__icon icon-viber"></i>
               </a>
             </li>
             <li class="messengers__item">
-              <a href="https://wa.me/+380688088484" class="messengers__link">               
+              <a href="https://wa.me/+380688088484" class="messengers__link">
                 <i class="messengers__icon icon-whatsApp"></i>
-               </a>
+              </a>
             </li>
           </ul>
 
@@ -222,21 +222,27 @@
             </nav>
 
             <ul class="messengers mob-menu">
-               <li class="messengers__item">
-                  <a href="tg://resolve?domain=+380688088484" class="messengers__link">
-                    <i class="messengers__icon icon-telegram"></i>
-                  </a>
-                </li>
-                <li class="messengers__item">
-                  <a href="viber://add?number=+380688088484" class="messengers__link">
-                    <i class="messengers__icon icon-viber"></i>
-                  </a>
-                </li>
-                <li class="messengers__item">
-                  <a href="https://wa.me/+380688088484" class="messengers__link">               
-                    <i class="messengers__icon icon-whatsApp"></i>
-                  </a>
-                </li>
+              <li class="messengers__item">
+                <a
+                  href="tg://resolve?domain=+380688088484"
+                  class="messengers__link"
+                >
+                  <i class="messengers__icon icon-telegram"></i>
+                </a>
+              </li>
+              <li class="messengers__item">
+                <a
+                  href="viber://add?number=+380688088484"
+                  class="messengers__link"
+                >
+                  <i class="messengers__icon icon-viber"></i>
+                </a>
+              </li>
+              <li class="messengers__item">
+                <a href="https://wa.me/+380688088484" class="messengers__link">
+                  <i class="messengers__icon icon-whatsApp"></i>
+                </a>
+              </li>
             </ul>
 
             <div class="languages">
@@ -370,21 +376,23 @@
           <span style="white-space: nowrap">
             <span
               ><span class="marquee__name" data-i18n="services.avto"
-                >Авто-лайф_PL</span>
+                >Авто-лайф_PL</span
+              >
               <i class="marquee__icon icon-star"></i>
             </span>
 
             <span
               ><span class="marquee__name" data-i18n="services.company"
-                >Компанія доставки</span>
-                <i class="marquee__icon icon-star"></i>
+                >Компанія доставки</span
+              >
+              <i class="marquee__icon icon-star"></i>
             </span>
           </span>
         </div>
         <div class="container">
           <ul class="services-list">
             <li class="services-list__item">
-               <i class="services-list__icon icon-delivery"></i>
+              <i class="services-list__icon icon-delivery"></i>
               <h3
                 class="services-list__title"
                 data-i18n="services.delivery.title"
@@ -397,7 +405,7 @@
               </p>
             </li>
             <li class="services-list__item">
-               <i class="services-list__icon icon-shipping"></i>
+              <i class="services-list__icon icon-shipping"></i>
               <h3
                 class="services-list__title"
                 data-i18n="services.shipping.title"
@@ -410,7 +418,7 @@
               </p>
             </li>
             <li class="services-list__item">
-               <i class="services-list__icon icon-delivery-doc"></i>
+              <i class="services-list__icon icon-delivery-doc"></i>
               <h3 class="services-list__title" data-i18n="services.doc.title">
                 Доставка документів
               </h3>
@@ -421,7 +429,7 @@
               </p>
             </li>
             <li class="services-list__item">
-               <i class="services-list__icon icon-delivery-med"></i>
+              <i class="services-list__icon icon-delivery-med"></i>
               <h3 class="services-list__title" data-i18n="services.med.title">
                 Доставка ліків
               </h3>
@@ -430,7 +438,7 @@
               </p>
             </li>
             <li class="services-list__item">
-               <i class="services-list__icon icon-arms"></i>
+              <i class="services-list__icon icon-arms"></i>
               <h3 class="services-list__title" data-i18n="services.zsu.title">
                 Доставка для ЗСУ
               </h3>
@@ -438,8 +446,8 @@
                 Безкоштовна доставка для ЗСУ
               </p>
             </li>
-            <li class="services-list__item">                
-               <i class="services-list__icon icon-trail"></i>             
+            <li class="services-list__item">
+              <i class="services-list__icon icon-trail"></i>
               <h3 class="services-list__title" data-i18n="services.order.title">
                 Доставка інтернет замовлень
               </h3>
@@ -454,13 +462,15 @@
           <span style="white-space: nowrap">
             <span
               ><span class="marquee__name" data-i18n="services.avto"
-                >Авто-лайф_PL</span>
+                >Авто-лайф_PL</span
+              >
               <i class="marquee__icon icon-star"></i>
             </span>
 
             <span
               ><span class="marquee__name" data-i18n="services.company"
-                >Компанія доставки</span>
+                >Компанія доставки</span
+              >
               <i class="marquee__icon icon-star"></i>
             </span>
           </span>
@@ -833,7 +843,7 @@
               <div class="calc__container-label">
                 <label class="calc__label">
                   <span class="calc__wraper-label">
-                     <i class="calc__icon icon-length"></i>
+                    <i class="calc__icon icon-length"></i>
                     <span class="calc__name" data-i18n="cost.length"
                       >Довжина, см</span
                     >
@@ -848,7 +858,7 @@
                 </label>
                 <label class="calc__label">
                   <span class="calc__wraper-label">
-                     <i class="calc__icon icon-width"></i>
+                    <i class="calc__icon icon-width"></i>
                     <span class="calc__name" data-i18n="cost.width"
                       >Ширина, см</span
                     >
@@ -863,7 +873,7 @@
                 </label>
                 <label class="calc__label">
                   <span class="calc__wraper-label">
-                     <i class="calc__icon icon-height"></i>
+                    <i class="calc__icon icon-height"></i>
                     <span class="calc__name" data-i18n="cost.height"
                       >Висота, см</span
                     >
@@ -885,10 +895,10 @@
                   <i class="cost__icon icon-price"></i>
                   <p class="cost__price">
                     <span data-i18n="cost.cost">Вартість: </span
-                    ><span class="cost__number" id="cost-value"
-                      >XX</span>
-                      <span class="cost__number" data-i18n="cost.figure"
-                      > zl</span>
+                    ><span class="cost__number" id="cost-value">XX</span>
+                    <span class="cost__number" data-i18n="cost.figure">
+                      zl</span
+                    >
                   </p>
                 </div>
               </div>
@@ -909,7 +919,13 @@
           </p>
 
           <div class="accordion-container"></div>
-          <button type="button" class="questions__btn" data-i18n="questions.more">Більше запитань</button>
+          <button
+            type="button"
+            class="questions__btn"
+            data-i18n="questions.more"
+          >
+            Більше запитань
+          </button>
         </div>
       </section>
 
@@ -933,6 +949,7 @@
                 name="phone"
                 type="tel"
                 placeholder="00 000 00 00"
+                required
                 class="form-feedback__input"
               />
             </label>
@@ -944,8 +961,18 @@
               >
                 Оберіть послугу
               </option>
-              <option value="Перевезення пасажира" data-i18n="feedback.transportPass">Перевезення пасажира</option>
-              <option value="Перевезення посилки" data-i18n="feedback.transportParcel">Перевезення посилки</option>
+              <option
+                value="Перевезення пасажира"
+                data-i18n="feedback.transportPass"
+              >
+                Перевезення пасажира
+              </option>
+              <option
+                value="Перевезення посилки"
+                data-i18n="feedback.transportParcel"
+              >
+                Перевезення посилки
+              </option>
             </select>
             <button
               type="submit"
@@ -967,20 +994,24 @@
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe> -->
         <picture>
-         <source
-           srcset=".//images/contacts/map-mob.jpg"
-           media="(max-width: 480px)"
-         />
-         <source
-           srcset="./images/contacts/map.jpg"
-           media="(min-width: 1280px)"
-         />
-         <source
-           srcset="./images/contacts/map-tablet.jpg"
-           media="(min-width: 480px)"
-         />
-         <img src="./images/contacts/map.jpg" alt="карта" class="connect__map" />
-       </picture>
+          <source
+            srcset=".//images/contacts/map-mob.jpg"
+            media="(max-width: 480px)"
+          />
+          <source
+            srcset="./images/contacts/map.jpg"
+            media="(min-width: 1280px)"
+          />
+          <source
+            srcset="./images/contacts/map-tablet.jpg"
+            media="(min-width: 480px)"
+          />
+          <img
+            src="./images/contacts/map.jpg"
+            alt="карта"
+            class="connect__map"
+          />
+        </picture>
         <div class="container">
           <div class="contacts-wraper">
             <h3 class="contacts-wraper__title" data-i18n="feedback.contacts">
@@ -995,15 +1026,19 @@
                   rel="noopener noreferrer"
                   ><span class="contacts__adress" data-i18n="connect.city"
                     >М. Почаїв </span
-                  ><span class="contacts__adress" data-i18n="connect.street">Вул. Спортивна, 41</span></a
+                  ><span class="contacts__adress" data-i18n="connect.street"
+                    >Вул. Спортивна, 41</span
+                  ></a
                 >
               </li>
               <li class="contacts__item contacts__item_phone">
                 <div class="contacts__item_wraper">
                   <a class="contacts__link" href="tel:+380969646086"
-                    >+380 (96) 964 60 86</a>
+                    >+380 (96) 964 60 86</a
+                  >
                   <a class="contacts__link" href="tel:+380687778088"
-                    >+380 (68) 777 80 88</a>
+                    >+380 (68) 777 80 88</a
+                  >
                 </div>
               </li>
               <li class="contacts__item">
@@ -1023,20 +1058,26 @@
             </h3>
             <ul class="messengers">
               <li class="messengers__item">
-                  <a href="tg://resolve?domain=+380688088484" class="messengers__link">
-                    <i class="messengers__icon icon-telegram"></i>
-                  </a>
-                </li>
-                <li class="messengers__item">
-                  <a href="viber://add?number=+380688088484" class="messengers__link">
-                    <i class="messengers__icon icon-viber"></i>
-                  </a>
-                </li>
-                <li class="messengers__item">
-                  <a href="https://wa.me/+380688088484" class="messengers__link">               
-                    <i class="messengers__icon icon-whatsApp"></i>
-                  </a>
-                </li>
+                <a
+                  href="tg://resolve?domain=+380688088484"
+                  class="messengers__link"
+                >
+                  <i class="messengers__icon icon-telegram"></i>
+                </a>
+              </li>
+              <li class="messengers__item">
+                <a
+                  href="viber://add?number=+380688088484"
+                  class="messengers__link"
+                >
+                  <i class="messengers__icon icon-viber"></i>
+                </a>
+              </li>
+              <li class="messengers__item">
+                <a href="https://wa.me/+380688088484" class="messengers__link">
+                  <i class="messengers__icon icon-whatsApp"></i>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -1117,7 +1158,9 @@
             </h2>
             <ul class="policy">
               <li class="policy__item">
-                <a href="" class="policy__link" data-i18n="footer.document">Документ</a>
+                <a href="" class="policy__link" data-i18n="footer.document"
+                  >Документ</a
+                >
               </li>
             </ul>
           </div>
@@ -1139,7 +1182,9 @@
                 rel="noopener noreferrer"
                 ><span class="contacts__adress" data-i18n="connect.city"
                   >М. Почаїв </span
-                ><span class="contacts__adress" data-i18n="connect.street">Вул. Спортивна, 41</span></a
+                ><span class="contacts__adress" data-i18n="connect.street"
+                  >Вул. Спортивна, 41</span
+                ></a
               >
             </li>
             <li class="contacts__item contacts__item_phone">
@@ -1163,30 +1208,34 @@
         </div>
 
         <ul class="messengers">
-           <li class="messengers__item">
-              <a href="tg://resolve?domain=+380688088484" class="messengers__link">
-                <i class="messengers__icon icon-telegram"></i>
-              </a>
-            </li>
-            <li class="messengers__item">
-              <a href="viber://add?number=+380688088484" class="messengers__link">
-                <i class="messengers__icon icon-viber"></i>
-              </a>
-            </li>
-            <li class="messengers__item">
-              <a href="https://wa.me/+380688088484" class="messengers__link">               
-                <i class="messengers__icon icon-whatsApp"></i>
-               </a>
-            </li>
+          <li class="messengers__item">
+            <a
+              href="tg://resolve?domain=+380688088484"
+              class="messengers__link"
+            >
+              <i class="messengers__icon icon-telegram"></i>
+            </a>
+          </li>
+          <li class="messengers__item">
+            <a href="viber://add?number=+380688088484" class="messengers__link">
+              <i class="messengers__icon icon-viber"></i>
+            </a>
+          </li>
+          <li class="messengers__item">
+            <a href="https://wa.me/+380688088484" class="messengers__link">
+              <i class="messengers__icon icon-whatsApp"></i>
+            </a>
+          </li>
         </ul>
       </div>
     </footer>
 
     <section class="section rights">
       <div class="container">
-         <h2 class="visually-hidden">Заголовок</h2>
+        <h2 class="visually-hidden">Заголовок</h2>
         <small class="rights__text">
-          &copy; 2023 | <span data-i18n="footer.rights">Усі права захищені | Розробка</span>
+          &copy; 2023 |
+          <span data-i18n="footer.rights">Усі права захищені | Розробка</span>
           <a
             href="https://quazom.com/"
             class="rights__link"
@@ -1199,9 +1248,6 @@
     </section>
 
     <script src="./js/i18next.min.js"></script>
-    <!-- <script src="./translations/ua.js"></script>
-    <script src="./translations/en.js"></script>
-    <script src="./translations/pl.js"></script> -->
     <script src="./js/settingsLng.js"></script>
     <script src="./js/accordion.min.js"></script>
     <script src="./js/intlTelInput.min.js"></script>

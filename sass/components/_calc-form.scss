@@ -16,7 +16,6 @@
   padding: 16px;
 
   &__title {
-    font-style: italic;
     @include adaptiv-font(40, 25, 768);
     line-height: 1.16;
     color: var(--color-darkbackground);

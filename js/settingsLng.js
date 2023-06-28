@@ -15,7 +15,7 @@ async function initI18next(lang) {
   i18next.init(
     {
       lng: lang,
-      debug: true,
+      debug: false,
       resources: {
         [lang]: {
           translation: translation,
@@ -24,7 +24,9 @@ async function initI18next(lang) {
     },
     () => {
       const preloader = document.querySelector(".preloader");
+      const body = document.querySelector("body");
       preloader.style.display = "none";
+      body.classList.remove("fixed");
     }
   );
 }
