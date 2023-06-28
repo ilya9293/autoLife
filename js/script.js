@@ -141,6 +141,7 @@ const inputs = document.querySelectorAll(".form-feedback__input[type=tel]");
 const dropDownContainer = document.querySelectorAll(
   ".form-feedback__wraper_phone"
 );
+let iti = [];
 
 if (inputs && dropDownContainer) {
   iti = [...inputs].map((el, idx) => {
@@ -423,15 +424,44 @@ switch (curentLng) {
 // Form Feedback
 const formFeedback = document.querySelector(".form-feedback");
 
-const handleFeedback = (e) => {
+
+const handleFeedback = async (e) => {
   e.preventDefault();
   const formData = new FormData(formFeedback);
-  const name = formData.get("name");
-  const phone = formData.get("phone");
-  const value = formData.get("service");
-  console.log(name);
-  console.log(phone);
-  console.log(value);
+  let message = "Данные формы:\n\n";
+  const phoneNumber = iti[0].getNumber();
+  message += `phone: ${phoneNumber}\n`;
+
+  for (let pair of formData.entries()) {
+   const [name, value] = pair;
+   if (name !== 'phone') {
+     message += `${name}: ${value}\n`;
+   }
+ }
+
+  const botToken = "6061798291:AAFlGxK6hwJNfpStT2Eny2LXQgeBDTLrRyE";
+  const chatId = "-995356794";
+
+  try {
+    const response = await fetch(
+      `https://api.telegram.org/bot${botToken}/sendMessage`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: `chat_id=${chatId}&text=${encodeURIComponent(message)}`,
+      }
+    );
+
+    if (response.ok) {
+      console.log("Данные успешно отправлены в Telegram");
+    } else {
+      console.error("Ошибка отправки данных в Telegram");
+    }
+  } catch (error) {
+    console.error("Произошла ошибка", error);
+  }
 };
 
 formFeedback.addEventListener("submit", handleFeedback);
