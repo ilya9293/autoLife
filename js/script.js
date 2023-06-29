@@ -1,3 +1,5 @@
+import dataForTg from './config.js'
+
 const mobBackDrop = document.querySelector("[data-modal]");
 const mobBtn = document.querySelector("[data-modal-open]");
 const mobBtnClose = document.querySelector("[data-modal-close]");
@@ -134,7 +136,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   button.addEventListener("click", handleShowMore);
   showFirstParagraphs();
-  start();
+//   start();
 });
 
 const inputs = document.querySelectorAll(".form-feedback__input[type=tel]");
@@ -154,174 +156,6 @@ if (inputs && dropDownContainer) {
   });
 }
 
-// select
-document.querySelectorAll(".select").forEach((select) => {
-  const selectOption = select.querySelectorAll("option");
-  const selectOptionLength = selectOption.length;
-  const selectedOption = Array.from(selectOption).find(
-    (option) => option.selected
-  );
-  const duration = 450;
-
-  const wrapper = document.createElement("div");
-  wrapper.className = "select";
-  select.parentNode.insertBefore(wrapper, select);
-
-  select.style.display = "none";
-  wrapper.appendChild(select);
-
-  const newSelect = document.createElement("div");
-  newSelect.className = "new-select";
-  newSelect.textContent = select.querySelector("option:disabled").textContent;
-  wrapper.appendChild(newSelect);
-
-  const selectHead = newSelect;
-
-  const selectList = document.createElement("div");
-  selectList.className = "new-select__list";
-  wrapper.appendChild(selectList);
-
-  for (let i = 1; i < selectOptionLength; i++) {
-    const selectItem = document.createElement("div");
-    selectItem.className = "new-select__item";
-    const span = document.createElement("span");
-    span.textContent = selectOption[i].textContent;
-    selectItem.appendChild(span);
-    selectItem.dataset.value = selectOption[i].value;
-    selectList.appendChild(selectItem);
-  }
-
-  const selectItems = selectList.querySelectorAll(".new-select__item");
-  selectList.style.display = "none";
-  selectHead.addEventListener("click", (e) => {
-    if (!selectHead.classList.contains("on")) {
-      selectHead.classList.add("on");
-      selectList.style.display = "block";
-      selectItems.forEach((item) => {
-        item.addEventListener("click", function () {
-          const chooseItem = this.dataset.value;
-          select.value = chooseItem;
-          selectedOption.removeAttribute("selected");
-          selectOption.forEach((option) => {
-            if (option.value === chooseItem) {
-              option.setAttribute("selected", "selected");
-            }
-          });
-          selectHead.textContent = this.querySelector("span").textContent;
-          selectList.style.display = "none";
-          selectHead.classList.remove("on");
-        });
-      });
-    } else {
-      selectHead.classList.remove("on");
-      selectList.style.display = "none";
-    }
-  });
-  const newSelects = document.querySelectorAll(".new-select");
-  document.addEventListener("click", (event) => {
-    const targetElement = event.target;
-    const isSelect = targetElement.classList.contains("new-select");
-    if (!isSelect) {
-      newSelects.forEach((newSelect) => {
-        newSelect.classList.remove("on");
-      });
-      selectList.style.display = "none";
-    }
-  });
-});
-
-function start() {
-  var marqueeElements = document.getElementsByClassName("marquee");
-  for (var i = 0; i < marqueeElements.length; i++) {
-    var direction = i % 2 === 0 ? "left" : "right";
-    new mq(marqueeElements[i], direction);
-    mqRotate(mqr);
-  }
-}
-
-// window.onload = start;
-
-function objWidth(obj) {
-  if (obj.offsetWidth) return obj.offsetWidth;
-  if (obj.clip) return obj.clip.width;
-  return 0;
-}
-
-var mqr = [];
-
-function mq(element, direction) {
-  this.mqo = element;
-  var spanElement = this.mqo.getElementsByTagName("span")[0];
-  var wid = objWidth(spanElement) + 5;
-  var fulwid = objWidth(this.mqo);
-  var txt = spanElement.innerHTML;
-  this.mqo.innerHTML = "";
-  var heit = this.mqo.style.height;
-  this.mqo.onmouseout = function () {
-    mqRotate(mqr);
-  };
-  this.mqo.onmouseover = function () {
-    clearTimeout(mqr[0].TO);
-  };
-  this.mqo.ary = [];
-  var maxw = Math.ceil(fulwid / wid) + 1;
-  var totalElements = direction === "left" ? maxw * 2 : maxw;
-  for (var i = 0; i < totalElements; i++) {
-    var index = i % maxw;
-    this.mqo.ary[i] = document.createElement("div");
-    this.mqo.ary[i].innerHTML = txt;
-    this.mqo.ary[i].style.position = "absolute";
-    this.mqo.ary[i].style.left = wid * index + "px";
-    this.mqo.ary[i].style.width = wid + "px";
-    this.mqo.ary[i].style.height = heit;
-    this.mqo.appendChild(this.mqo.ary[i]);
-  }
-  mqr.push(this.mqo);
-
-  // Устанавливаем направление анимации в зависимости от четности индекса
-  if (direction === "left") {
-    this.mqo.direction = -1;
-  } else {
-    this.mqo.direction = 1;
-  }
-}
-
-function mqRotate(mqr) {
-  if (!mqr) return;
-  for (var j = mqr.length - 1; j > -1; j--) {
-    var maxa = mqr[j].ary.length;
-    for (var i = 0; i < maxa; i++) {
-      var x = mqr[j].ary[i].style;
-      x.left = parseInt(x.left, 10) + mqr[j].direction + "px";
-    }
-    var firstElement = mqr[j].ary[0];
-    var lastElement = mqr[j].ary[maxa - 1];
-    if (
-      mqr[j].direction === -1 &&
-      parseInt(firstElement.style.left, 10) +
-        parseInt(firstElement.style.width, 10) <
-        0
-    ) {
-      var z = mqr[j].ary.shift();
-      z.style.left =
-        parseInt(lastElement.style.left) +
-        parseInt(lastElement.style.width) +
-        "px";
-      mqr[j].ary.push(z);
-    } else if (
-      mqr[j].direction === 1 &&
-      parseInt(lastElement.style.left, 10) > parseInt(window.innerWidth)
-    ) {
-      var z = mqr[j].ary.pop();
-      z.style.left =
-        parseInt(firstElement.style.left) -
-        parseInt(firstElement.style.width) +
-        "px";
-      mqr[j].ary.unshift(z);
-    }
-  }
-  mqr[0].TO = setTimeout("mqRotate(mqr)", 45);
-}
 
 const stepBtn = document.querySelectorAll("[data-switch]");
 const listParcel = document.querySelector(".steps-list.parcel");
@@ -423,7 +257,44 @@ switch (curentLng) {
 
 // Form Feedback
 const formFeedback = document.querySelector(".form-feedback");
+const successModal = document.getElementById("successModal");
+const errorModal = document.getElementById("errorModal");
+const closeButtons = document.querySelectorAll(".modal__close");
 
+closeButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    successModal.style.display = "none";
+    errorModal.style.display = "none";
+  });
+});
+
+function showSuccessModal() {
+  successModal.style.display = "flex";
+  successModal.classList.add("fade-in");
+}
+
+function showErrorModal() {
+  errorModal.style.display = "flex";
+  errorModal.classList.add("fade-in");
+}
+
+function hideModalAfterDelay(modal) {
+   setTimeout(() => {
+     modal.style.display = "none";
+   }, 3000);
+ }
+
+ successModal.addEventListener("click", (e) => {
+   if (e.target === successModal) {
+     successModal.style.display = "none";
+   }
+ });
+ 
+ errorModal.addEventListener("click", (e) => {
+   if (e.target === errorModal) {
+     errorModal.style.display = "none";
+   }
+ });
 
 const handleFeedback = async (e) => {
   e.preventDefault();
@@ -433,34 +304,34 @@ const handleFeedback = async (e) => {
   message += `phone: ${phoneNumber}\n`;
 
   for (let pair of formData.entries()) {
-   const [name, value] = pair;
-   if (name !== 'phone') {
-     message += `${name}: ${value}\n`;
-   }
- }
-
-  const botToken = "6061798291:AAFlGxK6hwJNfpStT2Eny2LXQgeBDTLrRyE";
-  const chatId = "-995356794";
+    const [name, value] = pair;
+    if (name !== "phone") {
+      message += `${name}: ${value}\n`;
+    }
+  }
 
   try {
     const response = await fetch(
-      `https://api.telegram.org/bot${botToken}/sendMessage`,
+      `https://api.telegram.org/bot${dataForTg.botToken}/sendMessage`,
       {
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
         },
-        body: `chat_id=${chatId}&text=${encodeURIComponent(message)}`,
+        body: `chat_id=${dataForTg.chatId}&text=${encodeURIComponent(message)}`,
       }
     );
 
     if (response.ok) {
-      console.log("Данные успешно отправлены в Telegram");
+      showSuccessModal();
+      hideModalAfterDelay(successModal);
     } else {
-      console.error("Ошибка отправки данных в Telegram");
+      showErrorModal();
+      hideModalAfterDelay(errorModal);
     }
   } catch (error) {
-    console.error("Произошла ошибка", error);
+    showErrorModal();
+    hideModalAfterDelay(errorModal);
   }
 };
 
