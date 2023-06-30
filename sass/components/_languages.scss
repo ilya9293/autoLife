@@ -39,7 +39,7 @@
     border-color: var(--color-btn-hover);
   }
 
-  &__btn:focus + .languages-list {
+  &__btn:focus-within + .languages-list {
     height: 83px;
   }
 

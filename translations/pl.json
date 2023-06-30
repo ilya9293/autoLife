@@ -92,7 +92,7 @@
   },
   "cost": {
     "calc": "Kalkulacja wartości przesyłki",
-    "price": "Minimalna wartość paczki: XX zł",
+    "price": "Minimalna wartość paczki: 20 zł",
     "length": "Długość, patrz",
     "width": "Szerokość, patrz",
     "height": "Wysokość, patrz",

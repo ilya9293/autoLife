@@ -29,6 +29,7 @@
     display: inline-block;
     font-size: 80px;
     padding: 13px 13px 12px 12px;
+    transition: outline 250ms linear;
   }
 
   &__number {
@@ -120,10 +121,14 @@
       border-radius: 11px;
     }
 
-    &__msg-wraper,
-    & .icon-support {
-      border: 3px solid #e8a83c;
+    &__item.accent &__icon,
+    &__item.accent &__msg-wraper {
+      outline: 3px solid #e8a83c;
+    }
+
+    &__msg-wraper {
       padding: 8px 10px;
+      transition: outline 250ms linear;
     }
 
     & .icon-support {
@@ -158,3 +163,4 @@ svg.steps-list__icon {
     }
   }
 }
+
