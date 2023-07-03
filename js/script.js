@@ -535,14 +535,14 @@ function getPhoneErrorMessage(language) {
 }
 
 function getNameErrorMessage(language) {
-   const translations = {
-     uk: "Введіть ім'я",
-     pl: "Wprowadź imię",
-     en: "Enter your name",
-   };
- 
-   return translations[language] || "Введіть ім'я";
- }
+  const translations = {
+    uk: "Введіть ім'я",
+    pl: "Wprowadź imię",
+    en: "Enter your name",
+  };
+
+  return translations[language] || "Введіть ім'я";
+}
 
 const handleFeedback = async (e) => {
   e.preventDefault();
@@ -561,7 +561,12 @@ const handleFeedback = async (e) => {
   }
 
   const phoneError = document.getElementById("phoneError");
-  if (phoneNumber === "" || !/^[+\d]+$/.test(phoneNumber)) {
+  if (
+    phoneNumber === "" ||
+    !/^[+\d]+$/.test(phoneNumber) ||
+    phoneNumber.length < 12 ||
+    phoneNumber.length > 14
+  ) {
     phoneError.textContent = getPhoneErrorMessage(curentLng);
     phoneError.classList.add("show-error");
     hasError = true;
@@ -572,6 +577,8 @@ const handleFeedback = async (e) => {
   if (hasError) {
     return;
   }
+
+  console.log(phoneNumber);
 
   let message = "Данные формы:\n\n";
   message += `phone: ${phoneNumber}\n`;
