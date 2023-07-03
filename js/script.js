@@ -574,7 +574,6 @@ const handleFeedback = async (e) => {
   }
 
   let message = "Данные формы:\n\n";
-  message += `name: ${name}\n`;
   message += `phone: ${phoneNumber}\n`;
 
   for (let pair of formData.entries()) {

@@ -234,6 +234,10 @@ button {
   }
 }
 
+.nav-authorization {
+  display: none;
+}
+
 .authorization {
   display: block;
   font-weight: 500;
@@ -350,7 +354,6 @@ button {
 }
 .desktop .languages {
   margin-bottom: 0;
-  margin-right: 30px;
 }
 @media screen and (min-width: 1280px) {
   .languages__btn,

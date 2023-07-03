@@ -22,7 +22,7 @@
       <div class="preloader__spinner"></div>
     </div>
 
-    <header class="header">
+    <header class="header" id="head">
       <div class="container">
         <a href="" class="logo">
           <picture>
@@ -46,7 +46,7 @@
           <nav>
             <ul class="nav-menu">
               <li class="nav-menu__item">
-                <a href="#" class="nav-menu__link" data-i18n="header.main"
+                <a href="#head" class="nav-menu__link anchor" data-i18n="header.main"
                   >Головна</a
                 >
               </li>
@@ -96,7 +96,7 @@
           <ul class="messengers">
             <li class="messengers__item">
               <a
-                href="tg://resolve?domain=NikolayTest"
+                href="tg://resolve?domain=Oksana_PMQuazom"
                 class="messengers__link"
               >
                 <i class="messengers__icon icon-telegram"></i>
@@ -132,10 +132,9 @@
             </ul>
           </div>
 
-          <nav>
+          <nav class="nav-authorization">
             <a href="" class="authorization" data-i18n="header.authorization"
-              >Авторизація</a
-            >
+              >Авторизація</a>
           </nav>
         </div>
 
@@ -174,7 +173,7 @@
             <nav>
               <ul class="nav-menu">
                 <li class="nav-menu__item">
-                  <a href="" class="nav-menu__link" data-i18n="header.main"
+                  <a href="#head" class="nav-menu__link anchor" data-i18n="header.main"
                     >Головна</a
                   >
                 </li>
@@ -224,7 +223,7 @@
             <ul class="messengers mob-menu">
               <li class="messengers__item">
                 <a
-                  href="tg://resolve?domain=NikolayTest"
+                  href="tg://resolve?domain=Oksana_PMQuazom"
                   class="messengers__link"
                 >
                   <i class="messengers__icon icon-telegram"></i>
@@ -260,7 +259,7 @@
               </ul>
             </div>
 
-            <nav>
+            <nav class="nav-authorization">
               <a href="" class="authorization" data-i18n="header.authorization"
                 >Авторизація</a
               >
@@ -1005,7 +1004,7 @@
                 placeholder="ПІБ"
                 class="form-feedback__input"
               />
-              <div id="nameError" class="form-feedback__error"></div>
+              <span id="nameError" class="form-feedback__error"></span>
             </label>
             <label class="form-feedback__wraper form-feedback__wraper_phone">
               <input
@@ -1014,7 +1013,7 @@
                 placeholder="00 000 00 00"
                 class="form-feedback__input"
               />
-              <div id="phoneError" class="form-feedback__error"></div>
+              <span id="phoneError" class="form-feedback__error"></span>
             </label>
             <select name="service" class="form-feedback__select select">
               <option
@@ -1122,7 +1121,7 @@
             <ul class="messengers">
               <li class="messengers__item">
                 <a
-                  href="tg://resolve?domain=NikolayTest"
+                  href="tg://resolve?domain=Oksana_PMQuazom"
                   class="messengers__link"
                 >
                   <i class="messengers__icon icon-telegram"></i>
@@ -1176,39 +1175,39 @@
             <h2 class="footer__title" data-i18n="header.avto">Авто-лайф</h2>
             <ul class="footer-menu">
               <li class="footer-menu__item">
-                <a href="" class="footer-menu__link" data-i18n="header.main"
+                <a href="#head" class="footer-menu__link anchor" data-i18n="header.main"
                   >Головна</a
                 >
               </li>
               <li class="footer-menu__item">
-                <a href="" class="footer-menu__link" data-i18n="header.aboutUs"
+                <a href="#about" class="footer-menu__link anchor" data-i18n="header.aboutUs"
                   >Про нас</a
                 >
               </li>
               <li class="footer-menu__item">
                 <a
-                  href=""
-                  class="footer-menu__link"
+                  href="#cost"
+                  class="footer-menu__link anchor"
                   data-i18n="header.costParcel"
                   >Вартість посилки</a
                 >
               </li>
               <li class="footer-menu__item">
                 <a
-                  href=""
-                  class="footer-menu__link"
+                  href="#questions"
+                  class="footer-menu__link anchor"
                   data-i18n="header.basicQuestions"
                   >Основні питання</a
                 >
               </li>
-              <li class="footer-menu__item">
+              <!-- <li class="footer-menu__item">
                 <a
                   href=""
                   class="footer-menu__link"
                   data-i18n="header.authorization"
                   >Авторизація</a
                 >
-              </li>
+              </li> -->
             </ul>
           </div>
 
@@ -1273,7 +1272,7 @@
         <ul class="messengers">
           <li class="messengers__item">
             <a
-              href="tg://resolve?domain=NikolayTest"
+              href="tg://resolve?domain=Oksana_PMQuazom"
               class="messengers__link"
             >
               <i class="messengers__icon icon-telegram"></i>
