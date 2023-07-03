@@ -150,7 +150,7 @@ if (inputs && dropDownContainer) {
   iti = [...inputs].map((el, idx) => {
     return window.intlTelInput(el, {
       utilsScript: "./js/utils.js",
-      preferredCountries: ["ua", "us", "gb"],
+      preferredCountries: ["ua", "pl"],
       separateDialCode: true,
       dropdownContainer: dropDownContainer[idx],
     });

@@ -93,9 +93,9 @@
   "cost": {
     "calc": "Calculation of the value of the parcel",
     "price": "The minimum value of the parcel 20 zl",
-    "length": "Length, see",
-    "width": "Width, see",
-    "height": "Height, see",
+    "length": "Length, cm",
+    "width": "Width, cm",
+    "height": "Height, cm",
     "cost": "Price: ",
     "figure": "zl"
   },
