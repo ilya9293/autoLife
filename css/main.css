@@ -381,9 +381,6 @@ button {
   transition: height 250ms linear;
 }
 .languages-list__item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: var(--color-darkbackground);
   width: 46px;
   height: 25px;
@@ -411,6 +408,16 @@ button {
 .languages-list__item:hover, .languages-list__item:focus {
   background-color: var(--color-btn-hover);
   color: var(--color-darkbackground);
+}
+.languages-list__link {
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 3px 0;
+}
+.desktop .languages-list__link {
+  padding: 5px 0;
 }
 
 .mob-backdrop {
