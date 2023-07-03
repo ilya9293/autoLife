@@ -539,7 +539,7 @@ const handleFeedback = async (e) => {
   const formData = new FormData(formFeedback);
   const phoneNumber = iti[0].getNumber();
 
-  if (phoneNumber === "") {
+  if (phoneNumber === "" || !/^[+\d]+$/.test(phoneNumber)) {
     const phoneError = document.getElementById("phoneError");
     phoneError.textContent = getPhoneErrorMessage(curentLng);
     phoneError.classList.add("show-error");
