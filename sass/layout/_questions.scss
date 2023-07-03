@@ -38,7 +38,7 @@
     }
 
     &__inform {
-      font-size: 28px;;
+      font-size: 28px;
       line-height: calc(33 / 28);
       margin-bottom: 20px;
     }
@@ -53,6 +53,14 @@
     &__btn {
       font-size: 23px;
       line-height: calc(27 / 23);
+    }
+  }
+
+  @media screen and (min-width: 1680px) {
+   & {
+      background-image: url("../images/questions/boxes.png");
+      background-repeat: no-repeat;
+      background-position: 0 95%;
     }
   }
 }

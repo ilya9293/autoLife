@@ -534,21 +534,47 @@ function getPhoneErrorMessage(language) {
   return translations[language] || "Введіть телефон";
 }
 
+function getNameErrorMessage(language) {
+   const translations = {
+     uk: "Введіть ім'я",
+     pl: "Wprowadź imię",
+     en: "Enter your name",
+   };
+ 
+   return translations[language] || "Введіть ім'я";
+ }
+
 const handleFeedback = async (e) => {
   e.preventDefault();
   const formData = new FormData(formFeedback);
+  const name = formData.get("name");
   const phoneNumber = iti[0].getNumber();
+  let hasError = false;
 
+  const nameError = document.getElementById("nameError");
+  if (name.trim() === "") {
+    nameError.textContent = getNameErrorMessage(curentLng);
+    nameError.classList.add("show-error");
+    hasError = true;
+  } else {
+    nameError.classList.remove("show-error");
+  }
+
+  const phoneError = document.getElementById("phoneError");
   if (phoneNumber === "" || !/^[+\d]+$/.test(phoneNumber)) {
-    const phoneError = document.getElementById("phoneError");
     phoneError.textContent = getPhoneErrorMessage(curentLng);
     phoneError.classList.add("show-error");
-    return;
+    hasError = true;
   } else {
     phoneError.classList.remove("show-error");
   }
 
+  if (hasError) {
+    return;
+  }
+
   let message = "Данные формы:\n\n";
+  message += `name: ${name}\n`;
   message += `phone: ${phoneNumber}\n`;
 
   for (let pair of formData.entries()) {

@@ -1386,6 +1386,13 @@ button {
     line-height: 1.1739130435;
   }
 }
+@media screen and (min-width: 1680px) {
+  .questions {
+    background-image: url("../images/questions/boxes.png");
+    background-repeat: no-repeat;
+    background-position: 0 95%;
+  }
+}
 
 .accordion-container {
   max-width: 1346px;
@@ -1519,7 +1526,7 @@ button {
   color: var(--color-darkbackground);
   margin-left: 15px;
   font-size: calc(
-    12px + 4 *
+    12px + 2 *
       ((100vw - 360px) / 920)
   );
 }
@@ -1565,7 +1572,7 @@ button {
     flex-basis: 16.2%;
   }
   .form-feedback__error {
-    font-size: 16px;
+    font-size: 14px;
   }
   .form-feedback__btn {
     flex-basis: 25%;

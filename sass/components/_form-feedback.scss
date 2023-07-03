@@ -27,7 +27,7 @@
    display: none;
    color: var(--color-darkbackground);
    margin-left: 15px;
-   @include adaptiv-font (16, 12, 1280);
+   @include adaptiv-font (14, 12, 1280);
   }
 
   &__btn {
@@ -81,7 +81,7 @@
     }
 
     &__error {
-      font-size: 16px;
+      font-size: 14px;
     }
 
     &__btn {
