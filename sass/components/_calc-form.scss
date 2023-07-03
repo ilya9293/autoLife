@@ -80,6 +80,14 @@
     cursor: pointer;
   }
 
+  &__container-error {
+    display: none;
+    color: var(--color-darkbackground);
+    @include adaptiv-font(16, 12, 1280);
+    margin-left: 16px;
+    margin-bottom: 16px;
+  }
+
   @media screen and (min-width: 687px) {
     & {
       padding: 32px;
@@ -121,6 +129,11 @@
     &__input {
       padding: 15px 20px;
       max-width: 63%;
+    }
+
+    &__container-error {
+      margin-left: 40%;
+      margin-bottom: 36px;
     }
 
     &__btn {
@@ -185,12 +198,17 @@
     &__label {
       max-width: 592px;
     }
-    &__label:last-child {
+    &__label:last-of-type {
       margin-bottom: 0;
     }
 
     &__input {
       max-width: 349px;
+    }
+
+    &__container-error {
+      font-size: 16px;
+      margin-left: 260px;
     }
 
     &__container-btn-price {
@@ -208,6 +226,24 @@
   @media screen and (min-width: 1280px) and (max-width: 1680px) {
     & {
       padding: 60px 70px;
+    }
+  }
+}
+
+.reset-margin {
+  margin-bottom: 0 !important;
+}
+
+.error-pl {
+  @media screen and (min-width: 687px) {
+    & {
+      margin-left: 48%;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    & {
+      margin-left: 285px;
     }
   }
 }

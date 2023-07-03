@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   button.addEventListener("click", handleShowMore);
   showFirstParagraphs();
-//   This function in services.js
+  //   This function in marquee.js
   start();
 });
 
@@ -295,21 +295,130 @@ anchors.forEach(function (anchor) {
 });
 
 // Calc Form
-
 const calcForm = document.querySelector(".calc__form");
 const costValue = document.querySelector("#cost-value");
 
 const handleCost = (e) => {
   e.preventDefault();
   const { width, length, height } = e.currentTarget;
-  const result =
-    (Number(width.value) * Number(length.value) * Number(height.value) * 60) /
-    (50 * 40 * 25);
-    if(result >= 20) {
+
+  const invalidFields = [];
+
+  // Проверяем каждое поле на заполнение и наличие числового формата данных
+  if (width.value.trim() === "") {
+    invalidFields.push({
+      field: width,
+      errorMessage: getErrorMessage(
+        "Введіть дані",
+        "Wprowadź dane",
+        "Enter data"
+      ),
+    });
+  } else if (isNaN(Number(width.value))) {
+    invalidFields.push({
+      field: width,
+      errorMessage: getErrorMessage(
+        "Введіть дані в числовому форматі",
+        "Wprowadź dane w formacie liczbowym",
+        "Enter data in numeric format"
+      ),
+    });
+  }
+
+  if (length.value.trim() === "") {
+    invalidFields.push({
+      field: length,
+      errorMessage: getErrorMessage(
+        "Введіть дані",
+        "Wprowadź dane",
+        "Enter data"
+      ),
+    });
+  } else if (isNaN(Number(length.value))) {
+    invalidFields.push({
+      field: length,
+      errorMessage: getErrorMessage(
+        "Введіть дані в числовому форматі",
+        "Wprowadź dane w formacie liczbowym",
+        "Enter data in numeric format"
+      ),
+    });
+  }
+
+  if (height.value.trim() === "") {
+    invalidFields.push({
+      field: height,
+      errorMessage: getErrorMessage(
+        "Введіть дані",
+        "Wprowadź dane",
+        "Enter data"
+      ),
+    });
+  } else if (isNaN(Number(height.value))) {
+    invalidFields.push({
+      field: height,
+      errorMessage: getErrorMessage(
+        "Введіть дані в числовому форматі",
+        "Wprowadź dane w formacie liczbowym",
+        "Enter data in numeric format"
+      ),
+    });
+  }
+
+  // Скрываем ошибки только для заполненных и верно заполненных полей
+  hideError(invalidFields);
+
+  if (invalidFields.length > 0) {
+    invalidFields.forEach((field) => {
+      showError(field.field, field.errorMessage[curentLng || "ua"]);
+    });
+  } else {
+    const result =
+      (Number(width.value) * Number(length.value) * Number(height.value) * 60) /
+      (50 * 40 * 25);
+    if (result >= 20) {
       costValue.textContent = Math.round(result);
     } else {
       costValue.textContent = 20;
     }
+  }
+};
+
+const showError = (input, errorMessage) => {
+  const errorContainer = input.parentElement.nextElementSibling;
+  errorContainer.textContent = errorMessage;
+  errorContainer.classList.add("show-error");
+  input.parentElement.classList.add("reset-margin");
+
+  if (curentLng === "pl") {
+    errorContainer.classList.add("error-pl");
+  }
+};
+
+const hideError = (fields) => {
+  const errorContainers = document.querySelectorAll(".calc__container-error");
+  const labels = document.querySelectorAll(".calc__label");
+  errorContainers.forEach((container) => {
+    container.textContent = "";
+    container.classList.remove("show-error");
+  });
+  labels.forEach((label) => {
+    if (
+      !fields.some(
+        (field) => field.field === label.querySelector(".calc__input")
+      )
+    ) {
+      label.classList.remove("reset-margin");
+    }
+  });
+};
+
+const getErrorMessage = (ua, pl, en) => {
+  return {
+    ua,
+    pl,
+    en,
+  };
 };
 
 calcForm.addEventListener("submit", handleCost);
@@ -358,12 +467,41 @@ closeButtons.forEach((button) => {
   });
 });
 
+function getModalMessage(messageKey, language) {
+  const translations = {
+    ua: {
+      success: "Дані успішно відправлені!",
+      error: "Помилка відправки даних!",
+    },
+    en: {
+      success: "Data sent successfully!",
+      error: "Error sending data!",
+    },
+    pl: {
+      success: "Dane wysłane pomyślnie!",
+      error: "Błąd wysyłania danych!",
+    },
+  };
+
+  if (language) {
+    return translations[language][messageKey];
+  } else {
+    return translations.ua[messageKey];
+  }
+}
+
 function showSuccessModal() {
+  const modalMessage = successModal.querySelector(".modal__message");
+  modalMessage.textContent = getModalMessage("success", curentLng);
+
   successModal.style.display = "flex";
   successModal.classList.add("fade-in");
 }
 
 function showErrorModal() {
+  const modalMessage = errorModal.querySelector(".modal__message");
+  modalMessage.textContent = getModalMessage("error", curentLng);
+
   errorModal.style.display = "flex";
   errorModal.classList.add("fade-in");
 }
@@ -386,11 +524,31 @@ errorModal.addEventListener("click", (e) => {
   }
 });
 
+function getPhoneErrorMessage(language) {
+  const translations = {
+    uk: "Введіть телефон",
+    pl: "Wprowadź numer telefonu",
+    en: "Enter your phone number",
+  };
+
+  return translations[language] || "Введіть телефон";
+}
+
 const handleFeedback = async (e) => {
   e.preventDefault();
   const formData = new FormData(formFeedback);
-  let message = "Данные формы:\n\n";
   const phoneNumber = iti[0].getNumber();
+
+  if (phoneNumber === "") {
+    const phoneError = document.getElementById("phoneError");
+    phoneError.textContent = getPhoneErrorMessage(curentLng);
+    phoneError.classList.add("show-error");
+    return;
+  } else {
+    phoneError.classList.remove("show-error");
+  }
+
+  let message = "Данные формы:\n\n";
   message += `phone: ${phoneNumber}\n`;
 
   for (let pair of formData.entries()) {
