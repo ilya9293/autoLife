@@ -18,6 +18,60 @@ mobBtn.addEventListener("click", toggleModal);
 mobBtnClose.addEventListener("click", toggleModal);
 mobBackDrop.addEventListener("click", closeModal);
 
+// Languages
+const btnLngs = document.querySelectorAll(".languages__btn");
+const listLngs = document.querySelectorAll(".languages-list");
+
+const showLngHandle = () => {
+  btnLngs.forEach((btn) => {
+    btn.classList.toggle("active-lng");
+  });
+
+  listLngs.forEach((list) => {
+    list.classList.toggle("show-lngs");
+  });
+
+  if (listLngs[0].classList.contains("show-lngs")) {
+    addDocumentClickHandler();
+  } else {
+    removeDocumentClickHandler();
+  }
+};
+
+const documentClickHandle = (event) => {
+  const target = event.target;
+  const isButton = Array.from(btnLngs).some((btn) => btn.contains(target));
+  const isList = Array.from(listLngs).some((list) => list.contains(target));
+
+  if (!isButton && !isList) {
+    btnLngs.forEach((btn) => {
+      btn.classList.remove("active-lng");
+    });
+
+    listLngs.forEach((list) => {
+      list.classList.remove("show-lngs");
+    });
+
+    removeDocumentClickHandler();
+  }
+};
+
+const addDocumentClickHandler = () => {
+  document.addEventListener("click", documentClickHandle);
+};
+
+const removeDocumentClickHandler = () => {
+  document.removeEventListener("click", documentClickHandle);
+};
+
+btnLngs.forEach((btn) => {
+  btn.addEventListener("click", showLngHandle);
+});
+
+
+
+// -----------------
+
 document.addEventListener("DOMContentLoaded", async function () {
   await changeLanguage(isCurentLng);
 

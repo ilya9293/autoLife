@@ -340,14 +340,11 @@ button {
   transform: rotate(180deg);
   transition: transform 250ms linear, border 250ms linear;
 }
-.languages__btn:focus::after {
+.languages__btn.active-lng::after {
   transform: rotate(0deg);
 }
 .desktop .languages__btn:focus::after, .desktop .languages__btn:hover::after {
   border-color: var(--color-btn-hover);
-}
-.languages__btn:focus-within + .languages-list {
-  height: 83px;
 }
 .desktop .languages__btn:focus, .desktop .languages__btn:hover {
   color: var(--color-btn-hover);
@@ -377,8 +374,11 @@ button {
   left: -15px;
   top: 20px;
   overflow: hidden;
-  z-index: 2;
+  z-index: 100;
   transition: height 250ms linear;
+}
+.languages-list.show-lngs {
+  height: 76px;
 }
 .languages-list__item {
   background-color: var(--color-darkbackground);
@@ -416,8 +416,10 @@ button {
   height: 100%;
   padding: 3px 0;
 }
-.desktop .languages-list__link {
-  padding: 5px 0;
+@media screen and (max-width: 1366px) {
+  .desktop .languages-list__link {
+    padding: 5px 0;
+  }
 }
 
 .mob-backdrop {
