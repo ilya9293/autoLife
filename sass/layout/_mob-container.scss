@@ -23,6 +23,7 @@
     transform: translateX(100%);
     overflow-x: auto;
     transition: transform 0.25s;
+    z-index: 20;
   }
 
   &.is-open &__container {

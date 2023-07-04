@@ -447,6 +447,7 @@ button {
   transform: translateX(100%);
   overflow-x: auto;
   transition: transform 0.25s;
+  z-index: 20;
 }
 .mob-backdrop.is-open .mob-backdrop__container {
   transform: translateX(0);
