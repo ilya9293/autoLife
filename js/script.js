@@ -496,13 +496,13 @@ const policyLink = document.querySelector(".policy__link");
 
 switch (curentLng) {
   case "ua":
-    policyLink.setAttribute("href", "../policy.htm");
+    policyLink.setAttribute("href", "./policy.htm");
     break;
   case "pl":
-    policyLink.setAttribute("href", "../policy.htm");
+    policyLink.setAttribute("href", "./policy.htm");
     break;
   case "en":
-    policyLink.setAttribute("href", "../policy.htm");
+    policyLink.setAttribute("href", "./policy.htm");
     break;
   default:
     break;
