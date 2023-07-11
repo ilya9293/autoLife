@@ -59,7 +59,7 @@
     position: absolute;
     bottom: -2%;
     right: 0;
-    z-index: 2;
+    z-index: 5;
     width: 44%;
     @include adaptiv-height(149, 70, 768);
   }
@@ -188,6 +188,7 @@
       width: 82%;
       height: 82%;
       object-fit: cover;
+      z-index: 4;
     }
 
     &__wraper {

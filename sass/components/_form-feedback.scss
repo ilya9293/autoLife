@@ -146,14 +146,14 @@
   }
 }
 
-.iti-mobile .iti__country-list {
+.iti .iti__country-list {
   border-radius: 15px;
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
   overflow-x: hidden;
 }
 
-.iti-mobile .iti__country-list::-webkit-scrollbar {
+.iti .iti__country-list::-webkit-scrollbar {
   width: 0 !important;
 }
 

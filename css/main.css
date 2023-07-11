@@ -888,7 +888,7 @@ button {
   position: absolute;
   bottom: -2%;
   right: 0;
-  z-index: 2;
+  z-index: 5;
   width: 44%;
   height: calc(
     70px + 79 *
@@ -1006,6 +1006,7 @@ button {
     height: 82%;
     -o-object-fit: cover;
        object-fit: cover;
+    z-index: 4;
   }
   .about__wraper {
     bottom: 15%;
@@ -1632,14 +1633,14 @@ button {
   }
 }
 
-.iti-mobile .iti__country-list {
+.iti .iti__country-list {
   border-radius: 15px;
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
   overflow-x: hidden;
 }
 
-.iti-mobile .iti__country-list::-webkit-scrollbar {
+.iti .iti__country-list::-webkit-scrollbar {
   width: 0 !important;
 }
 
@@ -2350,6 +2351,7 @@ option {
     max-width: 13.2%;
     position: absolute;
     z-index: 2;
+    cursor: pointer;
   }
   .steps-list__item:nth-child(1) {
     top: 15vw;
