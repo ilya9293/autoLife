@@ -632,8 +632,6 @@ const handleFeedback = async (e) => {
     return;
   }
 
-  console.log(phoneNumber);
-
   let message = "Данные формы:\n\n";
   message += `phone: ${phoneNumber}\n`;
 
